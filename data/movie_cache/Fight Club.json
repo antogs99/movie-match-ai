@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 550,
+  "imdb_id": "tt0137523",
+  "title": "Fight Club",
+  "year": "1999",
+  "genres": [
+    "Drama"
+  ],
+  "runtime": 139,
+  "director": "David Fincher",
+  "cast": [
+    "Edward Norton",
+    "Brad Pitt",
+    "Helena Bonham Carter",
+    "Meat Loaf",
+    "Jared Leto"
+  ],
+  "plot": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "8.8",
+  "metascore": "67",
+  "rotten_tomatoes": "81%"
+}

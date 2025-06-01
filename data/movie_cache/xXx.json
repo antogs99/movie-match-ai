@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 7451,
+  "imdb_id": "tt0295701",
+  "title": "xXx",
+  "year": "2002",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Thriller",
+    "Crime"
+  ],
+  "runtime": 124,
+  "director": "Rob Cohen",
+  "cast": [
+    "Vin Diesel",
+    "Asia Argento",
+    "Marton Csokas",
+    "Samuel L. Jackson",
+    "Michael Roof"
+  ],
+  "plot": "Xander Cage is your standard adrenaline junkie with no fear and a lousy attitude. When the US Government \"recruits\" him to go on a mission, he's not exactly thrilled. His mission: to gather information on an organization that may just be planning the destruction of the world, led by the nihilistic Yorgi.",
+  "streaming_services": [
+    "fuboTV"
+  ],
+  "imdb_rating": "5.8",
+  "metascore": "48",
+  "rotten_tomatoes": "48%"
+}

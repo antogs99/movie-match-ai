@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 785752,
+  "imdb_id": "tt5563324",
+  "title": "Intrusion",
+  "year": "2021",
+  "genres": [
+    "Drama",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 93,
+  "director": "Adam Salky",
+  "cast": [
+    "Freida Pinto",
+    "Logan Marshall-Green",
+    "Robert John Burke",
+    "Megan Elisabeth Kelly",
+    "Sarah Minnich"
+  ],
+  "plot": "When a husband and wife move to a small town, a home invasion leaves the wife traumatized and suspicious that those around her might not be who they seem.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "5.3",
+  "metascore": "39",
+  "rotten_tomatoes": "19%"
+}

@@ -1,0 +1,33 @@
+{
+  "tmdb_id": 1100782,
+  "imdb_id": "tt29268110",
+  "title": "Smile 2",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "runtime": 127,
+  "director": "Parker Finn",
+  "cast": [
+    "Naomi Scott",
+    "Rosemarie DeWitt",
+    "Lukas Gage",
+    "Miles Gutierrez-Riley",
+    "Peter Jacobson"
+  ],
+  "plot": "About to embark on a new world tour, global pop sensation Skye Riley begins experiencing increasingly terrifying and inexplicable events. Overwhelmed by the escalating horrors and the pressures of fame, Skye is forced to face her dark past to regain control of her life before it spirals out of control.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "fuboTV",
+    "MGM+ Amazon Channel",
+    "Paramount Plus",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel",
+    "Philo",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "6.7",
+  "metascore": "67",
+  "rotten_tomatoes": "86%"
+}

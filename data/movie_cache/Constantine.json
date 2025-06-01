@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 561,
+  "imdb_id": "tt0360486",
+  "title": "Constantine",
+  "year": "2005",
+  "genres": [
+    "Fantasy",
+    "Action",
+    "Horror"
+  ],
+  "runtime": 121,
+  "director": "Francis Lawrence",
+  "cast": [
+    "Keanu Reeves",
+    "Rachel Weisz",
+    "Shia LaBeouf",
+    "Djimon Hounsou",
+    "Max Baker"
+  ],
+  "plot": "John Constantine has literally been to Hell and back. When he teams up with a policewoman to solve the mysterious suicide of her twin sister, their investigation takes them through the world of demons and angels that exists beneath the landscape of contemporary Los Angeles.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "7.0",
+  "metascore": "50",
+  "rotten_tomatoes": "46%"
+}

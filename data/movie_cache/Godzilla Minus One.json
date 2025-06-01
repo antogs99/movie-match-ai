@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 940721,
+  "imdb_id": "tt23289160",
+  "title": "Godzilla Minus One",
+  "year": "2023",
+  "genres": [
+    "Science Fiction",
+    "Horror",
+    "Action"
+  ],
+  "runtime": 124,
+  "director": "Takashi Yamazaki",
+  "cast": [
+    "Ryunosuke Kamiki",
+    "Minami Hamabe",
+    "Yuki Yamada",
+    "Munetaka Aoki",
+    "Hidetaka Yoshioka"
+  ],
+  "plot": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "7.7",
+  "metascore": "81",
+  "rotten_tomatoes": "99%"
+}

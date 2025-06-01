@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 310131,
+  "imdb_id": "tt4263482",
+  "title": "The Witch",
+  "year": "2016",
+  "genres": [
+    "Horror",
+    "Fantasy",
+    "Drama"
+  ],
+  "runtime": 92,
+  "director": "Robert Eggers",
+  "cast": [
+    "Anya Taylor-Joy",
+    "Ralph Ineson",
+    "Kate Dickie",
+    "Harvey Scrimshaw",
+    "Ellie Grainger"
+  ],
+  "plot": "In 1630, a farmer relocates his family to a remote plot of land on the edge of a forest where strange, unsettling things happen. With suspicion and paranoia mounting, each family member's faith, loyalty and love are tested in shocking ways.",
+  "streaming_services": [],
+  "imdb_rating": "7.0",
+  "metascore": "84",
+  "rotten_tomatoes": "91%"
+}

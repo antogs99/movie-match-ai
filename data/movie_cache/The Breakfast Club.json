@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 2108,
+  "imdb_id": "tt0088847",
+  "title": "The Breakfast Club",
+  "year": "1985",
+  "genres": [
+    "Comedy",
+    "Drama"
+  ],
+  "runtime": 98,
+  "director": "John Hughes",
+  "cast": [
+    "Emilio Estevez",
+    "Judd Nelson",
+    "Molly Ringwald",
+    "Anthony Michael Hall",
+    "Ally Sheedy"
+  ],
+  "plot": "Five high school students from different walks of life endure a Saturday detention under a power-hungry principal. The disparate group includes rebel John, princess Claire, outcast Allison, brainy Brian and Andrew, the jock. Each has a chance to tell his or her story, making the others see them a little differently -- and when the day ends, they question whether school will ever be the same.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "66",
+  "rotten_tomatoes": "87%"
+}

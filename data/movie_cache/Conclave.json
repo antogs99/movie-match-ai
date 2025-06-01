@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 974576,
+  "imdb_id": "tt20215234",
+  "title": "Conclave",
+  "year": "2024",
+  "genres": [
+    "Drama",
+    "Thriller",
+    "Mystery"
+  ],
+  "runtime": 120,
+  "director": "Edward Berger",
+  "cast": [
+    "Ralph Fiennes",
+    "Stanley Tucci",
+    "John Lithgow",
+    "Isabella Rossellini",
+    "Lucian Msamati"
+  ],
+  "plot": "After the unexpected death of the Pope, Cardinal Lawrence is tasked with managing the covert and ancient ritual of electing a new one. Sequestered in the Vatican with the Catholic Church\u2019s most powerful leaders until the process is complete, Lawrence finds himself at the center of a conspiracy that could lead to its downfall.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.4",
+  "metascore": "79",
+  "rotten_tomatoes": "93%"
+}

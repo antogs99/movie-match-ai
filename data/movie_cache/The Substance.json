@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 933260,
+  "imdb_id": "tt17526714",
+  "title": "The Substance",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Science Fiction"
+  ],
+  "runtime": 141,
+  "director": "Coralie Fargeat",
+  "cast": [
+    "Demi Moore",
+    "Margaret Qualley",
+    "Dennis Quaid",
+    "Edward Hamilton-Clark",
+    "Gore Abrams"
+  ],
+  "plot": "A fading celebrity decides to use a black market drug, a cell-replicating substance that temporarily creates a younger, better version of herself.",
+  "streaming_services": [
+    "MUBI",
+    "MUBI Amazon Channel"
+  ],
+  "imdb_rating": "7.3",
+  "metascore": "78",
+  "rotten_tomatoes": "89%"
+}

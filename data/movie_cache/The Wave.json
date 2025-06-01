@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 619263,
+  "imdb_id": "tt4354756",
+  "title": "The Wave",
+  "year": "2019",
+  "genres": [
+    "Science Fiction"
+  ],
+  "runtime": 87,
+  "director": "Gille Klabin",
+  "cast": [
+    "Justin Long",
+    "Tommy Flanagan",
+    "Katia Winter",
+    "Donald Faison",
+    "Sheila Vand"
+  ],
+  "plot": "A man on the verge of a promotion takes a mysterious hallucinogenic drug that begins to tear down his reality and expose his life for what it really is.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Peacock Premium",
+    "Amazon Prime Video with Ads",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "6.1",
+  "metascore": "51",
+  "rotten_tomatoes": "68%"
+}

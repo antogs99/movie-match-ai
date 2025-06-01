@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 7461,
+  "imdb_id": "tt0443274",
+  "title": "Vantage Point",
+  "year": "2008",
+  "genres": [
+    "Drama",
+    "Action",
+    "Thriller",
+    "Crime"
+  ],
+  "runtime": 90,
+  "director": "Pete Travis",
+  "cast": [
+    "Dennis Quaid",
+    "Matthew Fox",
+    "Forest Whitaker",
+    "Sigourney Weaver",
+    "William Hurt"
+  ],
+  "plot": "During an historic counter-terrorism summit in Spain, the President of the United States is struck down by an assassin's bullet. Eight strangers have a perfect view of the kill, but what did they really see? As the minutes leading up to the fatal shot are replayed through the eyes of each eyewitness, the reality of the assassination takes shape.",
+  "streaming_services": [
+    "Paramount Plus Apple TV Channel "
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "40",
+  "rotten_tomatoes": "34%"
+}

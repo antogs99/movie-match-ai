@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 1276073,
+  "imdb_id": "tt33452974",
+  "title": "Bullet Train Explosion",
+  "year": "2025",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Crime",
+    "Drama"
+  ],
+  "runtime": 137,
+  "director": "Shinji Higuchi",
+  "cast": [
+    "Tsuyoshi Kusanagi",
+    "Machiko Ono",
+    "Jun Kaname",
+    "Non",
+    "Kanata Hosoda"
+  ],
+  "plot": "When panic erupts on a Tokyo-bound bullet train that will explode if it slows below 100 kph, authorities race against time to save everyone on board.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "6.3",
+  "metascore": "62",
+  "rotten_tomatoes": "68%"
+}

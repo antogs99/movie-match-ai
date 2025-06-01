@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 539972,
+  "imdb_id": "tt8790086",
+  "title": "Kraven the Hunter",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Thriller"
+  ],
+  "runtime": 127,
+  "director": "J.C. Chandor",
+  "cast": [
+    "Aaron Taylor-Johnson",
+    "Ariana DeBose",
+    "Fred Hechinger",
+    "Alessandro Nivola",
+    "Christopher Abbott"
+  ],
+  "plot": "Kraven Kravinoff's complex relationship with his ruthless gangster father, Nikolai, starts him down a path of vengeance with brutal consequences, motivating him to become not only the greatest hunter in the world, but also one of its most feared.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "5.5",
+  "metascore": "35",
+  "rotten_tomatoes": "15%"
+}

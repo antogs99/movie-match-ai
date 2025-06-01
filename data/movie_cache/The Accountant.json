@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 302946,
+  "imdb_id": "tt2140479",
+  "title": "The Accountant",
+  "year": "2016",
+  "genres": [
+    "Crime",
+    "Thriller",
+    "Drama"
+  ],
+  "runtime": 128,
+  "director": "Gavin O'Connor",
+  "cast": [
+    "Ben Affleck",
+    "Cynthia Addai-Robinson",
+    "Anna Kendrick",
+    "J.K. Simmons",
+    "Jon Bernthal"
+  ],
+  "plot": "As a math savant uncooks the books for a new client, the Treasury Department closes in on his activities and the body count starts to rise.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Max",
+    "Max Amazon Channel",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.3",
+  "metascore": "51",
+  "rotten_tomatoes": "53%"
+}

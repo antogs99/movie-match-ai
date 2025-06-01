@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 13051,
+  "imdb_id": "tt0467197",
+  "title": "Max Payne",
+  "year": "2008",
+  "genres": [
+    "Crime",
+    "Action",
+    "Drama",
+    "Thriller",
+    "Mystery"
+  ],
+  "runtime": 100,
+  "director": "John Moore",
+  "cast": [
+    "Mark Wahlberg",
+    "Mila Kunis",
+    "Beau Bridges",
+    "Ludacris",
+    "Chris O'Donnell"
+  ],
+  "plot": "A DEA agent whose family was slain as part of a conspiracy, and an assassin out to avenge her sister's death, join forces to solve a series of murders in New York City.",
+  "streaming_services": [],
+  "imdb_rating": "5.3",
+  "metascore": "31",
+  "rotten_tomatoes": "16%"
+}

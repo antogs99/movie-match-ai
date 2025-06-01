@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 361743,
+  "imdb_id": "tt1745960",
+  "title": "Top Gun: Maverick",
+  "year": "2022",
+  "genres": [
+    "Action",
+    "Drama"
+  ],
+  "runtime": 131,
+  "director": "Joseph Kosinski",
+  "cast": [
+    "Tom Cruise",
+    "Val Kilmer",
+    "Miles Teller",
+    "Jennifer Connelly",
+    "Bashir Salahuddin"
+  ],
+  "plot": "After more than thirty years of service as one of the Navy\u2019s top aviators, and dodging the advancement in rank that would ground him, Pete \u201cMaverick\u201d Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+  "streaming_services": [
+    "Paramount Plus",
+    "Paramount Plus Apple TV Channel ",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel"
+  ],
+  "imdb_rating": "8.2",
+  "metascore": "78",
+  "rotten_tomatoes": "96%"
+}

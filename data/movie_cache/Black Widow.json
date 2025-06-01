@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 497698,
+  "imdb_id": "tt3480822",
+  "title": "Black Widow",
+  "year": "2021",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 134,
+  "director": "Cate Shortland",
+  "cast": [
+    "Scarlett Johansson",
+    "Florence Pugh",
+    "Rachel Weisz",
+    "David Harbour",
+    "Ray Winstone"
+  ],
+  "plot": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "68",
+  "rotten_tomatoes": "79%"
+}

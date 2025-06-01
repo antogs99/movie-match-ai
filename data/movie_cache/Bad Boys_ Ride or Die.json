@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 573435,
+  "imdb_id": "tt4919268",
+  "title": "Bad Boys: Ride or Die",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Comedy",
+    "Crime",
+    "Thriller",
+    "Adventure"
+  ],
+  "runtime": 115,
+  "director": "Adil El Arbi",
+  "cast": [
+    "Will Smith",
+    "Martin Lawrence",
+    "Vanessa Hudgens",
+    "Alexander Ludwig",
+    "Paola Nu\u00f1ez"
+  ],
+  "plot": "After their late former Captain is framed, Lowrey and Burnett try to clear his name, only to end up on the run themselves.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "6.5",
+  "metascore": "54",
+  "rotten_tomatoes": "65%"
+}

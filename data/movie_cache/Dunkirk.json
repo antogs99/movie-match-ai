@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 17720,
+  "imdb_id": "tt0051565",
+  "title": "Dunkirk",
+  "year": "1958",
+  "genres": [
+    "Drama",
+    "War"
+  ],
+  "runtime": 134,
+  "director": "Leslie Norman",
+  "cast": [
+    "John Mills",
+    "Richard Attenborough",
+    "Bernard Lee",
+    "Robert Urquhart",
+    "Ray Jackson"
+  ],
+  "plot": "A British Corporal in France finds himself responsible for the lives of his men when their officer is killed. He has to get them back to Britain somehow. Meanwhile, British civilians are being dragged into the war with Operation Dynamo, the scheme to get the French and British forces back from the Dunkirk beaches. Some come forward to help, others were less willing.",
+  "streaming_services": [
+    "BFI Player Amazon Channel"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "N/A",
+  "rotten_tomatoes": null
+}

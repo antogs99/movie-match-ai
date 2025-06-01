@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 1184918,
+  "imdb_id": "tt29623480",
+  "title": "The Wild Robot",
+  "year": "2024",
+  "genres": [
+    "Animation",
+    "Science Fiction",
+    "Family"
+  ],
+  "runtime": 102,
+  "director": "Chris Sanders",
+  "cast": [
+    "Lupita Nyong'o",
+    "Pedro Pascal",
+    "Kit Connor",
+    "Bill Nighy",
+    "Stephanie Hsu"
+  ],
+  "plot": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "8.2",
+  "metascore": "85",
+  "rotten_tomatoes": "96%"
+}

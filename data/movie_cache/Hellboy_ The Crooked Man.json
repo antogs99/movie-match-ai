@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 1087822,
+  "imdb_id": "tt26757462",
+  "title": "Hellboy: The Crooked Man",
+  "year": "2024",
+  "genres": [
+    "Fantasy",
+    "Horror",
+    "Action"
+  ],
+  "runtime": 100,
+  "director": "Brian Taylor",
+  "cast": [
+    "Jack Kesy",
+    "Jefferson White",
+    "Adeline Rudolph",
+    "Leah McNamara",
+    "Hannah Margetson"
+  ],
+  "plot": "Hellboy and a rookie BPRD agent get stranded in 1950s rural Appalachia. There, they discover a small community haunted by witches, led by a local devil with a troubling connection to Hellboy's past: the Crooked Man.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "4.5",
+  "metascore": "45",
+  "rotten_tomatoes": "36%"
+}

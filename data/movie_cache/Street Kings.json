@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 1266,
+  "imdb_id": "tt0421073",
+  "title": "Street Kings",
+  "year": "2008",
+  "genres": [
+    "Action",
+    "Crime",
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 109,
+  "director": "David Ayer",
+  "cast": [
+    "Keanu Reeves",
+    "Forest Whitaker",
+    "Chris Evans",
+    "Hugh Laurie",
+    "Naomie Harris"
+  ],
+  "plot": "Tom Ludlow is a disillusioned L.A. Police Officer, rarely playing by the rules and haunted by the death of his wife. When evidence implicates him in the execution of a fellow officer, he is forced to go up against the cop culture he's been a part of his entire career, ultimately leading him to question the loyalties of everyone around him.",
+  "streaming_services": [
+    "Disney Plus",
+    "Hulu"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "55",
+  "rotten_tomatoes": "37%"
+}

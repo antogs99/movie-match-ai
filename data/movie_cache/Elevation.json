@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 1035048,
+  "imdb_id": "tt23558280",
+  "title": "Elevation",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "runtime": 91,
+  "director": "George Nolfi",
+  "cast": [
+    "Anthony Mackie",
+    "Morena Baccarin",
+    "Maddie Hasson",
+    "Danny Boyd Jr.",
+    "Rachel Nicks"
+  ],
+  "plot": "A single father and two women venture from the safety of their homes to face monstrous creatures to save the life of a young boy.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "5.6",
+  "metascore": "50",
+  "rotten_tomatoes": "55%"
+}

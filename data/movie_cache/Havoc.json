@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 668489,
+  "imdb_id": "tt14123284",
+  "title": "Havoc",
+  "year": "2025",
+  "genres": [
+    "Action",
+    "Crime",
+    "Thriller"
+  ],
+  "runtime": 107,
+  "director": "Gareth Evans",
+  "cast": [
+    "Tom Hardy",
+    "Jessie Mei Li",
+    "Timothy Olyphant",
+    "Forest Whitaker",
+    "Justin Cornwell"
+  ],
+  "plot": "When a drug heist swerves lethally out of control, a jaded cop fights his way through a corrupt city's criminal underworld to save a politician's son.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "N/A",
+  "metascore": "N/A",
+  "rotten_tomatoes": "66%"
+}

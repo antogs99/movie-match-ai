@@ -1,0 +1,34 @@
+{
+  "tmdb_id": 939243,
+  "imdb_id": "tt18259086",
+  "title": "Sonic the Hedgehog 3",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Science Fiction",
+    "Comedy",
+    "Family"
+  ],
+  "runtime": 110,
+  "director": "Jeff Fowler",
+  "cast": [
+    "Jim Carrey",
+    "Ben Schwartz",
+    "Keanu Reeves",
+    "Idris Elba",
+    "Colleen O'Shaughnessey"
+  ],
+  "plot": "Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched in every way, Team Sonic must seek out an unlikely alliance in hopes of stopping Shadow and protecting the planet.",
+  "streaming_services": [
+    "fuboTV",
+    "MGM+ Amazon Channel",
+    "Paramount Plus",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel",
+    "MGM Plus",
+    "Philo"
+  ],
+  "imdb_rating": "6.9",
+  "metascore": "56",
+  "rotten_tomatoes": "85%"
+}

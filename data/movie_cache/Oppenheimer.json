@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 872585,
+  "imdb_id": "tt15398776",
+  "title": "Oppenheimer",
+  "year": "2023",
+  "genres": [
+    "Drama",
+    "History"
+  ],
+  "runtime": 181,
+  "director": "Christopher Nolan",
+  "cast": [
+    "Cillian Murphy",
+    "Emily Blunt",
+    "Matt Damon",
+    "Robert Downey Jr.",
+    "Florence Pugh"
+  ],
+  "plot": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+  "streaming_services": [
+    "Peacock Premium",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "8.3",
+  "metascore": "90",
+  "rotten_tomatoes": "93%"
+}

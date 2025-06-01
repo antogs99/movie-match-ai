@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 1241982,
+  "imdb_id": "tt13622970",
+  "title": "Moana 2",
+  "year": "2024",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Family",
+    "Comedy"
+  ],
+  "runtime": 100,
+  "director": "David G. Derrick Jr.",
+  "cast": [
+    "Auli\u02bbi Cravalho",
+    "Dwayne Johnson",
+    "Hual\u0101lai Chung",
+    "Rose Matafeo",
+    "David Fane"
+  ],
+  "plot": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "58",
+  "rotten_tomatoes": "61%"
+}

@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 8645,
+  "imdb_id": "tt0949731",
+  "title": "The Happening",
+  "year": "2008",
+  "genres": [
+    "Thriller",
+    "Science Fiction"
+  ],
+  "runtime": 90,
+  "director": "M. Night Shyamalan",
+  "cast": [
+    "Mark Wahlberg",
+    "Zooey Deschanel",
+    "John Leguizamo",
+    "Ashlyn Sanchez",
+    "Betty Buckley"
+  ],
+  "plot": "When a deadly airborne virus threatens to wipe out the northeastern United States, teacher Elliot Moore and his wife Alma flee from contaminated cities into the countryside in a fight to discover the truth. Is it terrorism, the accidental release of some toxic military bio weapon -- or something even more sinister?",
+  "streaming_services": [
+    "fuboTV"
+  ],
+  "imdb_rating": "5.0",
+  "metascore": "34",
+  "rotten_tomatoes": "17%"
+}

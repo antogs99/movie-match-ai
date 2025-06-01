@@ -1,0 +1,35 @@
+{
+  "tmdb_id": 324786,
+  "imdb_id": "tt2119532",
+  "title": "Hacksaw Ridge",
+  "year": "2016",
+  "genres": [
+    "Drama",
+    "History",
+    "War"
+  ],
+  "runtime": 139,
+  "director": "Mel Gibson",
+  "cast": [
+    "Andrew Garfield",
+    "Sam Worthington",
+    "Vince Vaughn",
+    "Teresa Palmer",
+    "Luke Bracey"
+  ],
+  "plot": "WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people and becomes the first Conscientious Objector in American history to receive the Congressional Medal of Honor.",
+  "streaming_services": [
+    "Hulu",
+    "Paramount Plus Apple TV Channel ",
+    "AMC Plus Apple TV Channel ",
+    "AMC+ Amazon Channel",
+    "AMC+ Roku Premium Channel",
+    "AMC+",
+    "AMC",
+    "Philo",
+    "MovieSphere+ Amazon Channel"
+  ],
+  "imdb_rating": "8.1",
+  "metascore": "71",
+  "rotten_tomatoes": "84%"
+}

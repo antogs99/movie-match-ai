@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 564,
+  "imdb_id": "tt0120616",
+  "title": "The Mummy",
+  "year": "1999",
+  "genres": [
+    "Adventure",
+    "Action",
+    "Fantasy"
+  ],
+  "runtime": 124,
+  "director": "Stephen Sommers",
+  "cast": [
+    "Brendan Fraser",
+    "Rachel Weisz",
+    "John Hannah",
+    "Arnold Vosloo",
+    "Patricia Vel\u00e1squez"
+  ],
+  "plot": "Dashing legionnaire Rick O'Connell stumbles upon the hidden ruins of Hamunaptra while in the midst of a battle to claim the area in 1920s Egypt. It has been over three thousand years since former High Priest Imhotep suffered a fate worse than death as a punishment for a forbidden love\u2014along with a curse that guarantees eternal doom upon the world if he is ever awoken.",
+  "streaming_services": [],
+  "imdb_rating": "7.1",
+  "metascore": "48",
+  "rotten_tomatoes": "62%"
+}

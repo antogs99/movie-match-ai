@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 1055451,
+  "imdb_id": "tt23785128",
+  "title": "Founders Day",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Thriller",
+    "Comedy"
+  ],
+  "runtime": 107,
+  "director": "Erik Bloomquist",
+  "cast": [
+    "Naomi Grace",
+    "Devin Druid",
+    "William Russ",
+    "Amy Hargreaves",
+    "Catherine Curtin"
+  ],
+  "plot": "A small town is shaken by a series of ominous killings in the days leading up to a heated mayoral election.",
+  "streaming_services": [],
+  "imdb_rating": "4.4",
+  "metascore": "39",
+  "rotten_tomatoes": "49%"
+}

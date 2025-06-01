@@ -1,0 +1,31 @@
+{
+  "tmdb_id": 13027,
+  "imdb_id": "tt1059786",
+  "title": "Eagle Eye",
+  "year": "2008",
+  "genres": [
+    "Mystery",
+    "Thriller",
+    "Action"
+  ],
+  "runtime": 118,
+  "director": "D.J. Caruso",
+  "cast": [
+    "Shia LaBeouf",
+    "Michelle Monaghan",
+    "Rosario Dawson",
+    "Michael Chiklis",
+    "Anthony Mackie"
+  ],
+  "plot": "Jerry Shaw and Rachel Holloman are two strangers whose lives are suddenly thrown into turmoil by a mysterious woman they have never met. Threatening their lives and family, the unseen caller uses everyday technology to control their actions and push them into increasing danger. As events escalate, Jerry and Rachel become the country's most-wanted fugitives and must figure out what is happening to them.",
+  "streaming_services": [
+    "fuboTV",
+    "MGM+ Amazon Channel",
+    "Paramount Plus Apple TV Channel ",
+    "MGM Plus",
+    "Philo"
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "43",
+  "rotten_tomatoes": "27%"
+}

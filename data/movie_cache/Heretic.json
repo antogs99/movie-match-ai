@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 1138194,
+  "imdb_id": "tt28015403",
+  "title": "Heretic",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 111,
+  "director": "Scott Beck",
+  "cast": [
+    "Hugh Grant",
+    "Sophie Thatcher",
+    "Chloe East",
+    "Topher Grace",
+    "Elle Young"
+  ],
+  "plot": "Two young missionaries are forced to prove their faith when they knock on the wrong door and are greeted by a diabolical Mr. Reed, becoming ensnared in his deadly game of cat-and-mouse.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "7.0",
+  "metascore": "71",
+  "rotten_tomatoes": "91%"
+}

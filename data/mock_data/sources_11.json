@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Netflix",
+    "region": "US",
+    "audience_score": 88,
+    "critic_score": 80
+  },
+  {
+    "name": "Rotten Tomatoes",
+    "region": "US",
+    "audience_score": 88,
+    "critic_score": 80
+  }
+]

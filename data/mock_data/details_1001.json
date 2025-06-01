@@ -1,0 +1,17 @@
+{
+  "id": 1001,
+  "title": "Shadow Watch",
+  "original_title": "Shadow Watch",
+  "plot_overview": "An ex-cop must track a serial killer who leaves cryptic messages in abandoned subway tunnels.",
+  "type": "movie",
+  "runtime_minutes": 102,
+  "year": 2021,
+  "user_rating": 7.8,
+  "critic_score": 81,
+  "genre_names": [
+    "Thriller",
+    "Mystery"
+  ],
+  "poster": "",
+  "original_language": "en"
+}

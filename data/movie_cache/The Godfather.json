@@ -1,0 +1,24 @@
+{
+  "tmdb_id": 238,
+  "imdb_id": "tt0068646",
+  "title": "The Godfather",
+  "year": "1972",
+  "genres": [
+    "Drama",
+    "Crime"
+  ],
+  "runtime": 175,
+  "director": "Francis Ford Coppola",
+  "cast": [
+    "Marlon Brando",
+    "Al Pacino",
+    "James Caan",
+    "Robert Duvall",
+    "Richard S. Castellano"
+  ],
+  "plot": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+  "streaming_services": [],
+  "imdb_rating": "9.2",
+  "metascore": "100",
+  "rotten_tomatoes": "97%"
+}

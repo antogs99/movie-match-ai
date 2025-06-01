@@ -1,0 +1,14 @@
+{
+  "id": 11,
+  "title": "Fake Movie Title",
+  "year": 2022,
+  "plot_overview": "This is a fake movie plot.",
+  "user_rating": 8.4,
+  "critic_score": 75,
+  "genre_names": [
+    "Thriller",
+    "Crime"
+  ],
+  "justwatch_rating": 82,
+  "tmdb_score": 81
+}

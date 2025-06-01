@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 9381,
+  "imdb_id": "tt0364970",
+  "title": "Babylon A.D.",
+  "year": "2008",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "runtime": 101,
+  "director": "Mathieu Kassovitz",
+  "cast": [
+    "Vin Diesel",
+    "Michelle Yeoh",
+    "M\u00e9lanie Thierry",
+    "Lambert Wilson",
+    "Charlotte Rampling"
+  ],
+  "plot": "A veteran-turned-mercenary is hired to take a young woman with a secret from post-apocalyptic Eastern Europe to New York City.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "5.5",
+  "metascore": "26",
+  "rotten_tomatoes": "7%"
+}

@@ -1,0 +1,33 @@
+{
+  "tmdb_id": 866398,
+  "imdb_id": "tt15314262",
+  "title": "The Beekeeper",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Crime",
+    "Thriller"
+  ],
+  "runtime": 105,
+  "director": "David Ayer",
+  "cast": [
+    "Jason Statham",
+    "Emmy Raver-Lampman",
+    "Bobby Naderi",
+    "Josh Hutcherson",
+    "Jeremy Irons"
+  ],
+  "plot": "One man's campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "fuboTV",
+    "MGM+ Amazon Channel",
+    "MGM Plus Roku Premium Channel",
+    "MGM Plus",
+    "Philo",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "6.3",
+  "metascore": "53",
+  "rotten_tomatoes": "71%"
+}

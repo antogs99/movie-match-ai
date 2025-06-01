@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 713704,
+  "imdb_id": "tt13345606",
+  "title": "Evil Dead Rise",
+  "year": "2023",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 96,
+  "director": "Lee Cronin",
+  "cast": [
+    "Lily Sullivan",
+    "Alyssa Sutherland",
+    "Morgan Davies",
+    "Gabrielle Echols",
+    "Nell Fisher"
+  ],
+  "plot": "A reunion between two estranged sisters gets cut short by the rise of flesh-possessing demons, thrusting them into a primal battle for survival as they face the most nightmarish version of family imaginable.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "6.5",
+  "metascore": "69",
+  "rotten_tomatoes": "84%"
+}

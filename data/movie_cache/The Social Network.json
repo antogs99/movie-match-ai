@@ -1,0 +1,23 @@
+{
+  "tmdb_id": 37799,
+  "imdb_id": "tt1285016",
+  "title": "The Social Network",
+  "year": "2010",
+  "genres": [
+    "Drama"
+  ],
+  "runtime": 121,
+  "director": "David Fincher",
+  "cast": [
+    "Jesse Eisenberg",
+    "Andrew Garfield",
+    "Armie Hammer",
+    "Josh Pence",
+    "Justin Timberlake"
+  ],
+  "plot": "In 2003, Harvard undergrad and computer programmer Mark Zuckerberg begins work on a new concept that eventually turns into the global social network known as Facebook. Six years later, Mark is one of the youngest billionaires ever, but his unprecedented success leads to both personal and legal complications when he ends up on the receiving end of two lawsuits, one involving his former friend.",
+  "streaming_services": [],
+  "imdb_rating": "7.8",
+  "metascore": "95",
+  "rotten_tomatoes": "96%"
+}

@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 917496,
+  "imdb_id": "tt2049403",
+  "title": "Beetlejuice Beetlejuice",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Comedy",
+    "Fantasy"
+  ],
+  "runtime": 105,
+  "director": "Tim Burton",
+  "cast": [
+    "Michael Keaton",
+    "Winona Ryder",
+    "Catherine O'Hara",
+    "Jenna Ortega",
+    "Justin Theroux"
+  ],
+  "plot": "After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Betelgeuse, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Afterlife.",
+  "streaming_services": [
+    "Netflix",
+    "Max",
+    "Max Amazon Channel",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "62",
+  "rotten_tomatoes": "75%"
+}

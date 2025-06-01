@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 1125510,
+  "imdb_id": "tt27729779",
+  "title": "The Platform 2",
+  "year": "2024",
+  "genres": [
+    "Science Fiction",
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 101,
+  "director": "Galder Gaztelu-Urrutia",
+  "cast": [
+    "Milena Smit",
+    "Hovik Keuchkerian",
+    "Natalia Tena",
+    "\u00d3scar Jaenada",
+    "Ivan Massagu\u00e9"
+  ],
+  "plot": "After a mysterious leader imposes his law in a brutal system of vertical cells, a new arrival battles against a dubious food distribution method.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "4.9",
+  "metascore": "45",
+  "rotten_tomatoes": "35%"
+}

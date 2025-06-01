@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 244,
+  "imdb_id": "tt0024216",
+  "title": "King Kong",
+  "year": "1933",
+  "genres": [
+    "Adventure",
+    "Fantasy",
+    "Horror"
+  ],
+  "runtime": 104,
+  "director": "Ernest B. Schoedsack",
+  "cast": [
+    "Robert Armstrong",
+    "Fay Wray",
+    "Bruce Cabot",
+    "Frank Reicher",
+    "Victor Wong"
+  ],
+  "plot": "Adventurous filmmaker Carl Denham sets out to produce a motion picture unlike anything the world has seen before. Alongside his leading lady Ann Darrow and his first mate Jack Driscoll, they arrive on an island and discover a legendary creature said to be neither beast nor man. Denham captures the monster to be displayed on Broadway as King Kong, the eighth wonder of the world.",
+  "streaming_services": [],
+  "imdb_rating": "7.9",
+  "metascore": "92",
+  "rotten_tomatoes": "97%"
+}

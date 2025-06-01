@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 279,
+  "imdb_id": "tt0086879",
+  "title": "Amadeus",
+  "year": "1984",
+  "genres": [
+    "History",
+    "Music",
+    "Drama"
+  ],
+  "runtime": 160,
+  "director": "Milo\u0161 Forman",
+  "cast": [
+    "F. Murray Abraham",
+    "Tom Hulce",
+    "Elizabeth Berridge",
+    "Simon Callow",
+    "Roy Dotrice"
+  ],
+  "plot": "Disciplined Italian composer Antonio Salieri becomes consumed by jealousy and resentment towards the hedonistic and remarkably talented young Viennese composer Wolfgang Amadeus Mozart.",
+  "streaming_services": [
+    "Criterion Channel"
+  ],
+  "imdb_rating": "8.4",
+  "metascore": "87",
+  "rotten_tomatoes": "90%"
+}

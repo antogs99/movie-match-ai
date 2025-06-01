@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 945961,
+  "imdb_id": "tt18412256",
+  "title": "Alien: Romulus",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Science Fiction"
+  ],
+  "runtime": 119,
+  "director": "Fede \u00c1lvarez",
+  "cast": [
+    "Cailee Spaeny",
+    "David Jonsson",
+    "Archie Renaux",
+    "Isabela Merced",
+    "Spike Fearn"
+  ],
+  "plot": "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "64",
+  "rotten_tomatoes": "80%"
+}

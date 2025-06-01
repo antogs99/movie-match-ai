@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 615656,
+  "imdb_id": "tt9224104",
+  "title": "Meg 2: The Trench",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Science Fiction",
+    "Horror"
+  ],
+  "runtime": 116,
+  "director": "Ben Wheatley",
+  "cast": [
+    "Jason Statham",
+    "Wu Jing",
+    "Shuya Sophia Cai",
+    "Page Kennedy",
+    "Sergio Peris-Mencheta"
+  ],
+  "plot": "An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "5.0",
+  "metascore": "40",
+  "rotten_tomatoes": "27%"
+}

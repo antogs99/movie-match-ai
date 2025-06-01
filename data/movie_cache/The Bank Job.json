@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 8848,
+  "imdb_id": "tt0200465",
+  "title": "The Bank Job",
+  "year": "2008",
+  "genres": [
+    "Thriller",
+    "Crime",
+    "Drama"
+  ],
+  "runtime": 112,
+  "director": "Roger Donaldson",
+  "cast": [
+    "Jason Statham",
+    "Saffron Burrows",
+    "Stephen Campbell Moore",
+    "Daniel Mays",
+    "James Faulkner"
+  ],
+  "plot": "Terry is a small-time car dealer trying to leave his shady past behind and start a family. Martine is a beautiful model from Terry's old neighbourhood who knows that Terry is no angel. When Martine proposes a foolproof plan to rob a bank, Terry recognises the danger but realises this may be the opportunity of a lifetime.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "7.2",
+  "metascore": "69",
+  "rotten_tomatoes": "79%"
+}

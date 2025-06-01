@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 426063,
+  "imdb_id": "tt5040012",
+  "title": "Nosferatu",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Fantasy"
+  ],
+  "runtime": 133,
+  "director": "Robert Eggers",
+  "cast": [
+    "Lily-Rose Depp",
+    "Nicholas Hoult",
+    "Bill Skarsg\u00e5rd",
+    "Aaron Taylor-Johnson",
+    "Willem Dafoe"
+  ],
+  "plot": "A gothic tale of obsession between a haunted young woman and the terrifying vampire infatuated with her, causing untold horror in its wake.",
+  "streaming_services": [
+    "Peacock Premium",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "7.3",
+  "metascore": "78",
+  "rotten_tomatoes": "84%"
+}

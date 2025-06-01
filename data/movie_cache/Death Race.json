@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 10483,
+  "imdb_id": "tt0452608",
+  "title": "Death Race",
+  "year": "2008",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "runtime": 105,
+  "director": "Paul W. S. Anderson",
+  "cast": [
+    "Jason Statham",
+    "Joan Allen",
+    "Ian McShane",
+    "Tyrese Gibson",
+    "Natalie Martinez"
+  ],
+  "plot": "Terminal Island, New York: 2020. Overcrowding in the US penal system has reached a breaking point. Prisons have been turned over to a monolithic Weyland Corporation, which sees jails full of thugs as an opportunity for televised sport. Adrenalized inmates, a global audience hungry for violence and a spectacular, enclosed arena come together to form the 'Death Race', the biggest, most brutal event.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "6.4",
+  "metascore": "43",
+  "rotten_tomatoes": "41%"
+}

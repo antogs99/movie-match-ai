@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 628,
+  "imdb_id": "tt0110148",
+  "title": "Interview with the Vampire",
+  "year": "1994",
+  "genres": [
+    "Horror",
+    "Drama",
+    "Fantasy"
+  ],
+  "runtime": 123,
+  "director": "Neil Jordan",
+  "cast": [
+    "Tom Cruise",
+    "Brad Pitt",
+    "Antonio Banderas",
+    "Christian Slater",
+    "Stephen Rea"
+  ],
+  "plot": "A vampire relates his epic life story of love, betrayal, loneliness, and dark hunger to an over-curious reporter.",
+  "streaming_services": [
+    "fuboTV",
+    "NBC"
+  ],
+  "imdb_rating": "7.5",
+  "metascore": "62",
+  "rotten_tomatoes": "63%"
+}

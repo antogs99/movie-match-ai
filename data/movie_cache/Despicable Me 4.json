@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 519182,
+  "imdb_id": "tt7510222",
+  "title": "Despicable Me 4",
+  "year": "2024",
+  "genres": [
+    "Animation",
+    "Family",
+    "Comedy",
+    "Science Fiction"
+  ],
+  "runtime": 94,
+  "director": "Chris Renaud",
+  "cast": [
+    "Steve Carell",
+    "Kristen Wiig",
+    "Will Ferrell",
+    "Sof\u00eda Vergara",
+    "Miranda Cosgrove"
+  ],
+  "plot": "Gru and Lucy and their girls\u2014Margo, Edith and Agnes\u2014welcome a new member to the Gru family, Gru Jr., who is intent on tormenting his dad. Gru also faces a new nemesis in Maxime Le Mal and his femme fatale girlfriend Valentina, forcing the family to go on the run.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "6.2",
+  "metascore": "52",
+  "rotten_tomatoes": "56%"
+}

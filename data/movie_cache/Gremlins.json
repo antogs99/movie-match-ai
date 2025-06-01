@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 927,
+  "imdb_id": "tt0087363",
+  "title": "Gremlins",
+  "year": "1984",
+  "genres": [
+    "Fantasy",
+    "Horror",
+    "Comedy"
+  ],
+  "runtime": 106,
+  "director": "Joe Dante",
+  "cast": [
+    "Zach Galligan",
+    "Phoebe Cates",
+    "Hoyt Axton",
+    "Frances Lee McCain",
+    "Corey Feldman"
+  ],
+  "plot": "When Billy Peltzer is given a strange but adorable pet named Gizmo for Christmas, he inadvertently breaks the three important rules of caring for a Mogwai, unleashing a horde of mischievous gremlins on a small town.",
+  "streaming_services": [],
+  "imdb_rating": "7.3",
+  "metascore": "70",
+  "rotten_tomatoes": "87%"
+}

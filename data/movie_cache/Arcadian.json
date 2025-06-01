@@ -1,0 +1,35 @@
+{
+  "tmdb_id": 1051896,
+  "imdb_id": "tt22939186",
+  "title": "Arcadian",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Horror",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "runtime": 92,
+  "director": "Benjamin Brewer",
+  "cast": [
+    "Nicolas Cage",
+    "Jaeden Martell",
+    "Maxwell Jenkins",
+    "Sadie Soverall",
+    "Samantha Coughlan"
+  ],
+  "plot": "In the near future, on a decimated Earth, Paul and his twin sons face terror at night when ferocious creatures awaken. When Paul is nearly killed, the boys come up with a plan for survival, using everything their father taught them to keep him alive.",
+  "streaming_services": [
+    "Hulu",
+    "AMC Plus Apple TV Channel ",
+    "AMC+ Amazon Channel",
+    "AMC+",
+    "Philo",
+    "Shudder",
+    "Shudder Amazon Channel",
+    "Shudder Apple TV Channel"
+  ],
+  "imdb_rating": "5.5",
+  "metascore": "57",
+  "rotten_tomatoes": null
+}
