@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 980489,
+  "imdb_id": "tt4495098",
+  "title": "Gran Turismo",
+  "year": "2023",
+  "genres": [
+    "Adventure",
+    "Action",
+    "Drama"
+  ],
+  "runtime": 135,
+  "director": "Neill Blomkamp",
+  "cast": [
+    "Archie Madekwe",
+    "David Harbour",
+    "Orlando Bloom",
+    "Djimon Hounsou",
+    "Darren Barnet"
+  ],
+  "plot": "The ultimate wish-fulfillment tale of a teenage Gran Turismo player whose gaming skills won him a series of Nissan competitions to become an actual professional racecar driver.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "48",
+  "rotten_tomatoes": null
+}

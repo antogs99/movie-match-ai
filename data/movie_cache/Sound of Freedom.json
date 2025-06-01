@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 678512,
+  "imdb_id": "tt7599146",
+  "title": "Sound of Freedom",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Drama"
+  ],
+  "runtime": 131,
+  "director": "Alejandro Monteverde",
+  "cast": [
+    "Jim Caviezel",
+    "Mira Sorvino",
+    "Bill Camp",
+    "Gerardo Taracena",
+    "Kurt Fuller"
+  ],
+  "plot": "The story of Tim Ballard, a former US government agent, who quits his job in order to devote his life to rescuing children from global sex traffickers.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Angel Studios",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.6",
+  "metascore": "36",
+  "rotten_tomatoes": "57%"
+}

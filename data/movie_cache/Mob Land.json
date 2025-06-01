@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 979275,
+  "imdb_id": "tt20424130",
+  "title": "Mob Land",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Crime",
+    "Thriller"
+  ],
+  "runtime": 111,
+  "director": "Nicholas Maggio",
+  "cast": [
+    "John Travolta",
+    "Shiloh Fernandez",
+    "Stephen Dorff",
+    "Ashley Benson",
+    "Kevin Dillon"
+  ],
+  "plot": "A sheriff tries to keep the peace when a desperate family man violently robs a pill mill with his brother-in-law, alerting an enforcer for the New Orleans mafia.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "5.3",
+  "metascore": "47",
+  "rotten_tomatoes": "50%"
+}

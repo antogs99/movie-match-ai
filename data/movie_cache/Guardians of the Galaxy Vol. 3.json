@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 447365,
+  "imdb_id": "tt6791350",
+  "title": "Guardians of the Galaxy Vol. 3",
+  "year": "2023",
+  "genres": [
+    "Science Fiction",
+    "Adventure",
+    "Action",
+    "Comedy"
+  ],
+  "runtime": 150,
+  "director": "James Gunn",
+  "cast": [
+    "Chris Pratt",
+    "Zoe Salda\u00f1a",
+    "Dave Bautista",
+    "Karen Gillan",
+    "Pom Klementieff"
+  ],
+  "plot": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "7.9",
+  "metascore": "64",
+  "rotten_tomatoes": "82%"
+}

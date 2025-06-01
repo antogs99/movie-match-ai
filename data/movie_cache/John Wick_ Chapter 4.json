@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 603692,
+  "imdb_id": "tt10366206",
+  "title": "John Wick: Chapter 4",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Crime"
+  ],
+  "runtime": 170,
+  "director": "Chad Stahelski",
+  "cast": [
+    "Keanu Reeves",
+    "Donnie Yen",
+    "Bill Skarsg\u00e5rd",
+    "Ian McShane",
+    "Laurence Fishburne"
+  ],
+  "plot": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+  "streaming_services": [
+    "Peacock Premium",
+    "Starz Apple TV Channel",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "7.6",
+  "metascore": "78",
+  "rotten_tomatoes": "94%"
+}

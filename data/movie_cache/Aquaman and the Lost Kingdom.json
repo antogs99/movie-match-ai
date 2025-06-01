@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 572802,
+  "imdb_id": "tt9663764",
+  "title": "Aquaman and the Lost Kingdom",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "runtime": 124,
+  "director": "James Wan",
+  "cast": [
+    "Jason Momoa",
+    "Patrick Wilson",
+    "Yahya Abdul-Mateen II",
+    "Randall Park",
+    "Amber Heard"
+  ],
+  "plot": "Black Manta seeks revenge on Aquaman for his father's death. Wielding the Black Trident's power, he becomes a formidable foe. To defend Atlantis, Arthur (Aquaman) forges an alliance with his imprisoned brother. They must protect the kingdom.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "5.6",
+  "metascore": "42",
+  "rotten_tomatoes": "33%"
+}

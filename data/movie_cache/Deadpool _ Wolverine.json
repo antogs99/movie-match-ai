@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 533535,
+  "imdb_id": "tt6263850",
+  "title": "Deadpool & Wolverine",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Comedy",
+    "Science Fiction"
+  ],
+  "runtime": 128,
+  "director": "Shawn Levy",
+  "cast": [
+    "Ryan Reynolds",
+    "Hugh Jackman",
+    "Emma Corrin",
+    "Matthew Macfadyen",
+    "Dafne Keen"
+  ],
+  "plot": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "7.6",
+  "metascore": "56",
+  "rotten_tomatoes": "78%"
+}

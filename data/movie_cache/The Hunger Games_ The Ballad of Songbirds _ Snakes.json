@@ -1,0 +1,31 @@
+{
+  "tmdb_id": 695721,
+  "imdb_id": "tt10545296",
+  "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+  "year": "2023",
+  "genres": [
+    "Drama",
+    "Science Fiction",
+    "Adventure",
+    "Action"
+  ],
+  "runtime": 157,
+  "director": "Francis Lawrence",
+  "cast": [
+    "Tom Blyth",
+    "Rachel Zegler",
+    "Peter Dinklage",
+    "Jason Schwartzman",
+    "Hunter Schafer"
+  ],
+  "plot": "64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12.",
+  "streaming_services": [
+    "Starz Roku Premium Channel",
+    "Starz",
+    "Philo",
+    "Starz Amazon Channel"
+  ],
+  "imdb_rating": "6.7",
+  "metascore": "54",
+  "rotten_tomatoes": "64%"
+}

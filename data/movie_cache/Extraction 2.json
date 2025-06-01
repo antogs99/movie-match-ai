@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 697843,
+  "imdb_id": "tt12263384",
+  "title": "Extraction 2",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Crime"
+  ],
+  "runtime": 122,
+  "director": "Sam Hargrave",
+  "cast": [
+    "Chris Hemsworth",
+    "Golshifteh Farahani",
+    "Adam Bessa",
+    "Tornike Gogrichiani",
+    "Tornike Bziava"
+  ],
+  "plot": "Back from the brink of death, highly skilled commando Tyler Rake takes on another dangerous mission: saving the imprisoned family of a ruthless gangster.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "7.0",
+  "metascore": "57",
+  "rotten_tomatoes": "80%"
+}

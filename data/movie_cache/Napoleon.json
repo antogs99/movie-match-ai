@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 753342,
+  "imdb_id": "tt13287846",
+  "title": "Napoleon",
+  "year": "2023",
+  "genres": [
+    "History",
+    "War",
+    "Romance"
+  ],
+  "runtime": 158,
+  "director": "Ridley Scott",
+  "cast": [
+    "Joaquin Phoenix",
+    "Vanessa Kirby",
+    "Tahar Rahim",
+    "Rupert Everett",
+    "Mark Bonnar"
+  ],
+  "plot": "An epic that details the checkered rise and fall of French Emperor Napoleon Bonaparte and his relentless journey to power through the prism of his addictive, volatile relationship with his wife, Josephine.",
+  "streaming_services": [
+    "Apple TV+",
+    "Apple TV Plus Amazon Channel"
+  ],
+  "imdb_rating": "6.3",
+  "metascore": "64",
+  "rotten_tomatoes": "58%"
+}

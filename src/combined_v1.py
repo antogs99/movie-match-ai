@@ -206,22 +206,26 @@ def recommend_movies_from_prompt(prompt: str):
     filters = extract_filters_from_prompt(prompt)
     print(f"[INFO] Extracted Filters: {filters}")
 
-    # Step 2: Get candidate movies using filters
-    candidates = get_movies_by_filters(filters)
+    # Fallback keyword injection from local keyword list
+    if "with_keywords" not in filters:
+        keyword_path = os.path.abspath(os.path.join(cache_dir, "..", "tmdb_keywords.json"))
+        if os.path.exists(keyword_path):
+            with open(keyword_path) as f:
+                keyword_cache = json.load(f)
+            prompt_words = re.findall(r'\b\w+\b', prompt.lower())
+            matched_keywords = [keyword_cache[word] for word in prompt_words if word in keyword_cache]
+            if matched_keywords:
+                filters["with_keywords"] = ",".join(str(k) for k in matched_keywords)
+                print(f"[INFO] Injected keywords from prompt: {matched_keywords}")
+
+    if not filters.get("with_keywords") and not filters.get("with_genres"):
+        print("[INFO] No strong filters detected — skipping TMDb and going to fallback titles.")
+        candidates = []
+    else:
+        candidates = get_movies_by_filters(filters)
     print(f"[INFO] Fetched {len(candidates)} candidates from TMDb")
 
-    enriched_movies = []
-    for movie in candidates[:30]:
-        title = movie.get("title")
-        data = get_combined_data(title)
-        if data and data.get("title") and data.get("rotten_tomatoes"):
-            enriched_movies.append(data)
-
-    print(f"[INFO] Enriched data for {len(enriched_movies)} movies")
-
-    enriched_movies = [m for m in enriched_movies if m.get("streaming_services")]
-
-    if len(enriched_movies) == 0:
+    if not candidates:
         # fallback logic: ask GPT for top movies to recommend
         fallback_response = openai.chat.completions.create(
             model="gpt-4",
@@ -232,16 +236,27 @@ def recommend_movies_from_prompt(prompt: str):
             temperature=0.7
         )
         fallback_titles = fallback_response.choices[0].message.content.split('\n')
-        enriched_movies = []
+        candidates = []
         for title in fallback_titles:
             title = title.strip("- ").strip()
             if title:
                 print(f"[FALLBACK] Getting info for: {title}")
-                data = get_combined_data(title)
-                if data and data.get("title") and data.get("rotten_tomatoes"):
-                    enriched_movies.append(data)
+                candidates.append({"title": title})
 
-        enriched_movies = [m for m in enriched_movies if m.get("streaming_services")]
+    enriched_movies = []
+    for movie in candidates[:30]:
+        title = movie.get("title")
+        print(f"[ENRICHING] Fetching detailed info for: {title}")
+        data = get_combined_data(title)
+        if data and data.get("title") and data.get("rotten_tomatoes"):
+            enriched_movies.append(data)
+
+    print(f"[INFO] Enriched data for {len(candidates[:30])} movies, usable: {len(enriched_movies)}")
+
+    if not enriched_movies:
+        print("[INFO] No enriched movies with full data — fallback formatting may be GPT-generated.")
+
+    enriched_movies = [m for m in enriched_movies if m.get("streaming_services")]
 
     def sort_key(m):
         def to_float(val):
@@ -265,7 +280,7 @@ def recommend_movies_from_prompt(prompt: str):
     response = openai.chat.completions.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "You are a movie expert recommending great films to users based on their preferences. Pick the best matches from the list, and for each movie, include its Rotten Tomatoes critic score, IMDb rating, and Metascore (if available), where it's available to stream, and a short plot summary."},
+            {"role": "system", "content": "You are a movie expert recommending great films to users based on their preferences. Pick the best matches from the list, even if they are loosely related to the prompt. For each movie, include its Rotten Tomatoes critic score, IMDb rating, and Metascore (if available), where it's available to stream, and a short plot summary."},
             {"role": "user", "content": f"The user prompt was: '{prompt}'\nHere are 20 movie options:\n{json.dumps(top_movies, indent=2)}"}
         ],
         temperature=0.7

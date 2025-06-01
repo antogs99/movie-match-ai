@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 980026,
+  "imdb_id": "tt20561198",
+  "title": "The Promised Land",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Drama",
+    "History"
+  ],
+  "runtime": 127,
+  "director": "Nikolaj Arcel",
+  "cast": [
+    "Mads Mikkelsen",
+    "Amanda Collin",
+    "Simon Bennebjerg",
+    "Kristine Kujath Thorp",
+    "Gustav Lindh"
+  ],
+  "plot": "Denmark, 1755. Captain Ludvig Kahlen sets out to conquer a Danish heath reputed to be uncultivable, with an impossible goal: to establish a colony in the name of the king, in exchange for a royal title. A single-minded ambition that the ruthless lord of the region will relentlessly seek to put down. Kahlen's fate hangs in the balance: will his endevours bring him wealth and honour, or cost him his life...?",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "7.7",
+  "metascore": "77",
+  "rotten_tomatoes": "97%"
+}

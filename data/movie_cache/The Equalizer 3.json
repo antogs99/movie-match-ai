@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 926393,
+  "imdb_id": "tt17024450",
+  "title": "The Equalizer 3",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Crime"
+  ],
+  "runtime": 109,
+  "director": "Antoine Fuqua",
+  "cast": [
+    "Denzel Washington",
+    "Dakota Fanning",
+    "Eugenio Mastrandrea",
+    "David Denman",
+    "Gaia Scodellaro"
+  ],
+  "plot": "Robert McCall finds himself at home in Southern Italy but he discovers his friends are under the control of local crime bosses. As events turn deadly, McCall knows what he has to do: become his friends' protector by taking on the mafia.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "58",
+  "rotten_tomatoes": "76%"
+}

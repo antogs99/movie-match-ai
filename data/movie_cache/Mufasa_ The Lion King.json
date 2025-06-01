@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 762509,
+  "imdb_id": "tt13186482",
+  "title": "Mufasa: The Lion King",
+  "year": "2024",
+  "genres": [
+    "Adventure",
+    "Family",
+    "Animation"
+  ],
+  "runtime": 118,
+  "director": "Barry Jenkins",
+  "cast": [
+    "Aaron Pierre",
+    "Kelvin Harrison, Jr.",
+    "Tiffany Boone",
+    "Kagiso Lediga",
+    "Preston Nyman"
+  ],
+  "plot": "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "56",
+  "rotten_tomatoes": "56%"
+}

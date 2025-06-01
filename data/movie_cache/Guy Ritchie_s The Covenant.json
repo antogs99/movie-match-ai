@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 882569,
+  "imdb_id": "tt4873118",
+  "title": "Guy Ritchie's The Covenant",
+  "year": "2023",
+  "genres": [
+    "War",
+    "Action",
+    "Thriller"
+  ],
+  "runtime": 123,
+  "director": "Guy Ritchie",
+  "cast": [
+    "Jake Gyllenhaal",
+    "Dar Salim",
+    "Sean Sagar",
+    "Jason Wong",
+    "Rhys Yates"
+  ],
+  "plot": "During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of grueling terrain.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.5",
+  "metascore": "63",
+  "rotten_tomatoes": "83%"
+}

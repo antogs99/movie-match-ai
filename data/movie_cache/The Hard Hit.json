@@ -1,0 +1,31 @@
+{
+  "tmdb_id": 1195585,
+  "imdb_id": "tt20419974",
+  "title": "The Hard Hit",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Crime"
+  ],
+  "runtime": 76,
+  "director": "Darien Smith",
+  "cast": [
+    "Brian Ronan Mulroy",
+    "Jamie Ohlsen",
+    "Malachi Durant",
+    "Rob LaColla Jr.",
+    "Trae Ireland"
+  ],
+  "plot": "An Interpol agent hunting the head of a global crime syndicate tracks his target to Las Vegas, but when the criminal organization kills his wife and daughter, he goes above the law to get his revenge.",
+  "streaming_services": [
+    "Starz Apple TV Channel",
+    "Starz Roku Premium Channel",
+    "Starz",
+    "Philo",
+    "Starz Amazon Channel"
+  ],
+  "imdb_rating": "4.9",
+  "metascore": "N/A",
+  "rotten_tomatoes": null
+}

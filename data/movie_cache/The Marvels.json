@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 609681,
+  "imdb_id": "tt10676048",
+  "title": "The Marvels",
+  "year": "2023",
+  "genres": [
+    "Science Fiction",
+    "Adventure",
+    "Action"
+  ],
+  "runtime": 105,
+  "director": "Nia DaCosta",
+  "cast": [
+    "Brie Larson",
+    "Teyonah Parris",
+    "Iman Vellani",
+    "Samuel L. Jackson",
+    "Zawe Ashton"
+  ],
+  "plot": "When her duties send her to an anomalous wormhole linked to a Kree revolutionary, Carol's powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol's estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "5.5",
+  "metascore": "50",
+  "rotten_tomatoes": "62%"
+}
