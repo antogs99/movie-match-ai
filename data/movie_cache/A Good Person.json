@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 800787,
+  "imdb_id": "tt14153080",
+  "title": "A Good Person",
+  "year": "2023",
+  "genres": [
+    "Drama",
+    "Comedy"
+  ],
+  "runtime": 128,
+  "director": "Zach Braff",
+  "cast": [
+    "Florence Pugh",
+    "Morgan Freeman",
+    "Molly Shannon",
+    "Celeste O'Connor",
+    "Zoe Lister-Jones"
+  ],
+  "plot": "Allison's life falls apart following her involvement in a fatal accident. The unlikely relationship she forms with her would-be father-in-law helps her live a life worth living.",
+  "streaming_services": [
+    "MGM Plus Roku Premium Channel",
+    "Philo"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "50",
+  "rotten_tomatoes": "57%"
+}

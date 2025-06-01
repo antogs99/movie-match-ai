@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 180863,
+  "imdb_id": "tt2763304",
+  "title": "T2 Trainspotting",
+  "year": "2017",
+  "genres": [
+    "Drama",
+    "Comedy",
+    "Crime"
+  ],
+  "runtime": 117,
+  "director": "Danny Boyle",
+  "cast": [
+    "Ewan McGregor",
+    "Jonny Lee Miller",
+    "Ewen Bremner",
+    "Robert Carlyle",
+    "Anjela Nedyalkova"
+  ],
+  "plot": "After 20 years abroad, Mark Renton returns to Scotland and reunites with his old friends Sick Boy, Spud and Begbie.",
+  "streaming_services": [],
+  "imdb_rating": "7.1",
+  "metascore": "67",
+  "rotten_tomatoes": "81%"
+}

@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 653364,
+  "imdb_id": "tt8201352",
+  "title": "Elizabeth Is Missing",
+  "year": "2019",
+  "genres": [
+    "Drama",
+    "Mystery",
+    "TV Movie"
+  ],
+  "runtime": 87,
+  "director": "Aisling Walsh",
+  "cast": [
+    "Glenda Jackson",
+    "Maggie Steed",
+    "Sophie Rundle",
+    "Helen Behan",
+    "Liv Hill"
+  ],
+  "plot": "Maud's best friend Elizabeth has disappeared, but as she tries to solve the mystery, dementia threatens to erase all the clues, giving the search a poignant urgency.",
+  "streaming_services": [
+    "PBS Masterpiece Amazon Channel"
+  ],
+  "imdb_rating": "7.4",
+  "metascore": "N/A",
+  "rotten_tomatoes": "93%"
+}

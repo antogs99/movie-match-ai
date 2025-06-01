@@ -76,7 +76,16 @@ def get_movies_by_filters(filters):
     url = "https://api.themoviedb.org/3/discover/movie"
     headers = {"accept": "application/json", "Authorization": f"Bearer {TMDB_BEARER_TOKEN}"}
     movies = []
-    for page in range(1, 4):
+    # Dynamically determine number of pages based on specificity
+    base_pages = 2
+    if filters.get("with_keywords") and filters.get("with_genres") and filters.get("primary_release_year"):
+        base_pages = 5  # very specific prompts
+    elif filters.get("with_keywords") or filters.get("with_genres"):
+        base_pages = 3  # moderately specific
+    else:
+        base_pages = 1  # fallback or vague prompts
+
+    for page in range(1, base_pages + 1):
         params = {"language": "en-US", "page": page, "include_adult": "false", **filters}
         try:
             r = requests.get(url, headers=headers, params=params)

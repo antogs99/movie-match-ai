@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 414906,
+  "imdb_id": "tt1877830",
+  "title": "The Batman",
+  "year": "2022",
+  "genres": [
+    "Crime",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 177,
+  "director": "Matt Reeves",
+  "cast": [
+    "Robert Pattinson",
+    "Zo\u00eb Kravitz",
+    "Jeffrey Wright",
+    "Colin Farrell",
+    "Paul Dano"
+  ],
+  "plot": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "72",
+  "rotten_tomatoes": "85%"
+}

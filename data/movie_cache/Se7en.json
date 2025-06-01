@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 807,
+  "imdb_id": "tt0114369",
+  "title": "Se7en",
+  "year": "1995",
+  "genres": [
+    "Crime",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 127,
+  "director": "David Fincher",
+  "cast": [
+    "Morgan Freeman",
+    "Brad Pitt",
+    "Gwyneth Paltrow",
+    "John Cassini",
+    "Peter Crombie"
+  ],
+  "plot": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Somerset researches each sin in an effort to get inside the killer's mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.",
+  "streaming_services": [],
+  "imdb_rating": "8.6",
+  "metascore": "65",
+  "rotten_tomatoes": "84%"
+}

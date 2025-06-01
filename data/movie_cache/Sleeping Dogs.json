@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 37582,
+  "imdb_id": "tt0076725",
+  "title": "Sleeping Dogs",
+  "year": "1977",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Drama"
+  ],
+  "runtime": 107,
+  "director": "Roger Donaldson",
+  "cast": [
+    "Sam Neill",
+    "Warren Oates",
+    "Ian Mune",
+    "Ian Watkin",
+    "William Johnson"
+  ],
+  "plot": "Recluse Smith is drawn into a revolutionary struggle between guerrillas and right-wingers in New Zealand. Implicated in a murder and framed as a revolutionary conspirator, Smith tries to maintain an attitude of non-violence while caught between warring factions.",
+  "streaming_services": [
+    "ARROW"
+  ],
+  "imdb_rating": "6.3",
+  "metascore": "N/A",
+  "rotten_tomatoes": null
+}

@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 600354,
+  "imdb_id": "tt10272386",
+  "title": "The Father",
+  "year": "2020",
+  "genres": [
+    "Drama"
+  ],
+  "runtime": 97,
+  "director": "Florian Zeller",
+  "cast": [
+    "Anthony Hopkins",
+    "Olivia Colman",
+    "Mark Gatiss",
+    "Olivia Williams",
+    "Imogen Poots"
+  ],
+  "plot": "A man refuses all assistance from his daughter as he ages and, as he tries to make sense of his changing circumstances, he begins to doubt his loved ones, his own mind and even the fabric of his reality.",
+  "streaming_services": [
+    "Starz Apple TV Channel",
+    "Starz Roku Premium Channel",
+    "Starz",
+    "Philo",
+    "Starz Amazon Channel"
+  ],
+  "imdb_rating": "8.2",
+  "metascore": "88",
+  "rotten_tomatoes": "98%"
+}

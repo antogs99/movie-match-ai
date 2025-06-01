@@ -1,0 +1,31 @@
+{
+  "tmdb_id": 198663,
+  "imdb_id": "tt1790864",
+  "title": "The Maze Runner",
+  "year": "2014",
+  "genres": [
+    "Action",
+    "Mystery",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "runtime": 113,
+  "director": "Wes Ball",
+  "cast": [
+    "Dylan O'Brien",
+    "Kaya Scodelario",
+    "Aml Ameen",
+    "Thomas Brodie-Sangster",
+    "Ki Hong Lee"
+  ],
+  "plot": "Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow \u201crunners\u201d for a shot at escape.",
+  "streaming_services": [
+    "MGM+ Amazon Channel",
+    "MGM Plus Roku Premium Channel",
+    "MGM Plus",
+    "Philo"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "57",
+  "rotten_tomatoes": "66%"
+}

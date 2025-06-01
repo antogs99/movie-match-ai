@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 1900,
+  "imdb_id": "tt0181865",
+  "title": "Traffic",
+  "year": "2000",
+  "genres": [
+    "Thriller",
+    "Drama",
+    "Crime"
+  ],
+  "runtime": 147,
+  "director": "Steven Soderbergh",
+  "cast": [
+    "Michael Douglas",
+    "Benicio del Toro",
+    "Catherine Zeta-Jones",
+    "Erika Christensen",
+    "Don Cheadle"
+  ],
+  "plot": "An exploration of the United States of America's war on drugs from multiple perspectives. For the new head of the Office of National Drug Control Policy, the war becomes personal when he discovers his well-educated daughter is abusing cocaine within their comfortable suburban home. In Mexico, a flawed, but noble policeman agrees to testify against a powerful general in league with a cartel, and in San Diego, a drug kingpin's sheltered trophy wife must learn her husband's ruthless business after he is arrested, endangering her luxurious lifestyle.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Starz Apple TV Channel",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.6",
+  "metascore": "86",
+  "rotten_tomatoes": "93%"
+}

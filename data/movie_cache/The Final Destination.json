@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 19912,
+  "imdb_id": "tt1144884",
+  "title": "The Final Destination",
+  "year": "2009",
+  "genres": [
+    "Horror",
+    "Mystery"
+  ],
+  "runtime": 82,
+  "director": "David R. Ellis",
+  "cast": [
+    "Bobby Campo",
+    "Shantel VanSanten",
+    "Nick Zano",
+    "Haley Webb",
+    "Mykelti Williamson"
+  ],
+  "plot": "A horrifying premonition saves a young man and his friends from death during a racetrack accident but terrible fates await them nonetheless.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "5.1",
+  "metascore": "30",
+  "rotten_tomatoes": "28%"
+}

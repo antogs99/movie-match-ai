@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 419430,
+  "imdb_id": "tt5052448",
+  "title": "Get Out",
+  "year": "2017",
+  "genres": [
+    "Mystery",
+    "Thriller",
+    "Horror"
+  ],
+  "runtime": 104,
+  "director": "Jordan Peele",
+  "cast": [
+    "Daniel Kaluuya",
+    "Allison Williams",
+    "Catherine Keener",
+    "Bradley Whitford",
+    "Caleb Landry Jones"
+  ],
+  "plot": "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
+  "streaming_services": [
+    "Peacock Premium",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "85",
+  "rotten_tomatoes": "98%"
+}

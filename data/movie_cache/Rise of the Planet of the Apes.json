@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 61791,
+  "imdb_id": "tt1318514",
+  "title": "Rise of the Planet of the Apes",
+  "year": "2011",
+  "genres": [
+    "Thriller",
+    "Action",
+    "Drama",
+    "Science Fiction"
+  ],
+  "runtime": 105,
+  "director": "Rupert Wyatt",
+  "cast": [
+    "Andy Serkis",
+    "James Franco",
+    "Freida Pinto",
+    "John Lithgow",
+    "Brian Cox"
+  ],
+  "plot": "A highly intelligent chimpanzee named Caesar has been living a peaceful suburban life ever since he was born. But when he gets taken to a cruel primate facility, Caesar decides to revolt against those who have harmed him.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "7.6",
+  "metascore": "68",
+  "rotten_tomatoes": "82%"
+}

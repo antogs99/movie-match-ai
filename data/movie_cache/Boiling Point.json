@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 807196,
+  "imdb_id": "tt11127680",
+  "title": "Boiling Point",
+  "year": "2021",
+  "genres": [
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 95,
+  "director": "Philip Barantini",
+  "cast": [
+    "Stephen Graham",
+    "Vinette Robinson",
+    "Alice May Feetham",
+    "Jason Flemyng",
+    "Hannah Walters"
+  ],
+  "plot": "A head chef balances multiple personal and professional crises at a popular restaurant in London.",
+  "streaming_services": [
+    "Peacock Premium",
+    "Hoopla",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "7.5",
+  "metascore": "73",
+  "rotten_tomatoes": "99%"
+}

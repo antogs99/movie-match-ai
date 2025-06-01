@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 210577,
+  "imdb_id": "tt2267998",
+  "title": "Gone Girl",
+  "year": "2014",
+  "genres": [
+    "Mystery",
+    "Thriller",
+    "Drama"
+  ],
+  "runtime": 149,
+  "director": "David Fincher",
+  "cast": [
+    "Ben Affleck",
+    "Rosamund Pike",
+    "Neil Patrick Harris",
+    "Tyler Perry",
+    "Carrie Coon"
+  ],
+  "plot": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+  "streaming_services": [],
+  "imdb_rating": "8.1",
+  "metascore": "79",
+  "rotten_tomatoes": "88%"
+}
