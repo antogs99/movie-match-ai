@@ -40,6 +40,37 @@ def log_api_call(service):
     with open(path, "w") as f:
         json.dump(log, f, indent=2)
 
+def get_or_fetch_keyword_id(keyword: str):
+    cache_path = os.path.abspath(os.path.join(cache_dir, "..", "tmdb_keywords.json"))
+    if os.path.exists(cache_path):
+        with open(cache_path) as f:
+            keyword_cache = json.load(f)
+    else:
+        keyword_cache = {}
+
+    if keyword in keyword_cache:
+        return keyword_cache[keyword]
+
+    url = "https://api.themoviedb.org/3/search/keyword"
+    headers = {"accept": "application/json", "Authorization": f"Bearer {TMDB_BEARER_TOKEN}"}
+    params = {"query": keyword}
+    try:
+        r = requests.get(url, headers=headers, params=params)
+        log_api_call("tmdb")
+        r.raise_for_status()
+        results = r.json().get("results", [])
+        if not results:
+            print(f"[WARNING] No TMDb keyword found for '{keyword}'")
+            return None
+        keyword_id = results[0]["id"]
+        keyword_cache[keyword] = keyword_id
+        with open(cache_path, "w") as f:
+            json.dump(keyword_cache, f, indent=2)
+        return keyword_id
+    except Exception as e:
+        print(f"[ERROR] Keyword fetch failed for '{keyword}':", e)
+        return None
+
 ######### TMDb MOVIE LIST #########
 def get_movies_by_filters(filters):
     url = "https://api.themoviedb.org/3/discover/movie"
@@ -87,7 +118,14 @@ def extract_filters_from_prompt(prompt: str) -> dict:
     )
     response = completion.choices[0].message.content
     try:
-        return eval(response)
+        filters = eval(response)
+        if "with_keywords" in filters and isinstance(filters["with_keywords"], str):
+            keyword_id = get_or_fetch_keyword_id(filters["with_keywords"])
+            if keyword_id:
+                filters["with_keywords"] = keyword_id
+            else:
+                del filters["with_keywords"]
+        return filters
     except Exception:
         print("Failed to parse GPT response:", response)
         return {}
