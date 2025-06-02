@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 141052,
+  "imdb_id": "tt0974015",
+  "title": "Justice League",
+  "year": "2017",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 120,
+  "director": "Zack Snyder",
+  "cast": [
+    "Ben Affleck",
+    "Henry Cavill",
+    "Amy Adams",
+    "Gal Gadot",
+    "Ezra Miller"
+  ],
+  "plot": "Fuelled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne and Diana Prince assemble a team of metahumans consisting of Barry Allen, Arthur Curry and Victor Stone to face the catastrophic threat of Steppenwolf and the Parademons who are on the hunt for three Mother Boxes on Earth.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "6.1",
+  "metascore": "45",
+  "rotten_tomatoes": "39%"
+}

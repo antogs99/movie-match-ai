@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 634649,
+  "imdb_id": "tt10872600",
+  "title": "Spider-Man: No Way Home",
+  "year": "2021",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 148,
+  "director": "Jon Watts",
+  "cast": [
+    "Tom Holland",
+    "Zendaya",
+    "Benedict Cumberbatch",
+    "Jacob Batalon",
+    "Jon Favreau"
+  ],
+  "plot": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+  "streaming_services": [
+    "Starz Roku Premium Channel",
+    "Philo"
+  ],
+  "imdb_rating": "8.2",
+  "metascore": "71",
+  "rotten_tomatoes": "93%"
+}

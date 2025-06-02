@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 24428,
+  "imdb_id": "tt0848228",
+  "title": "The Avengers",
+  "year": "2012",
+  "genres": [
+    "Science Fiction",
+    "Action",
+    "Adventure"
+  ],
+  "runtime": 143,
+  "director": "Joss Whedon",
+  "cast": [
+    "Robert Downey Jr.",
+    "Chris Evans",
+    "Mark Ruffalo",
+    "Chris Hemsworth",
+    "Scarlett Johansson"
+  ],
+  "plot": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "8.0",
+  "metascore": "69",
+  "rotten_tomatoes": "91%"
+}

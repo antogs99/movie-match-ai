@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 339527,
+  "imdb_id": "tt1291570",
+  "title": "Solace",
+  "year": "2015",
+  "genres": [
+    "Thriller",
+    "Crime",
+    "Mystery"
+  ],
+  "runtime": 101,
+  "director": "Afonso Poyart",
+  "cast": [
+    "Anthony Hopkins",
+    "Jeffrey Dean Morgan",
+    "Abbie Cornish",
+    "Colin Farrell",
+    "Matt Gerald"
+  ],
+  "plot": "A psychic doctor, John Clancy, works with an FBI special agent in search of a serial killer.",
+  "streaming_services": [
+    "fuboTV",
+    "Peacock Premium",
+    "Peacock Premium Plus",
+    "MovieSphere+ Amazon Channel"
+  ],
+  "imdb_rating": "6.4",
+  "metascore": "36",
+  "rotten_tomatoes": "24%"
+}

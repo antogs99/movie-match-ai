@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 300668,
+  "imdb_id": "tt2798920",
+  "title": "Annihilation",
+  "year": "2018",
+  "genres": [
+    "Science Fiction",
+    "Horror"
+  ],
+  "runtime": 115,
+  "director": "Alex Garland",
+  "cast": [
+    "Natalie Portman",
+    "Jennifer Jason Leigh",
+    "Gina Rodriguez",
+    "Tessa Thompson",
+    "Tuva Novotny"
+  ],
+  "plot": "A biologist signs up for a dangerous, secret expedition into a mysterious zone where the laws of nature don't apply.",
+  "streaming_services": [
+    "Paramount Plus",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "79",
+  "rotten_tomatoes": "88%"
+}

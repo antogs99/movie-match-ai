@@ -6,6 +6,8 @@ import requests
 from datetime import datetime
 from dotenv import load_dotenv
 
+today_str = datetime.now().strftime("%B %d, %Y")
+
 """
 from combined_movie_data:
 get_combined_data
@@ -113,7 +115,8 @@ def extract_filters_from_prompt(prompt: str) -> dict:
     system_msg = (
         genre_instructions + "\n\n"
         "Extract a TMDb-compatible movie filter from a user prompt. "
-        "Use keys like with_genres (genre ID), primary_release_year, vote_average.gte. "
+        "Use keys like with_genres (genre ID), primary_release_year, vote_average.gte, and with_keywords. "
+        "If the prompt includes topics like space, war, cancer, love, or loss, consider using with_keywords. "
         "Only output a Python dictionary."
     )
     messages = [
@@ -134,6 +137,28 @@ def extract_filters_from_prompt(prompt: str) -> dict:
                 filters["with_keywords"] = keyword_id
             else:
                 del filters["with_keywords"]
+
+        matched_keywords = []
+        if "with_keywords" not in filters:
+            keyword_path = os.path.abspath(os.path.join(cache_dir, "..", "tmdb_keywords.json"))
+            if os.path.exists(keyword_path):
+                with open(keyword_path) as f:
+                    keyword_cache = json.load(f)
+                print(f"[DEBUG] Loaded {len(keyword_cache)} keywords from local cache.")
+                prompt_lower = prompt.lower()
+                for k, v in keyword_cache.items():
+                    if k.lower() in prompt_lower:
+                        matched_keywords.append((k, v))
+                if matched_keywords:
+                    ids = [str(kw[1]) for kw in matched_keywords]
+                    filters["with_keywords"] = ",".join(ids)
+
+        if matched_keywords:
+            print(f"[INFO] Matched keywords from local cache:")
+            for k, v in matched_keywords:
+                print(f"    - {k} → ID {v}")
+        else:
+            print("[INFO] No keywords matched from local cache.")
         return filters
     except Exception:
         print("Failed to parse GPT response:", response)
@@ -195,14 +220,15 @@ def get_omdb_data(imdb_id):
         return {}
 
 def get_combined_data(title):
-    safe = re.sub(r'[^\w\-_\. ]', '_', title)
-    path = os.path.join(cache_dir, f"{safe}.json")
-    if os.path.exists(path):
-        return json.load(open(path))
     tmdb = get_tmdb_data(title)
     if not tmdb:
         return {"title": title, "note": "TMDb not found"}
-    omdb = get_omdb_data(tmdb.get("imdb_id"))
+    imdb_id = tmdb.get("imdb_id")
+    safe_filename = imdb_id if imdb_id else re.sub(r'[^\w\-_\. ]', '_', title)
+    path = os.path.join(cache_dir, f"{safe_filename}.json")
+    if os.path.exists(path):
+        return json.load(open(path))
+    omdb = get_omdb_data(imdb_id)
     full = {**tmdb, **omdb}
     with open(path, "w") as f:
         json.dump(full, f, indent=2)
@@ -221,32 +247,70 @@ def recommend_movies_from_prompt(prompt: str):
         if os.path.exists(keyword_path):
             with open(keyword_path) as f:
                 keyword_cache = json.load(f)
-            prompt_words = re.findall(r'\b\w+\b', prompt.lower())
-            matched_keywords = [keyword_cache[word] for word in prompt_words if word in keyword_cache]
+            prompt_lower = prompt.lower()
+            matched_keywords = []
+            for k, v in keyword_cache.items():
+                # match whole word or phrase
+                if k.lower() in prompt_lower:
+                    matched_keywords.append((k, v))
             if matched_keywords:
-                filters["with_keywords"] = ",".join(str(k) for k in matched_keywords)
-                print(f"[INFO] Injected keywords from prompt: {matched_keywords}")
+                print(f"[INFO] Keywords matched from local cache: {[kw[0] for kw in matched_keywords]}")
+                ids = [str(kw[1]) for kw in matched_keywords]
+                filters["with_keywords"] = ",".join(ids)
+                print(f"[INFO] Injected keywords from prompt: {[kw[0] for kw in matched_keywords]}")
 
     if not filters.get("with_keywords") and not filters.get("with_genres"):
         print("[INFO] No strong filters detected — skipping TMDb and going to fallback titles.")
         candidates = []
     else:
         candidates = get_movies_by_filters(filters)
-    print(f"[INFO] Fetched {len(candidates)} candidates from TMDb")
+
+        if not candidates:
+            print("[INFO] No TMDb results — attempting to match from local cache...")
+            for fname in os.listdir(cache_dir):
+                if not fname.endswith(".json"):
+                    continue
+                try:
+                    with open(os.path.join(cache_dir, fname)) as f:
+                        data = json.load(f)
+                    title = data.get("title", "").lower()
+                    year = data.get("year")
+                    genres = [g.lower() for g in data.get("genres", [])]
+                    if (
+                        str(filters.get("primary_release_year")) == str(year)
+                        and any(k.lower() in title for k in prompt.split())
+                    ):
+                        candidates.append({"title": data["title"]})
+                except Exception as e:
+                    continue
+            if candidates:
+                print(f"[INFO] Found {len(candidates)} matching locally cached movies.")
 
     if not candidates:
-        # fallback logic: ask GPT for top movies to recommend
+        print("[FALLBACK] No usable candidates found — calling GPT for fallback titles.")
         fallback_response = openai.chat.completions.create(
             model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant that suggests movie titles based on a user prompt."},
-                {"role": "user", "content": f"Suggest 10 movie titles based on this prompt: '{prompt}'."}
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a helpful movie expert. The current date is "
+                        f"{today_str}. Only suggest real, released or officially announced movies as of today. "
+                        "Do not invent or guess titles that might come out in the future."
+                    )
+                },
+                {
+                    "role": "user",
+                    "content": f"Suggest 10 real, existing movie titles based on this prompt: '{prompt}'."
+                }
             ],
             temperature=0.7
         )
         fallback_titles = fallback_response.choices[0].message.content.split('\n')
         candidates = []
         for title in fallback_titles:
+            if not title or len(title.split()) > 10 or "as an ai" in title.lower():
+                continue  # Skip invalid or non-title lines
             title = title.strip("- ").strip()
             if title:
                 print(f"[FALLBACK] Getting info for: {title}")
@@ -260,7 +324,10 @@ def recommend_movies_from_prompt(prompt: str):
         if data and data.get("title") and data.get("rotten_tomatoes"):
             enriched_movies.append(data)
 
-    print(f"[INFO] Enriched data for {len(candidates[:30])} movies, usable: {len(enriched_movies)}")
+    if not enriched_movies and candidates:
+        print("[INFO] Fallback mode — skipping scoring filter. Enriched all fallback titles based on GPT output.")
+    else:
+        print(f"[INFO] Enriched data for {len(candidates[:30])} movies, usable: {len(enriched_movies)}")
 
     if not enriched_movies:
         print("[INFO] No enriched movies with full data — fallback formatting may be GPT-generated.")
@@ -289,7 +356,14 @@ def recommend_movies_from_prompt(prompt: str):
     response = openai.chat.completions.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "You are a movie expert recommending great films to users based on their preferences. Pick the best matches from the list, even if they are loosely related to the prompt. For each movie, include its Rotten Tomatoes critic score, IMDb rating, and Metascore (if available), where it's available to stream, and a short plot summary."},
+            {
+                "role": "system",
+                "content": (
+                    f"You are a movie expert recommending great films based on user preferences. "
+                    f"Today's date is {today_str}. Only use real, released movies. Include RT, IMDb, and Metascore where possible, "
+                    f"plus where to stream and a short plot summary."
+                )
+            },
             {"role": "user", "content": f"The user prompt was: '{prompt}'\nHere are 20 movie options:\n{json.dumps(top_movies, indent=2)}"}
         ],
         temperature=0.7

@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 274870,
+  "imdb_id": "tt1355644",
+  "title": "Passengers",
+  "year": "2016",
+  "genres": [
+    "Drama",
+    "Romance",
+    "Science Fiction"
+  ],
+  "runtime": 116,
+  "director": "Morten Tyldum",
+  "cast": [
+    "Jennifer Lawrence",
+    "Chris Pratt",
+    "Michael Sheen",
+    "Laurence Fishburne",
+    "Andy Garc\u00eda"
+  ],
+  "plot": "A spacecraft traveling to a distant colony planet and transporting thousands of people has a malfunction in its sleep chambers. As a result, two passengers are awakened 90 years early.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "fuboTV",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.0",
+  "metascore": "41",
+  "rotten_tomatoes": "30%"
+}

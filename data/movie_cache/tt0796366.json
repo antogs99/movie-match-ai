@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 13475,
+  "imdb_id": "tt0796366",
+  "title": "Star Trek",
+  "year": "2009",
+  "genres": [
+    "Science Fiction",
+    "Action",
+    "Adventure"
+  ],
+  "runtime": 127,
+  "director": "J.J. Abrams",
+  "cast": [
+    "Chris Pine",
+    "Zachary Quinto",
+    "Leonard Nimoy",
+    "Eric Bana",
+    "Bruce Greenwood"
+  ],
+  "plot": "The fate of the galaxy rests in the hands of bitter rivals. One, James Kirk, is a delinquent, thrill-seeking Iowa farm boy. The other, Spock, a Vulcan, was raised in a logic-based society that rejects all emotion. As fiery instinct clashes with calm reason, their unlikely but powerful partnership is the only thing capable of leading their crew through unimaginable danger, boldly going where no one has gone before. The human adventure has begun again.",
+  "streaming_services": [
+    "Paramount Plus",
+    "Paramount Plus Apple TV Channel ",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel"
+  ],
+  "imdb_rating": "7.9",
+  "metascore": "82",
+  "rotten_tomatoes": "94%"
+}

@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 299536,
+  "imdb_id": "tt4154756",
+  "title": "Avengers: Infinity War",
+  "year": "2018",
+  "genres": [
+    "Adventure",
+    "Action",
+    "Science Fiction"
+  ],
+  "runtime": 149,
+  "director": "Joe Russo",
+  "cast": [
+    "Robert Downey Jr.",
+    "Chris Evans",
+    "Chris Hemsworth",
+    "Josh Brolin",
+    "Mark Ruffalo"
+  ],
+  "plot": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+  "streaming_services": [
+    "Disney Plus",
+    "TNT",
+    "TBS",
+    "tru TV"
+  ],
+  "imdb_rating": "8.4",
+  "metascore": "68",
+  "rotten_tomatoes": "85%"
+}

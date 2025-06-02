@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 1979,
+  "imdb_id": "tt0486576",
+  "title": "Fantastic Four: Rise of the Silver Surfer",
+  "year": "2007",
+  "genres": [
+    "Science Fiction",
+    "Adventure",
+    "Action"
+  ],
+  "runtime": 92,
+  "director": "Tim Story",
+  "cast": [
+    "Ioan Gruffudd",
+    "Jessica Alba",
+    "Chris Evans",
+    "Michael Chiklis",
+    "Julian McMahon"
+  ],
+  "plot": "The Fantastic Four return to the big screen as a new and all powerful enemy threatens the Earth. The seemingly unstoppable 'Silver Surfer', but all is not what it seems and there are old and new enemies that pose a greater threat than the intrepid superheroes realize.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "5.6",
+  "metascore": "45",
+  "rotten_tomatoes": "37%"
+}

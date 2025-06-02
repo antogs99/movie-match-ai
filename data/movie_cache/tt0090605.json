@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 679,
+  "imdb_id": "tt0090605",
+  "title": "Aliens",
+  "year": "1986",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "runtime": 137,
+  "director": "James Cameron",
+  "cast": [
+    "Sigourney Weaver",
+    "Carrie Henn",
+    "Michael Biehn",
+    "Paul Reiser",
+    "Lance Henriksen"
+  ],
+  "plot": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "8.4",
+  "metascore": "84",
+  "rotten_tomatoes": "94%"
+}

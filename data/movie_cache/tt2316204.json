@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 126889,
+  "imdb_id": "tt2316204",
+  "title": "Alien: Covenant",
+  "year": "2017",
+  "genres": [
+    "Science Fiction",
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 122,
+  "director": "Ridley Scott",
+  "cast": [
+    "Michael Fassbender",
+    "Katherine Waterston",
+    "Billy Crudup",
+    "Danny McBride",
+    "Demi\u00e1n Bichir"
+  ],
+  "plot": "The crew of the colony ship Covenant, bound for a remote planet on the far side of the galaxy, discovers what they think is an uncharted paradise but is actually a dark, dangerous world.",
+  "streaming_services": [
+    "Hulu",
+    "fuboTV"
+  ],
+  "imdb_rating": "6.4",
+  "metascore": "65",
+  "rotten_tomatoes": "65%"
+}

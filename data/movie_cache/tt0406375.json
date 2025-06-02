@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 6795,
+  "imdb_id": "tt0406375",
+  "title": "Zathura: A Space Adventure",
+  "year": "2005",
+  "genres": [
+    "Science Fiction",
+    "Adventure",
+    "Family"
+  ],
+  "runtime": 101,
+  "director": "Jon Favreau",
+  "cast": [
+    "Josh Hutcherson",
+    "Jonah Bobo",
+    "Dax Shepard",
+    "Kristen Stewart",
+    "Tim Robbins"
+  ],
+  "plot": "After their father is called into work, two young boys, Walter and Danny, are left in the care of their teenage sister, Lisa, and told they must stay inside. Walter and Danny, who anticipate a boring day, are shocked when they begin playing Zathura, a space-themed board game, which they realize has mystical powers when their house is shot into space. With the help of an astronaut, the boys attempt to return home.",
+  "streaming_services": [
+    "fuboTV",
+    "NBC",
+    "USA Network"
+  ],
+  "imdb_rating": "6.3",
+  "metascore": "67",
+  "rotten_tomatoes": "77%"
+}

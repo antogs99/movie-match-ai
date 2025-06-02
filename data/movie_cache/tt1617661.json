@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 76757,
+  "imdb_id": "tt1617661",
+  "title": "Jupiter Ascending",
+  "year": "2015",
+  "genres": [
+    "Science Fiction",
+    "Fantasy",
+    "Action"
+  ],
+  "runtime": 127,
+  "director": "Lilly Wachowski",
+  "cast": [
+    "Channing Tatum",
+    "Mila Kunis",
+    "Sean Bean",
+    "Eddie Redmayne",
+    "Douglas Booth"
+  ],
+  "plot": "In a universe where human genetic material is the most precious commodity, an impoverished young Earth woman becomes the key to strategic maneuvers and internal strife within a powerful dynasty\u2026",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "5.3",
+  "metascore": "40",
+  "rotten_tomatoes": "28%"
+}

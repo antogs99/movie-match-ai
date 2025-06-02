@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 103392,
+  "imdb_id": "tt8902986",
+  "title": "Ali Baba's Cinema",
+  "year": "2011",
+  "genres": [
+    "Comedy",
+    "Fantasy"
+  ],
+  "runtime": 118,
+  "director": "Ahmed El Gendy",
+  "cast": [
+    "Ahmed Mekky",
+    "Amy Samir Ghanem",
+    "Hesham Ismail",
+    "Lotfy Labib",
+    "Mohamed Shaheen"
+  ],
+  "plot": "Inspired by the 1950s cinema screenings in Cairo's sha'abi quarters, this double feature includes a space odyssey and a farm animal protector.",
+  "streaming_services": [
+    "Shahid VIP"
+  ],
+  "imdb_rating": "4.7",
+  "metascore": "N/A",
+  "rotten_tomatoes": null
+}

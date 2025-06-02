@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 1246,
+  "imdb_id": "tt0479143",
+  "title": "Rocky Balboa",
+  "year": "2006",
+  "genres": [
+    "Drama"
+  ],
+  "runtime": 102,
+  "director": "Sylvester Stallone",
+  "cast": [
+    "Sylvester Stallone",
+    "Burt Young",
+    "Antonio Tarver",
+    "Geraldine Hughes",
+    "Milo Ventimiglia"
+  ],
+  "plot": "His wife is dead and his son hates him, but this old man still has fight in him!  When he loses a highly publicized virtual boxing match to ex-champ Rocky Balboa, reigning heavyweight titleholder Mason Dixon retaliates by challenging Rocky to a nationally televised, 10-round exhibition bout. To the surprise of his son and friends, Rocky agrees to come out of retirement and face an opponent who's faster, stronger, and thirty years his junior.",
+  "streaming_services": [
+    "AMC+ Roku Premium Channel",
+    "AMC+"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "63",
+  "rotten_tomatoes": "78%"
+}

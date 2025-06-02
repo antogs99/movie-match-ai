@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 912649,
+  "imdb_id": "tt16366836",
+  "title": "Venom: The Last Dance",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Science Fiction",
+    "Adventure"
+  ],
+  "runtime": 109,
+  "director": "Kelly Marcel",
+  "cast": [
+    "Tom Hardy",
+    "Chiwetel Ejiofor",
+    "Juno Temple",
+    "Rhys Ifans",
+    "Stephen Graham"
+  ],
+  "plot": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "6.0",
+  "metascore": "41",
+  "rotten_tomatoes": "40%"
+}

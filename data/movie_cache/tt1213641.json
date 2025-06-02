@@ -1,0 +1,24 @@
+{
+  "tmdb_id": 369972,
+  "imdb_id": "tt1213641",
+  "title": "First Man",
+  "year": "2018",
+  "genres": [
+    "History",
+    "Drama"
+  ],
+  "runtime": 141,
+  "director": "Damien Chazelle",
+  "cast": [
+    "Ryan Gosling",
+    "Claire Foy",
+    "Jason Clarke",
+    "Kyle Chandler",
+    "Corey Stoll"
+  ],
+  "plot": "A look at the life of the astronaut, Neil Armstrong, and the legendary space mission that led him to become the first man to walk on the Moon on July 20, 1969.",
+  "streaming_services": [],
+  "imdb_rating": "7.3",
+  "metascore": "84",
+  "rotten_tomatoes": "87%"
+}

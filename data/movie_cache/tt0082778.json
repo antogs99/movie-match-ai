@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 30002,
+  "imdb_id": "tt0082778",
+  "title": "The Munsters' Revenge",
+  "year": "1981",
+  "genres": [
+    "Comedy",
+    "Crime",
+    "Family",
+    "TV Movie",
+    "Horror"
+  ],
+  "runtime": 96,
+  "director": "Don Weis",
+  "cast": [
+    "Fred Gwynne",
+    "Yvonne De Carlo",
+    "Al Lewis",
+    "Jo McDonnell",
+    "K.C. Martel"
+  ],
+  "plot": "The lovable Munster family finds their placid world turned into turmoil by the diabolical Dr. Diablo, the mastermind of an art heist using monster robots, including clones of Herman and Grandpa.",
+  "streaming_services": [],
+  "imdb_rating": "5.9",
+  "metascore": "N/A",
+  "rotten_tomatoes": null
+}

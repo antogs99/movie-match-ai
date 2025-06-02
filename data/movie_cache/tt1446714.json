@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 70981,
+  "imdb_id": "tt1446714",
+  "title": "Prometheus",
+  "year": "2012",
+  "genres": [
+    "Science Fiction",
+    "Adventure",
+    "Mystery"
+  ],
+  "runtime": 124,
+  "director": "Ridley Scott",
+  "cast": [
+    "Noomi Rapace",
+    "Michael Fassbender",
+    "Charlize Theron",
+    "Idris Elba",
+    "Guy Pearce"
+  ],
+  "plot": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to the darkest corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+  "streaming_services": [
+    "Disney Plus",
+    "Hulu"
+  ],
+  "imdb_rating": "7.0",
+  "metascore": "64",
+  "rotten_tomatoes": "73%"
+}

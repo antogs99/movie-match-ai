@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 283995,
+  "imdb_id": "tt3896198",
+  "title": "Guardians of the Galaxy Vol. 2",
+  "year": "2017",
+  "genres": [
+    "Science Fiction",
+    "Adventure",
+    "Action"
+  ],
+  "runtime": 137,
+  "director": "James Gunn",
+  "cast": [
+    "Chris Pratt",
+    "Zoe Salda\u00f1a",
+    "Dave Bautista",
+    "Vin Diesel",
+    "Bradley Cooper"
+  ],
+  "plot": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+  "streaming_services": [
+    "Disney Plus",
+    "TNT",
+    "TBS",
+    "tru TV"
+  ],
+  "imdb_rating": "7.6",
+  "metascore": "67",
+  "rotten_tomatoes": "85%"
+}

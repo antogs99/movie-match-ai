@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 782,
+  "imdb_id": "tt0119177",
+  "title": "Gattaca",
+  "year": "1997",
+  "genres": [
+    "Thriller",
+    "Science Fiction",
+    "Mystery",
+    "Romance"
+  ],
+  "runtime": 106,
+  "director": "Andrew Niccol",
+  "cast": [
+    "Ethan Hawke",
+    "Uma Thurman",
+    "Jude Law",
+    "Alan Arkin",
+    "Loren Dean"
+  ],
+  "plot": "Vincent is an all-too-human man who dares to defy a system obsessed with genetic perfection. He is an \"In-Valid\" who assumes the identity of a member of the genetic elite to pursue his goal of traveling into space with the Gattaca Aerospace Corporation.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.7",
+  "metascore": "64",
+  "rotten_tomatoes": "82%"
+}

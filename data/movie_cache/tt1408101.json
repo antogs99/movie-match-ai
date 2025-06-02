@@ -1,0 +1,31 @@
+{
+  "tmdb_id": 54138,
+  "imdb_id": "tt1408101",
+  "title": "Star Trek Into Darkness",
+  "year": "2013",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 132,
+  "director": "J.J. Abrams",
+  "cast": [
+    "Chris Pine",
+    "Zachary Quinto",
+    "Zoe Salda\u00f1a",
+    "Benedict Cumberbatch",
+    "Karl Urban"
+  ],
+  "plot": "When the crew of the Enterprise is called back home, they find an unstoppable force of terror from within their own organization has detonated the fleet and everything it stands for, leaving our world in a state of crisis.  With a personal score to settle, Captain Kirk leads a manhunt to a war-zone world to capture a one man weapon of mass destruction. As our heroes are propelled into an epic chess game of life and death, love will be challenged, friendships will be torn apart, and sacrifices must be made for the only family Kirk has left: his crew.",
+  "streaming_services": [
+    "Paramount Plus",
+    "Paramount Plus Apple TV Channel ",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel",
+    "Paramount+ Originals Amazon Channel"
+  ],
+  "imdb_rating": "7.7",
+  "metascore": "72",
+  "rotten_tomatoes": "84%"
+}

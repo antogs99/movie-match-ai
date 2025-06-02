@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 274855,
+  "imdb_id": "tt1981128",
+  "title": "Geostorm",
+  "year": "2017",
+  "genres": [
+    "Action",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "runtime": 109,
+  "director": "Dean Devlin",
+  "cast": [
+    "Gerard Butler",
+    "Alexandra Maria Lara",
+    "Jim Sturgess",
+    "Abbie Cornish",
+    "Ed Harris"
+  ],
+  "plot": "After an unprecedented series of natural disasters threatened the planet, the world's leaders came together to create an intricate network of satellites to control the global climate and keep everyone safe. But now, something has gone wrong: the system built to protect Earth is attacking it, and it becomes a race against the clock to uncover the real threat before a worldwide geostorm wipes out everything and everyone along with it.",
+  "streaming_services": [
+    "Netflix",
+    "USA Network",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "5.3",
+  "metascore": "21",
+  "rotten_tomatoes": "18%"
+}

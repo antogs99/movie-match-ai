@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 557,
+  "imdb_id": "tt0145487",
+  "title": "Spider-Man",
+  "year": "2002",
+  "genres": [
+    "Action",
+    "Science Fiction"
+  ],
+  "runtime": 121,
+  "director": "Sam Raimi",
+  "cast": [
+    "Tobey Maguire",
+    "Willem Dafoe",
+    "Kirsten Dunst",
+    "James Franco",
+    "Cliff Robertson"
+  ],
+  "plot": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+  "streaming_services": [
+    "Disney Plus",
+    "fuboTV"
+  ],
+  "imdb_rating": "7.4",
+  "metascore": "73",
+  "rotten_tomatoes": "90%"
+}

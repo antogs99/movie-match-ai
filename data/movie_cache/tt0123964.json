@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 6522,
+  "imdb_id": "tt0123964",
+  "title": "Life",
+  "year": "1999",
+  "genres": [
+    "Comedy",
+    "Crime"
+  ],
+  "runtime": 108,
+  "director": "Ted Demme",
+  "cast": [
+    "Eddie Murphy",
+    "Martin Lawrence",
+    "Obba Babatund\u00e9",
+    "Nick Cassavetes",
+    "Bernie Mac"
+  ],
+  "plot": "Two men in 1930s Mississippi become friends after being sentenced to life in prison together for a crime they did not commit.",
+  "streaming_services": [
+    "Starz Apple TV Channel",
+    "Starz Roku Premium Channel",
+    "Starz",
+    "Philo",
+    "Starz Amazon Channel"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "63",
+  "rotten_tomatoes": "52%"
+}

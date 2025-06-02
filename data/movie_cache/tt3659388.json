@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 286217,
+  "imdb_id": "tt3659388",
+  "title": "The Martian",
+  "year": "2015",
+  "genres": [
+    "Drama",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 141,
+  "director": "Ridley Scott",
+  "cast": [
+    "Matt Damon",
+    "Jessica Chastain",
+    "Kristen Wiig",
+    "Jeff Daniels",
+    "Michael Pe\u00f1a"
+  ],
+  "plot": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and spirit to subsist and find a way to signal to Earth that he is alive.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel",
+    "Cinemax Amazon Channel",
+    "Cinemax Apple TV Channel"
+  ],
+  "imdb_rating": "8.0",
+  "metascore": "80",
+  "rotten_tomatoes": "91%"
+}

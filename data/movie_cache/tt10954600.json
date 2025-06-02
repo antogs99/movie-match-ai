@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 640146,
+  "imdb_id": "tt10954600",
+  "title": "Ant-Man and the Wasp: Quantumania",
+  "year": "2023",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 125,
+  "director": "Peyton Reed",
+  "cast": [
+    "Paul Rudd",
+    "Evangeline Lilly",
+    "Michael Douglas",
+    "Michelle Pfeiffer",
+    "Jonathan Majors"
+  ],
+  "plot": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "6.0",
+  "metascore": "48",
+  "rotten_tomatoes": "46%"
+}

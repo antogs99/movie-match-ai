@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 49047,
+  "imdb_id": "tt1454468",
+  "title": "Gravity",
+  "year": "2013",
+  "genres": [
+    "Science Fiction",
+    "Thriller",
+    "Drama"
+  ],
+  "runtime": 91,
+  "director": "Alfonso Cuar\u00f3n",
+  "cast": [
+    "Sandra Bullock",
+    "George Clooney",
+    "Ed Harris",
+    "Orto Ignatiussen",
+    "Phaldut Sharma"
+  ],
+  "plot": "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes. The Shuttle is destroyed, leaving Stone and Kowalsky completely alone-tethered to nothing but each other and spiraling out into the blackness of space. The deafening silence tells them they have lost any link to Earth and any chance for rescue. As fear turns to panic, every gulp of air eats away at what little oxygen is left. But the only way home may be to go further out into the terrifying expanse of space.",
+  "streaming_services": [],
+  "imdb_rating": "7.7",
+  "metascore": "96",
+  "rotten_tomatoes": "96%"
+}

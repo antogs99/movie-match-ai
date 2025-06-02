@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 614911,
+  "imdb_id": "tt10539608",
+  "title": "The Midnight Sky",
+  "year": "2020",
+  "genres": [
+    "Science Fiction",
+    "Drama"
+  ],
+  "runtime": 118,
+  "director": "George Clooney",
+  "cast": [
+    "George Clooney",
+    "Felicity Jones",
+    "David Oyelowo",
+    "Caoilinn Springall",
+    "Kyle Chandler"
+  ],
+  "plot": "A lone scientist in the Arctic races to contact a crew of astronauts returning home to a mysterious global catastrophe.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "5.7",
+  "metascore": "58",
+  "rotten_tomatoes": "50%"
+}

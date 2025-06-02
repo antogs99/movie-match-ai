@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 299537,
+  "imdb_id": "tt4154664",
+  "title": "Captain Marvel",
+  "year": "2019",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 124,
+  "director": "Ryan Fleck",
+  "cast": [
+    "Brie Larson",
+    "Samuel L. Jackson",
+    "Ben Mendelsohn",
+    "Jude Law",
+    "Annette Bening"
+  ],
+  "plot": "The story follows Carol Danvers as she becomes one of the universe\u2019s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "64",
+  "rotten_tomatoes": "79%"
+}

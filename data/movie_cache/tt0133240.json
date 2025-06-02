@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 9016,
+  "imdb_id": "tt0133240",
+  "title": "Treasure Planet",
+  "year": "2002",
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Family",
+    "Fantasy",
+    "Science Fiction"
+  ],
+  "runtime": 95,
+  "director": "John Musker",
+  "cast": [
+    "Joseph Gordon-Levitt",
+    "Brian Murray",
+    "Emma Thompson",
+    "David Hyde Pierce",
+    "Martin Short"
+  ],
+  "plot": "When space galleon cabin boy Jim Hawkins discovers a map to an intergalactic \"loot of a thousand worlds,\" a cyborg cook named John Silver teaches him to battle supernovas and space storms on their journey to find treasure.",
+  "streaming_services": [
+    "Disney Plus"
+  ],
+  "imdb_rating": "7.2",
+  "metascore": "60",
+  "rotten_tomatoes": "69%"
+}

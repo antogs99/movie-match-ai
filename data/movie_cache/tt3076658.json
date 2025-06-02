@@ -1,0 +1,32 @@
+{
+  "tmdb_id": 312221,
+  "imdb_id": "tt3076658",
+  "title": "Creed",
+  "year": "2015",
+  "genres": [
+    "Action",
+    "Drama"
+  ],
+  "runtime": 133,
+  "director": "Ryan Coogler",
+  "cast": [
+    "Michael B. Jordan",
+    "Sylvester Stallone",
+    "Tessa Thompson",
+    "Phylicia Rash\u0101d",
+    "Andre Ward"
+  ],
+  "plot": "The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "fuboTV",
+    "MGM+ Amazon Channel",
+    "MGM Plus Roku Premium Channel",
+    "MGM Plus",
+    "Philo",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.6",
+  "metascore": "82",
+  "rotten_tomatoes": "95%"
+}
