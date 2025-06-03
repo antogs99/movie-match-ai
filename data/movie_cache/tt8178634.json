@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 579974,
+  "imdb_id": "tt8178634",
+  "title": "RRR",
+  "year": "2022",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Drama"
+  ],
+  "runtime": 185,
+  "director": "S. S. Rajamouli",
+  "cast": [
+    "N.T. Rama Rao Jr.",
+    "Ram Charan",
+    "Olivia Morris",
+    "Ray Stevenson",
+    "Alison Doody"
+  ],
+  "plot": "A fictional history of two legendary revolutionaries' journey away from home before they began fighting for their country in the 1920s.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "83",
+  "rotten_tomatoes": "96%"
+}

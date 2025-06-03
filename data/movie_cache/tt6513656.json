@@ -1,0 +1,32 @@
+{
+  "tmdb_id": 440471,
+  "imdb_id": "tt6513656",
+  "title": "Escape Plan 2: Hades",
+  "year": "2018",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Crime",
+    "Mystery",
+    "Science Fiction"
+  ],
+  "runtime": 93,
+  "director": "Steven C. Miller",
+  "cast": [
+    "Sylvester Stallone",
+    "Dave Bautista",
+    "Jesse Metcalfe",
+    "50 Cent",
+    "Huang Xiaoming"
+  ],
+  "plot": "Ray Breslin manages an elite team of security specialists trained in the art of breaking people out of the world's most impenetrable prisons. When his most trusted operative, Shu Ren, is kidnapped and disappears inside the most elaborate prison ever built, Ray must track him down with the help of some of his former friends.",
+  "streaming_services": [
+    "AMC+ Amazon Channel",
+    "AMC+ Roku Premium Channel",
+    "Philo",
+    "USA Network"
+  ],
+  "imdb_rating": "3.9",
+  "metascore": "N/A",
+  "rotten_tomatoes": "7%"
+}

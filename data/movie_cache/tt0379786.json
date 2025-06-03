@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 16320,
+  "imdb_id": "tt0379786",
+  "title": "Serenity",
+  "year": "2005",
+  "genres": [
+    "Science Fiction",
+    "Action",
+    "Adventure",
+    "Thriller"
+  ],
+  "runtime": 119,
+  "director": "Joss Whedon",
+  "cast": [
+    "Nathan Fillion",
+    "Summer Glau",
+    "Gina Torres",
+    "Alan Tudyk",
+    "Morena Baccarin"
+  ],
+  "plot": "When the renegade crew of Serenity agrees to hide a fugitive on their ship, they find themselves in an action-packed battle between the relentless military might of a totalitarian regime who will destroy anything \u2013 or anyone \u2013 to get the girl back and the bloodthirsty creatures who roam the uncharted areas of space. But... the greatest danger of all may be on their ship.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "74",
+  "rotten_tomatoes": "82%"
+}

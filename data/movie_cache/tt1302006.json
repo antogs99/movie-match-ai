@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 398978,
+  "imdb_id": "tt1302006",
+  "title": "The Irishman",
+  "year": "2019",
+  "genres": [
+    "Crime",
+    "Drama",
+    "History"
+  ],
+  "runtime": 209,
+  "director": "Martin Scorsese",
+  "cast": [
+    "Robert De Niro",
+    "Al Pacino",
+    "Joe Pesci",
+    "Harvey Keitel",
+    "Ray Romano"
+  ],
+  "plot": "Pennsylvania, 1956. Frank Sheeran, a war veteran of Irish origin who works as a truck driver, accidentally meets mobster Russell Bufalino. Once Frank becomes his trusted man, Bufalino sends him to Chicago with the task of helping Jimmy Hoffa, a powerful union leader related to organized crime, with whom Frank will maintain a close friendship for nearly twenty years.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "94",
+  "rotten_tomatoes": "95%"
+}

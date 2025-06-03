@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 91586,
+  "imdb_id": "tt2226417",
+  "title": "Insidious: Chapter 2",
+  "year": "2013",
+  "genres": [
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 106,
+  "director": "James Wan",
+  "cast": [
+    "Patrick Wilson",
+    "Rose Byrne",
+    "Lin Shaye",
+    "Ty Simpkins",
+    "Barbara Hershey"
+  ],
+  "plot": "The haunted Lambert family seeks to uncover the mysterious childhood secret that has left them dangerously connected to the spirit world.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "40",
+  "rotten_tomatoes": "38%"
+}

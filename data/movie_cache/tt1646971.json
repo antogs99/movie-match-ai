@@ -1,0 +1,31 @@
+{
+  "tmdb_id": 82702,
+  "imdb_id": "tt1646971",
+  "title": "How to Train Your Dragon 2",
+  "year": "2014",
+  "genres": [
+    "Fantasy",
+    "Action",
+    "Adventure",
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "runtime": 102,
+  "director": "Dean DeBlois",
+  "cast": [
+    "Jay Baruchel",
+    "Cate Blanchett",
+    "Gerard Butler",
+    "Craig Ferguson",
+    "America Ferrera"
+  ],
+  "plot": "Five years have passed since Hiccup and Toothless united the dragons and Vikings of Berk. Now, they spend their time charting unmapped territories. During one of their adventures, the pair discover a secret cave that houses hundreds of wild dragons -- and a mysterious dragon rider. Hiccup and Toothless find themselves at the center of a battle to protect Berk from a power-hungry warrior.",
+  "streaming_services": [
+    "Peacock Premium",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "77",
+  "rotten_tomatoes": "92%"
+}

@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 11884,
+  "imdb_id": "tt0087597",
+  "title": "The Last Starfighter",
+  "year": "1984",
+  "genres": [
+    "Adventure",
+    "Science Fiction",
+    "Action"
+  ],
+  "runtime": 101,
+  "director": "Nick Castle",
+  "cast": [
+    "Lance Guest",
+    "Robert Preston",
+    "Chris Hebert",
+    "Kay E. Kuter",
+    "Dan Mason"
+  ],
+  "plot": "Video game expert Alex Rogan finds himself transported to another planet after conquering the video game The Last Starfighter, only to find out it was just a test. He was recruited to join the team of best Starfighters to defend their world from the attack.",
+  "streaming_services": [],
+  "imdb_rating": "6.7",
+  "metascore": "67",
+  "rotten_tomatoes": "76%"
+}

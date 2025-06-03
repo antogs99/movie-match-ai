@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 605,
+  "imdb_id": "tt0242653",
+  "title": "The Matrix Revolutions",
+  "year": "2003",
+  "genres": [
+    "Adventure",
+    "Action",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "runtime": 129,
+  "director": "Lana Wachowski",
+  "cast": [
+    "Keanu Reeves",
+    "Laurence Fishburne",
+    "Carrie-Anne Moss",
+    "Hugo Weaving",
+    "Jada Pinkett Smith"
+  ],
+  "plot": "The human city of Zion defends itself against the massive invasion of the machines as Neo fights to end the war at another front while also opposing the rogue Agent Smith.",
+  "streaming_services": [
+    "Peacock Premium",
+    "NBC",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "6.7",
+  "metascore": "47",
+  "rotten_tomatoes": "33%"
+}

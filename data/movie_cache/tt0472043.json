@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 1579,
+  "imdb_id": "tt0472043",
+  "title": "Apocalypto",
+  "year": "2006",
+  "genres": [
+    "Action",
+    "Drama",
+    "History"
+  ],
+  "runtime": 139,
+  "director": "Mel Gibson",
+  "cast": [
+    "Rudy Youngblood",
+    "Raoul Max Trujillo",
+    "Gerardo Taracena",
+    "Iazua Larios",
+    "Antonio Monroy"
+  ],
+  "plot": "Set in the Mayan civilization, when a man's idyllic presence is brutally disrupted by a violent invading force, he is taken on a perilous journey to a world ruled by fear and oppression where a harrowing end awaits him. Through a twist of fate and spurred by the power of his love for his woman and his family he will make a desperate break to return home and to ultimately save his way of life.",
+  "streaming_services": [
+    "Hulu",
+    "Peacock Premium",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "7.8",
+  "metascore": "68",
+  "rotten_tomatoes": "65%"
+}

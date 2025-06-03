@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 770,
+  "imdb_id": "tt0031381",
+  "title": "Gone with the Wind",
+  "year": "1939",
+  "genres": [
+    "Drama",
+    "War",
+    "Romance"
+  ],
+  "runtime": 233,
+  "director": "Victor Fleming",
+  "cast": [
+    "Vivien Leigh",
+    "Clark Gable",
+    "Olivia de Havilland",
+    "Leslie Howard",
+    "Hattie McDaniel"
+  ],
+  "plot": "The spoiled daughter of a Georgia plantation owner conducts a tumultuous romance with a cynical profiteer during the American Civil War and Reconstruction Era.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "8.2",
+  "metascore": "97",
+  "rotten_tomatoes": "90%"
+}

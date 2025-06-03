@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 502,
+  "imdb_id": "tt0058083",
+  "title": "Fail Safe",
+  "year": "1964",
+  "genres": [
+    "Thriller",
+    "Drama",
+    "War"
+  ],
+  "runtime": 112,
+  "director": "Sidney Lumet",
+  "cast": [
+    "Henry Fonda",
+    "Walter Matthau",
+    "Fritz Weaver",
+    "Larry Hagman",
+    "Frank Overton"
+  ],
+  "plot": "Because of a technical defect an American bomber team mistakenly orders the destruction of Moscow. The President of the United States has but little time to prevent an atomic catastrophe from occurring.",
+  "streaming_services": [],
+  "imdb_rating": "8.0",
+  "metascore": "75",
+  "rotten_tomatoes": "93%"
+}

@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 353081,
+  "imdb_id": "tt4912910",
+  "title": "Mission: Impossible - Fallout",
+  "year": "2018",
+  "genres": [
+    "Action",
+    "Adventure"
+  ],
+  "runtime": 147,
+  "director": "Christopher McQuarrie",
+  "cast": [
+    "Tom Cruise",
+    "Henry Cavill",
+    "Ving Rhames",
+    "Simon Pegg",
+    "Rebecca Ferguson"
+  ],
+  "plot": "When an IMF mission ends badly, the world is faced with dire consequences. As Ethan Hunt takes it upon himself to fulfill his original briefing, the CIA begin to question his loyalty and his motives. The IMF team find themselves in a race against time, hunted by assassins while trying to prevent a global catastrophe.",
+  "streaming_services": [
+    "Paramount Plus",
+    "Paramount Plus Apple TV Channel ",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel"
+  ],
+  "imdb_rating": "7.7",
+  "metascore": "87",
+  "rotten_tomatoes": "98%"
+}

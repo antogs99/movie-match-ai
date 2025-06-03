@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 558915,
+  "imdb_id": "tt1200263",
+  "title": "The Color Purple",
+  "year": "2023",
+  "genres": [
+    "Drama"
+  ],
+  "runtime": 141,
+  "director": "Blitz Bazawule",
+  "cast": [
+    "Fantasia Barrino",
+    "Taraji P. Henson",
+    "Danielle Brooks",
+    "Colman Domingo",
+    "Corey Hawkins"
+  ],
+  "plot": "A decades-spanning tale of love and resilience and of one woman's journey to independence. Celie faces many hardships in her life, but ultimately finds extraordinary strength and hope in the unbreakable bonds of sisterhood.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel",
+    "Cinemax Amazon Channel",
+    "Cinemax Apple TV Channel"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "72",
+  "rotten_tomatoes": "81%"
+}

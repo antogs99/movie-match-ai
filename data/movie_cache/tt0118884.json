@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 686,
+  "imdb_id": "tt0118884",
+  "title": "Contact",
+  "year": "1997",
+  "genres": [
+    "Drama",
+    "Science Fiction",
+    "Mystery"
+  ],
+  "runtime": 150,
+  "director": "Robert Zemeckis",
+  "cast": [
+    "Jodie Foster",
+    "Matthew McConaughey",
+    "James Woods",
+    "John Hurt",
+    "Tom Skerritt"
+  ],
+  "plot": "A radio astronomer receives the first extraterrestrial radio signal ever picked up on Earth. As the world powers scramble to decipher the message and decide upon a course of action, she must make some difficult decisions between her beliefs, the truth, and reality.",
+  "streaming_services": [],
+  "imdb_rating": "7.5",
+  "metascore": "62",
+  "rotten_tomatoes": "68%"
+}

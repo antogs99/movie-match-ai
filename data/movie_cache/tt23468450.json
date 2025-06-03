@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 1226578,
+  "imdb_id": "tt23468450",
+  "title": "Longlegs",
+  "year": "2024",
+  "genres": [
+    "Crime",
+    "Horror",
+    "Thriller"
+  ],
+  "runtime": 101,
+  "director": "Osgood Perkins",
+  "cast": [
+    "Maika Monroe",
+    "Nicolas Cage",
+    "Blair Underwood",
+    "Alicia Witt",
+    "Michelle Choi-Lee"
+  ],
+  "plot": "FBI Agent Lee Harker is a gifted new recruit assigned to the unsolved case of an elusive serial killer. As the case takes complex turns, unearthing evidence of the occult, Harker discovers a personal connection to the merciless killer and must race against time to stop him before he claims the lives of another innocent family.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "6.6",
+  "metascore": "77",
+  "rotten_tomatoes": "86%"
+}

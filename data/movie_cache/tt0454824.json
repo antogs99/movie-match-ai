@@ -1,0 +1,32 @@
+{
+  "tmdb_id": 9664,
+  "imdb_id": "tt0454824",
+  "title": "Flyboys",
+  "year": "2006",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Drama",
+    "History",
+    "Romance",
+    "War"
+  ],
+  "runtime": 138,
+  "director": "Tony Bill",
+  "cast": [
+    "James Franco",
+    "David Ellison",
+    "Jean Reno",
+    "Philip Winchester",
+    "Todd Boyce"
+  ],
+  "plot": "The adventures of the Lafayette Escadrille, young Americans who volunteered for the French military before the U.S. entered World War I, and became the country's first fighter pilots.",
+  "streaming_services": [
+    "fuboTV",
+    "Peacock Premium",
+    "Peacock Premium Plus"
+  ],
+  "imdb_rating": "6.5",
+  "metascore": "47",
+  "rotten_tomatoes": "34%"
+}

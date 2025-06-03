@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 240832,
+  "imdb_id": "tt2872732",
+  "title": "Lucy",
+  "year": "2014",
+  "genres": [
+    "Action",
+    "Science Fiction"
+  ],
+  "runtime": 89,
+  "director": "Luc Besson",
+  "cast": [
+    "Scarlett Johansson",
+    "Morgan Freeman",
+    "Choi Min-sik",
+    "Amr Waked",
+    "Julian Rhind-Tutt"
+  ],
+  "plot": "A woman, accidentally caught in a dark deal, turns the tables on her captors and transforms into a merciless warrior evolved beyond human logic.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "6.4",
+  "metascore": "62",
+  "rotten_tomatoes": "67%"
+}

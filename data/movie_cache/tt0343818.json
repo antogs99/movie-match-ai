@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 2048,
+  "imdb_id": "tt0343818",
+  "title": "I, Robot",
+  "year": "2004",
+  "genres": [
+    "Action",
+    "Science Fiction"
+  ],
+  "runtime": 115,
+  "director": "Alex Proyas",
+  "cast": [
+    "Will Smith",
+    "Alan Tudyk",
+    "Bridget Moynahan",
+    "James Cromwell",
+    "Bruce Greenwood"
+  ],
+  "plot": "In 2035, where robots are commonplace and abide by the three laws of robotics, a technophobic cop investigates an apparent suicide. Suspecting that a robot may be responsible for the death, his investigation leads him to believe that humanity may be in danger.",
+  "streaming_services": [
+    "Hulu",
+    "TNT",
+    "TBS",
+    "tru TV"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "59",
+  "rotten_tomatoes": null
+}

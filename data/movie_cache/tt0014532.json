@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 24805,
+  "imdb_id": "tt0014532",
+  "title": "The Ten Commandments",
+  "year": "1923",
+  "genres": [
+    "Drama",
+    "Fantasy"
+  ],
+  "runtime": 136,
+  "director": "Cecil B. DeMille",
+  "cast": [
+    "Theodore Roberts",
+    "Charles De Rochefort",
+    "Estelle Taylor",
+    "Julia Faye",
+    "Pat Moore"
+  ],
+  "plot": "The first part tells the story of Moses leading the Jews from Egypt to the Promised Land, his receipt of the tablets and the worship of the golden calf. The second part shows the efficacy of the commandments in modern life through a story set in San Francisco. Two brothers, rivals for the love of Mary, also come into conflict when John discovers Dan used shoddy materials to construct a cathedral.",
+  "streaming_services": [
+    "Eternal Family"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "N/A",
+  "rotten_tomatoes": "86%"
+}

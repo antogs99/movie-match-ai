@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 660,
+  "imdb_id": "tt0059800",
+  "title": "Thunderball",
+  "year": "1965",
+  "genres": [
+    "Adventure",
+    "Action",
+    "Thriller"
+  ],
+  "runtime": 130,
+  "director": "Terence Young",
+  "cast": [
+    "Sean Connery",
+    "Claudine Auger",
+    "Adolfo Celi",
+    "Luciana Paluzzi",
+    "Rik Van Nutter"
+  ],
+  "plot": "A criminal organization has obtained two nuclear bombs and are asking for a 100 million pound ransom in the form of diamonds in seven days or they will use the weapons. The secret service sends James Bond to the Bahamas to once again save the world.",
+  "streaming_services": [],
+  "imdb_rating": "6.9",
+  "metascore": "64",
+  "rotten_tomatoes": "85%"
+}

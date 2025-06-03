@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 310,
+  "imdb_id": "tt0315327",
+  "title": "Bruce Almighty",
+  "year": "2003",
+  "genres": [
+    "Fantasy",
+    "Comedy"
+  ],
+  "runtime": 101,
+  "director": "Tom Shadyac",
+  "cast": [
+    "Jim Carrey",
+    "Morgan Freeman",
+    "Jennifer Aniston",
+    "Philip Baker Hall",
+    "Catherine Bell"
+  ],
+  "plot": "Bruce Nolan toils as a \"human interest\" television reporter in Buffalo, NY, but despite his high ratings and the love of his beautiful girlfriend, Bruce remains unfulfilled. At the end of the worst day in his life, he angrily ridicules God \u2014 and the Almighty responds, endowing Bruce with all of His divine powers.",
+  "streaming_services": [
+    "Starz Roku Premium Channel",
+    "Starz",
+    "Philo",
+    "Starz Amazon Channel"
+  ],
+  "imdb_rating": "6.8",
+  "metascore": "46",
+  "rotten_tomatoes": "48%"
+}

@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 17610,
+  "imdb_id": "tt1045778",
+  "title": "Year One",
+  "year": "2009",
+  "genres": [
+    "Comedy",
+    "Adventure"
+  ],
+  "runtime": 97,
+  "director": "Harold Ramis",
+  "cast": [
+    "Jack Black",
+    "Michael Cera",
+    "Oliver Platt",
+    "David Cross",
+    "Christopher Mintz-Plasse"
+  ],
+  "plot": "When a couple of lazy hunter-gatherers are banished from their primitive village, they set off on an epic journey through the ancient world.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "4.9",
+  "metascore": "34",
+  "rotten_tomatoes": "14%"
+}

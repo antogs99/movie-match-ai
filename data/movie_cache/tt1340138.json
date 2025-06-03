@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 87101,
+  "imdb_id": "tt1340138",
+  "title": "Terminator Genisys",
+  "year": "2015",
+  "genres": [
+    "Science Fiction",
+    "Action",
+    "Thriller",
+    "Adventure"
+  ],
+  "runtime": 126,
+  "director": "Alan Taylor",
+  "cast": [
+    "Emilia Clarke",
+    "Jai Courtney",
+    "Arnold Schwarzenegger",
+    "Jason Clarke",
+    "Matt Smith"
+  ],
+  "plot": "The year is 2029. John Connor, leader of the resistance continues the war against the machines. At the Los Angeles offensive, John's fears of the unknown future begin to emerge when TECOM spies reveal a new plot by SkyNet that will attack him from both fronts; past and future, and will ultimately change warfare forever.",
+  "streaming_services": [
+    "Paramount Plus",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel"
+  ],
+  "imdb_rating": "6.3",
+  "metascore": "38",
+  "rotten_tomatoes": "26%"
+}

@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 22301,
+  "imdb_id": "tt0020960",
+  "title": "Hell's Angels",
+  "year": "1930",
+  "genres": [
+    "Drama",
+    "War",
+    "Action"
+  ],
+  "runtime": 131,
+  "director": "Howard Hughes",
+  "cast": [
+    "Ben Lyon",
+    "James Hall",
+    "Jean Harlow",
+    "John Darrow",
+    "Lucien Prival"
+  ],
+  "plot": "When the Great War breaks out, brothers Roy and Monte Rutledge, each attending Oxford University, enlist with the Royal Flying Corps.",
+  "streaming_services": [],
+  "imdb_rating": "7.3",
+  "metascore": "N/A",
+  "rotten_tomatoes": "71%"
+}

@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 218,
+  "imdb_id": "tt0088247",
+  "title": "The Terminator",
+  "year": "1984",
+  "genres": [
+    "Action",
+    "Thriller",
+    "Science Fiction"
+  ],
+  "runtime": 108,
+  "director": "James Cameron",
+  "cast": [
+    "Arnold Schwarzenegger",
+    "Michael Biehn",
+    "Linda Hamilton",
+    "Paul Winfield",
+    "Lance Henriksen"
+  ],
+  "plot": "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the \"Terminator\" back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel",
+    "MGM+ Amazon Channel"
+  ],
+  "imdb_rating": "8.1",
+  "metascore": "84",
+  "rotten_tomatoes": "100%"
+}

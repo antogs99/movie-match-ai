@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 9323,
+  "imdb_id": "tt0113568",
+  "title": "Ghost in the Shell",
+  "year": "1995",
+  "genres": [
+    "Action",
+    "Animation",
+    "Science Fiction"
+  ],
+  "runtime": 83,
+  "director": "Mamoru Oshii",
+  "cast": [
+    "Atsuko Tanaka",
+    "Akio Otsuka",
+    "Iemasa Kayumi",
+    "Koichi Yamadera",
+    "Yutaka Nakano"
+  ],
+  "plot": "In the year 2029, the barriers of our world have been broken down by the net and by cybernetics, but this brings new vulnerability to humans in the form of brain-hacking. When a highly-wanted hacker known as 'The Puppetmaster' begins involving them in politics, Section 9, a group of cybernetically enhanced cops, are called in to investigate and stop the Puppetmaster.",
+  "streaming_services": [
+    "MovieSphere+ Amazon Channel"
+  ],
+  "imdb_rating": "7.9",
+  "metascore": "76",
+  "rotten_tomatoes": "95%"
+}

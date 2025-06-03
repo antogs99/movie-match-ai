@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 72431,
+  "imdb_id": "tt0485985",
+  "title": "Red Tails",
+  "year": "2012",
+  "genres": [
+    "Drama",
+    "Action",
+    "Adventure",
+    "History",
+    "War"
+  ],
+  "runtime": 125,
+  "director": "Anthony Hemingway",
+  "cast": [
+    "Bryan Cranston",
+    "David Oyelowo",
+    "Cuba Gooding Jr.",
+    "Daniela Ruah",
+    "Terrence Howard"
+  ],
+  "plot": "The story of the Tuskegee Airmen, the first African-American pilots to fly in a combat squadron during World War II.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel"
+  ],
+  "imdb_rating": "5.9",
+  "metascore": "46",
+  "rotten_tomatoes": "40%"
+}

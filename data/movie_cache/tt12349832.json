@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 869291,
+  "imdb_id": "tt12349832",
+  "title": "Cuckoo",
+  "year": "2024",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 103,
+  "director": "Tilman Singer",
+  "cast": [
+    "Hunter Schafer",
+    "Jan Bluthardt",
+    "Marton Csokas",
+    "Jessica Henwick",
+    "Dan Stevens"
+  ],
+  "plot": "After reluctantly moving to the German Alps with her father and his new family, Gretchen discovers that their new town hides sinister secrets, as she's plagued by strange noises and frightening visions of a woman pursuing her.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "5.7",
+  "metascore": "62",
+  "rotten_tomatoes": "79%"
+}

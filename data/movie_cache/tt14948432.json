@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 845781,
+  "imdb_id": "tt14948432",
+  "title": "Red One",
+  "year": "2024",
+  "genres": [
+    "Action",
+    "Comedy",
+    "Fantasy"
+  ],
+  "runtime": 124,
+  "director": "Jake Kasdan",
+  "cast": [
+    "Dwayne Johnson",
+    "Chris Evans",
+    "Kiernan Shipka",
+    "J.K. Simmons",
+    "Lucy Liu"
+  ],
+  "plot": "After Santa Claus (codename: Red One) is kidnapped, the North Pole's Head of Security must team up with the world's most infamous tracker in a globe-trotting, action-packed mission to save Christmas.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "6.3",
+  "metascore": "34",
+  "rotten_tomatoes": "30%"
+}

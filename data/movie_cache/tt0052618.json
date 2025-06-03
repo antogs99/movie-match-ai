@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 665,
+  "imdb_id": "tt0052618",
+  "title": "Ben-Hur",
+  "year": "1959",
+  "genres": [
+    "History",
+    "Drama",
+    "Adventure",
+    "Action"
+  ],
+  "runtime": 222,
+  "director": "William Wyler",
+  "cast": [
+    "Charlton Heston",
+    "Stephen Boyd",
+    "Hugh Griffith",
+    "Jack Hawkins",
+    "Haya Harareet"
+  ],
+  "plot": "In 25 AD, Judah Ben-Hur, a Jew in ancient Judea, opposes the occupying Roman empire.  Falsely accused by a Roman childhood friend-turned-overlord of trying to kill the Roman governor, he is put into slavery and his mother and sister are taken away as prisoners.",
+  "streaming_services": [],
+  "imdb_rating": "8.1",
+  "metascore": "90",
+  "rotten_tomatoes": "87%"
+}

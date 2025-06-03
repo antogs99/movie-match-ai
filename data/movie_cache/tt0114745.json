@@ -1,0 +1,30 @@
+{
+  "tmdb_id": 31894,
+  "imdb_id": "tt0114745",
+  "title": "The Tuskegee Airmen",
+  "year": "1995",
+  "genres": [
+    "War",
+    "History",
+    "Drama",
+    "TV Movie"
+  ],
+  "runtime": 106,
+  "director": "Robert Markowitz",
+  "cast": [
+    "Laurence Fishburne",
+    "Allen Payne",
+    "Malcolm-Jamal Warner",
+    "Courtney B. Vance",
+    "Andre Braugher"
+  ],
+  "plot": "During the Second World War, a special project is begun by the US Army Air Corps to integrate African American pilots into the Fighter Pilot Program. Known as the \"Tuskegee Airman\" for the name of the airbase at which they were trained, these men were forced to constantly endure harassement, prejudice, and much behind the scenes politics until at last they were able to prove themselves in combat.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel",
+    "History Vault"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "N/A",
+  "rotten_tomatoes": "86%"
+}

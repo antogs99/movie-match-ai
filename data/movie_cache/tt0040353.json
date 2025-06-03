@@ -1,0 +1,26 @@
+{
+  "tmdb_id": 101864,
+  "imdb_id": "tt0040353",
+  "title": "Fighter Squadron",
+  "year": "1948",
+  "genres": [
+    "Action",
+    "War"
+  ],
+  "runtime": 96,
+  "director": "Raoul Walsh",
+  "cast": [
+    "Edmond O'Brien",
+    "Robert Stack",
+    "John Rodney",
+    "Tom D'Andrea",
+    "Henry Hull"
+  ],
+  "plot": "During World War II, an insubordinate fighter pilot finds the shoe on the other foot when he's promoted.",
+  "streaming_services": [
+    "TCM"
+  ],
+  "imdb_rating": "6.2",
+  "metascore": "N/A",
+  "rotten_tomatoes": null
+}

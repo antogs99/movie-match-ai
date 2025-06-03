@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 87516,
+  "imdb_id": "tt1321511",
+  "title": "Oldboy",
+  "year": "2013",
+  "genres": [
+    "Drama",
+    "Thriller",
+    "Mystery",
+    "Action"
+  ],
+  "runtime": 104,
+  "director": "Spike Lee",
+  "cast": [
+    "Josh Brolin",
+    "Elizabeth Olsen",
+    "Sharlto Copley",
+    "Samuel L. Jackson",
+    "Michael Imperioli"
+  ],
+  "plot": "A man has only three and a half days and limited resources to discover why he was imprisoned in a nondescript room for 20 years without any explanation.",
+  "streaming_services": [
+    "fuboTV"
+  ],
+  "imdb_rating": "5.8",
+  "metascore": "49",
+  "rotten_tomatoes": "39%"
+}

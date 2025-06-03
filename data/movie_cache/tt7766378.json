@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 777443,
+  "imdb_id": "tt7766378",
+  "title": "The Electric State",
+  "year": "2025",
+  "genres": [
+    "Science Fiction",
+    "Adventure",
+    "Action"
+  ],
+  "runtime": 125,
+  "director": "Joe Russo",
+  "cast": [
+    "Millie Bobby Brown",
+    "Chris Pratt",
+    "Ke Huy Quan",
+    "Jason Alexander",
+    "Woody Norman"
+  ],
+  "plot": "An orphaned teen hits the road with a mysterious robot to find her long-lost brother, teaming up with a smuggler and his wisecracking sidekick.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "5.9",
+  "metascore": "30",
+  "rotten_tomatoes": "14%"
+}

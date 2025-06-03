@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 619979,
+  "imdb_id": "tt2180339",
+  "title": "Deep Water",
+  "year": "2022",
+  "genres": [
+    "Drama",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 116,
+  "director": "Adrian Lyne",
+  "cast": [
+    "Ben Affleck",
+    "Ana de Armas",
+    "Tracy Letts",
+    "Lil Rel Howery",
+    "Dash Mihok"
+  ],
+  "plot": "A well-to-do husband who allows his wife to have affairs in order to avoid a divorce becomes a prime suspect in the disappearance of her lovers.",
+  "streaming_services": [
+    "Hulu"
+  ],
+  "imdb_rating": "5.5",
+  "metascore": "53",
+  "rotten_tomatoes": "35%"
+}

@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 553,
+  "imdb_id": "tt0276919",
+  "title": "Dogville",
+  "year": "2003",
+  "genres": [
+    "Crime",
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 178,
+  "director": "Lars von Trier",
+  "cast": [
+    "Nicole Kidman",
+    "Paul Bettany",
+    "John Hurt",
+    "Stellan Skarsg\u00e5rd",
+    "Philip Baker Hall"
+  ],
+  "plot": "When beautiful young Grace arrives in the isolated township of Dogville, the small community agrees to hide her from a gang of ruthless gangsters, and, in return, Grace agrees to do odd jobs for the townspeople.",
+  "streaming_services": [
+    "MUBI",
+    "MUBI Amazon Channel"
+  ],
+  "imdb_rating": "8.0",
+  "metascore": "61",
+  "rotten_tomatoes": "70%"
+}

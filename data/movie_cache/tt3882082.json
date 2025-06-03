@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 321258,
+  "imdb_id": "tt3882082",
+  "title": "The Boy",
+  "year": "2016",
+  "genres": [
+    "Horror",
+    "Mystery",
+    "Thriller"
+  ],
+  "runtime": 98,
+  "director": "William Brent Bell",
+  "cast": [
+    "Lauren Cohan",
+    "Rupert Evans",
+    "James Russell",
+    "Jim Norton",
+    "Diana Hardcastle"
+  ],
+  "plot": "A young American woman takes a job as a nanny in a remote English village, soon discovering that the family's eight-year-old son is a life-sized doll that comes with a list of strict rules.",
+  "streaming_services": [
+    "Paramount Plus Apple TV Channel "
+  ],
+  "imdb_rating": "6.0",
+  "metascore": "42",
+  "rotten_tomatoes": "31%"
+}

@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 152601,
+  "imdb_id": "tt1798709",
+  "title": "Her",
+  "year": "2013",
+  "genres": [
+    "Romance",
+    "Science Fiction",
+    "Drama"
+  ],
+  "runtime": 126,
+  "director": "Spike Jonze",
+  "cast": [
+    "Joaquin Phoenix",
+    "Scarlett Johansson",
+    "Lynn Adrianna",
+    "Lisa Renee Pitts",
+    "Gabe Gomez"
+  ],
+  "plot": "In the not so distant future, Theodore, a lonely writer, purchases a newly developed operating system designed to meet the user's every need. To Theodore's surprise, a romantic relationship develops between him and his operating system. This unconventional love story blends science fiction and romance in a sweet tale that explores the nature of love and the ways that technology isolates and connects us all.",
+  "streaming_services": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+  ],
+  "imdb_rating": "8.0",
+  "metascore": "91",
+  "rotten_tomatoes": "95%"
+}

@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 1405338,
+  "imdb_id": "tt35111035",
+  "title": "Demon City",
+  "year": "2025",
+  "genres": [
+    "Action",
+    "Crime",
+    "Fantasy",
+    "Thriller"
+  ],
+  "runtime": 106,
+  "director": "Seiji Tanaka",
+  "cast": [
+    "Toma Ikuta",
+    "Masahiro Higashide",
+    "Miou Tanaka",
+    "Ami Touma",
+    "Taro Suruga"
+  ],
+  "plot": "Framed for his family's murder and left for dead, an ex-hitman will stop at nothing to exact revenge on the masked \"demons\" who have taken over his city.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "5.4",
+  "metascore": "N/A",
+  "rotten_tomatoes": "50%"
+}

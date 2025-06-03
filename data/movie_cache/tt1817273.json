@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 97367,
+  "imdb_id": "tt1817273",
+  "title": "The Place Beyond the Pines",
+  "year": "2013",
+  "genres": [
+    "Drama",
+    "Crime"
+  ],
+  "runtime": 140,
+  "director": "Derek Cianfrance",
+  "cast": [
+    "Ryan Gosling",
+    "Eva Mendes",
+    "Bradley Cooper",
+    "Rose Byrne",
+    "Ray Liotta"
+  ],
+  "plot": "A motorcycle stunt rider considers committing a crime in order to provide for his wife and child, an act that puts him on a collision course with a cop-turned-politician.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "7.3",
+  "metascore": "68",
+  "rotten_tomatoes": "79%"
+}

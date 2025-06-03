@@ -25,6 +25,27 @@ OMDB_API_KEY = os.getenv("OMDB_API_KEY")
 TMDB_BEARER_TOKEN = os.getenv("TMDB_BEARER_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+# === SUPABASE LOGGING ===
+from supabase import create_client
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+def log_prompt_to_supabase(prompt_text, filters, platforms, top_movies, final_response, used_fallback=False, response_time_ms=None, token_usage=None):
+    try:
+        supabase.table("prompts").insert({
+            "prompt_text": prompt_text,
+            "filters": filters,
+            "platforms": platforms,
+            "top_movies": top_movies,
+            "final_response": final_response,
+            "used_fallback": used_fallback,
+            "response_time_ms": response_time_ms,
+            "token_usage": token_usage
+        }).execute()
+        print("[LOG] Prompt logged to Supabase.")
+    except Exception as e:
+        print("[ERROR] Logging to Supabase failed:", e)
+
 # Setup cache dir
 cache_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "movie_cache"))
 os.makedirs(cache_dir, exist_ok=True)
@@ -232,7 +253,68 @@ def get_combined_data(title):
     full = {**tmdb, **omdb}
     with open(path, "w") as f:
         json.dump(full, f, indent=2)
+    push_movie_to_supabase(full)
     return full
+
+def push_movie_to_supabase(movie_data):
+    try:
+        if not movie_data.get("imdb_id", "").startswith("tt"):
+            return
+
+        imdb_id = movie_data.get("imdb_id")
+
+        # Safe validation for rotten_tomatoes, imdb_rating, metascore
+        try:
+            rt = movie_data.get("rotten_tomatoes")
+            rt_value = int(rt.replace("%", "")) if rt and isinstance(rt, str) and rt.endswith("%") else None
+        except Exception as e:
+            print(f"[SKIP] {movie_data.get('title')} — invalid Rotten Tomatoes score: {rt}")
+            rt_value = None
+
+        try:
+            imdb_rating = float(movie_data["imdb_rating"]) if movie_data.get("imdb_rating") and movie_data["imdb_rating"] != "N/A" else None
+        except Exception as e:
+            print(f"[SKIP] {movie_data.get('title')} — invalid IMDb rating: {movie_data.get('imdb_rating')}")
+            imdb_rating = None
+
+        try:
+            metascore = int(movie_data["metascore"]) if movie_data.get("metascore") and movie_data["metascore"].isdigit() else None
+        except Exception as e:
+            print(f"[SKIP] {movie_data.get('title')} — invalid Metascore: {movie_data.get('metascore')}")
+            metascore = None
+
+        # Check if movie already exists
+        existing = supabase.table("movies").select("imdb_id").eq("imdb_id", imdb_id).execute()
+        is_new = not existing.data
+
+        movie_payload = {
+            "imdb_id": imdb_id,
+            "tmdb_id": movie_data.get("tmdb_id"),
+            "title": movie_data.get("title"),
+            "year": movie_data.get("year"),
+            "genres": movie_data.get("genres"),
+            "runtime": movie_data.get("runtime"),
+            "director": movie_data.get("director"),
+            "main_cast": movie_data.get("cast"),
+            "plot": movie_data.get("plot"),
+            "streaming_services": movie_data.get("streaming_services"),
+            "rotten_tomatoes": rt_value,
+            "imdb_rating": imdb_rating,
+            "metascore": metascore,
+            "updated_at": datetime.utcnow().isoformat()
+        }
+
+        if is_new:
+            movie_payload["created_at"] = datetime.utcnow().isoformat()
+
+        result = supabase.table("movies").upsert(movie_payload, on_conflict="imdb_id").execute()
+
+        if result and result.data:
+            print(f"[SUPABASE] Upserted: {movie_data['title']} ({imdb_id}) — {'NEW' if is_new else 'UPDATED'}")
+        else:
+            print(f"[SUPABASE] No data returned for: {movie_data['title']} ({imdb_id})")
+    except Exception as e:
+        print(f"[ERROR] Failed to push {movie_data.get('title', 'Unknown')} to Supabase: {e}")
 
 def recommend_movies_from_prompt(prompt: str):
     print(f"[INFO] User Prompt: {prompt}")
@@ -348,25 +430,42 @@ def recommend_movies_from_prompt(prompt: str):
 
     enriched_movies.sort(key=sort_key, reverse=True)
 
-    top_movies = enriched_movies[:20]
+    top_movies = enriched_movies[:10]
 
     print(f"[INFO] Top {len(top_movies)} movies selected for GPT recommendation.")
 
-    # Step 3: Use GPT to select and format top 10 recommendations
+    # Step 3: Use GPT to select and format top 5 recommendations
+    import time
+    start_time = time.time()
     response = openai.chat.completions.create(
         model="gpt-4",
         messages=[
             {
                 "role": "system",
                 "content": (
-                    f"You are a movie expert recommending great films based on user preferences. "
+                    f"You are a movie expert recommending 5 great films based on user preferences. "
                     f"Today's date is {today_str}. Only use real, released movies. Include RT, IMDb, and Metascore where possible, "
                     f"plus where to stream and a short plot summary."
                 )
             },
-            {"role": "user", "content": f"The user prompt was: '{prompt}'\nHere are 20 movie options:\n{json.dumps(top_movies, indent=2)}"}
+            {"role": "user", "content": f"The user prompt was: '{prompt}'\nHere are 10 movie options:\n{json.dumps(top_movies, indent=2)}"}
         ],
         temperature=0.7
+    )
+    elapsed_ms = int((time.time() - start_time) * 1000)
+    usage_tokens = getattr(response, "usage", None)
+    if usage_tokens:
+        usage_tokens = usage_tokens.total_tokens
+    # Log prompt and results to Supabase
+    log_prompt_to_supabase(
+        prompt_text=prompt,
+        filters=filters,
+        platforms=filters.get("with_watch_providers", "").split(",") if filters.get("with_watch_providers") else [],
+        top_movies=top_movies,
+        final_response=response.choices[0].message.content,
+        used_fallback=not bool(candidates),
+        response_time_ms=elapsed_ms,
+        token_usage=usage_tokens
     )
 
     print("\n====== RECOMMENDATIONS ======")

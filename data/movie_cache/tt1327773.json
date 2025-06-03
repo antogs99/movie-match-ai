@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 132363,
+  "imdb_id": "tt1327773",
+  "title": "The Butler",
+  "year": "2013",
+  "genres": [
+    "Drama"
+  ],
+  "runtime": 132,
+  "director": "Lee Daniels",
+  "cast": [
+    "Forest Whitaker",
+    "Oprah Winfrey",
+    "David Oyelowo",
+    "John Cusack",
+    "Jane Fonda"
+  ],
+  "plot": "A look at the life of Cecil Gaines, who served eight presidents as the White House's head butler from 1952 to 1986, and had a unique front-row seat as political and racial history was made.",
+  "streaming_services": [
+    "Starz Apple TV Channel",
+    "Starz Roku Premium Channel",
+    "Starz",
+    "Philo",
+    "Starz Amazon Channel"
+  ],
+  "imdb_rating": "7.2",
+  "metascore": "65",
+  "rotten_tomatoes": "71%"
+}

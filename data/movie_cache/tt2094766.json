@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 121856,
+  "imdb_id": "tt2094766",
+  "title": "Assassin's Creed",
+  "year": "2016",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 116,
+  "director": "Justin Kurzel",
+  "cast": [
+    "Michael Fassbender",
+    "Marion Cotillard",
+    "Jeremy Irons",
+    "Brendan Gleeson",
+    "Charlotte Rampling"
+  ],
+  "plot": "Through a technology that unlocks the generic memories of his ancestor in 15th century Spain, Callum Lynch discovers he is a descendant of an ancient line of Assassins and amasses lethal skills to take on the oppressive Templar Order.",
+  "streaming_services": [
+    "Max",
+    "Max Amazon Channel",
+    "FilmBox+"
+  ],
+  "imdb_rating": "5.6",
+  "metascore": "36",
+  "rotten_tomatoes": "18%"
+}

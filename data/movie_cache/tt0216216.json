@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 8452,
+  "imdb_id": "tt0216216",
+  "title": "The 6th Day",
+  "year": "2000",
+  "genres": [
+    "Science Fiction",
+    "Action",
+    "Mystery",
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 123,
+  "director": "Roger Spottiswoode",
+  "cast": [
+    "Arnold Schwarzenegger",
+    "Michael Rapaport",
+    "Tony Goldwyn",
+    "Michael Rooker",
+    "Sarah Wynter"
+  ],
+  "plot": "A world of the very near future in which cattle, fish, and even the family pet can be cloned. But cloning humans is illegal - that is until family man Adam Gibson comes home from work one day to find a clone has replaced him. Taken from his family and plunged into a sinister world he doesn't understand, Gibson must not only save himself from the assassins who must destroy him to protect their secret, but uncover who and what is behind the horrible things happening to him.",
+  "streaming_services": [],
+  "imdb_rating": "5.9",
+  "metascore": "49",
+  "rotten_tomatoes": "40%"
+}

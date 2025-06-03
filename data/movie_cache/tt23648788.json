@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 1356039,
+  "imdb_id": "tt23648788",
+  "title": "Counterattack",
+  "year": "2025",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Thriller"
+  ],
+  "runtime": 85,
+  "director": "Chava Cartas",
+  "cast": [
+    "Luis Alberti",
+    "No\u00e9 Hern\u00e1ndez",
+    "Leonardo Alonso",
+    "Luis Curiel",
+    "Guillermo Nava"
+  ],
+  "plot": "When a hostage rescue mission creates a new enemy, Capt. Guerrero and his elite soldiers must face an ambush by a criminal group.",
+  "streaming_services": [
+    "Netflix"
+  ],
+  "imdb_rating": "6.0",
+  "metascore": "N/A",
+  "rotten_tomatoes": null
+}

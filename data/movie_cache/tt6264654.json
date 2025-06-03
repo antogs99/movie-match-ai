@@ -1,0 +1,28 @@
+{
+  "tmdb_id": 550988,
+  "imdb_id": "tt6264654",
+  "title": "Free Guy",
+  "year": "2021",
+  "genres": [
+    "Comedy",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "runtime": 115,
+  "director": "Shawn Levy",
+  "cast": [
+    "Ryan Reynolds",
+    "Jodie Comer",
+    "Lil Rel Howery",
+    "Joe Keery",
+    "Utkarsh Ambudkar"
+  ],
+  "plot": "A bank teller discovers he is actually a background player in an open-world video game, and decides to become the hero of his own story. Now, in a world where there are no limits, he is determined to be the guy who saves his world his way before it's too late.",
+  "streaming_services": [
+    "Disney Plus",
+    "fuboTV"
+  ],
+  "imdb_rating": "7.1",
+  "metascore": "62",
+  "rotten_tomatoes": "80%"
+}

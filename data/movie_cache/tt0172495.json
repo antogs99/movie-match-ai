@@ -1,0 +1,33 @@
+{
+  "tmdb_id": 98,
+  "imdb_id": "tt0172495",
+  "title": "Gladiator",
+  "year": "2000",
+  "genres": [
+    "Action",
+    "Drama",
+    "Adventure"
+  ],
+  "runtime": 155,
+  "director": "Ridley Scott",
+  "cast": [
+    "Russell Crowe",
+    "Joaquin Phoenix",
+    "Connie Nielsen",
+    "Oliver Reed",
+    "Richard Harris"
+  ],
+  "plot": "After the death of Emperor Marcus Aurelius, his devious son takes power and demotes Maximus, one of Rome's most capable generals who Marcus preferred. Eventually, Maximus is forced to become a gladiator and battle to the death against other men for the amusement of paying audiences.",
+  "streaming_services": [
+    "fuboTV",
+    "Paramount Plus",
+    "Paramount Plus Apple TV Channel ",
+    "Paramount+ Amazon Channel",
+    "AMC+ Amazon Channel",
+    "Kanopy",
+    "Philo"
+  ],
+  "imdb_rating": "8.5",
+  "metascore": "67",
+  "rotten_tomatoes": "80%"
+}

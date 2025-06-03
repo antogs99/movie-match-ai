@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 1495,
+  "imdb_id": "tt0320661",
+  "title": "Kingdom of Heaven",
+  "year": "2005",
+  "genres": [
+    "Drama",
+    "Action",
+    "Adventure",
+    "History",
+    "War"
+  ],
+  "runtime": 144,
+  "director": "Ridley Scott",
+  "cast": [
+    "Orlando Bloom",
+    "Eva Green",
+    "Jeremy Irons",
+    "David Thewlis",
+    "Ghassan Massoud"
+  ],
+  "plot": "After his wife dies, a blacksmith named Balian is thrust into royalty, political intrigue and bloody holy wars during the Crusades.",
+  "streaming_services": [],
+  "imdb_rating": "7.3",
+  "metascore": "63",
+  "rotten_tomatoes": "40%"
+}

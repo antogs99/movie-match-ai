@@ -1,0 +1,31 @@
+{
+  "tmdb_id": 290859,
+  "imdb_id": "tt6450804",
+  "title": "Terminator: Dark Fate",
+  "year": "2019",
+  "genres": [
+    "Science Fiction",
+    "Action",
+    "Adventure",
+    "Thriller"
+  ],
+  "runtime": 128,
+  "director": "Tim Miller",
+  "cast": [
+    "Linda Hamilton",
+    "Arnold Schwarzenegger",
+    "Mackenzie Davis",
+    "Natalia Reyes",
+    "Gabriel Luna"
+  ],
+  "plot": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet.",
+  "streaming_services": [
+    "fuboTV",
+    "Paramount Plus",
+    "Paramount+ Amazon Channel",
+    "Paramount+ Roku Premium Channel"
+  ],
+  "imdb_rating": "6.2",
+  "metascore": "54",
+  "rotten_tomatoes": "70%"
+}

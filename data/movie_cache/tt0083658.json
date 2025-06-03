@@ -1,0 +1,25 @@
+{
+  "tmdb_id": 78,
+  "imdb_id": "tt0083658",
+  "title": "Blade Runner",
+  "year": "1982",
+  "genres": [
+    "Science Fiction",
+    "Drama",
+    "Thriller"
+  ],
+  "runtime": 118,
+  "director": "Ridley Scott",
+  "cast": [
+    "Harrison Ford",
+    "Rutger Hauer",
+    "Sean Young",
+    "Edward James Olmos",
+    "M. Emmet Walsh"
+  ],
+  "plot": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
+  "streaming_services": [],
+  "imdb_rating": "8.1",
+  "metascore": "84",
+  "rotten_tomatoes": "89%"
+}

@@ -1,0 +1,27 @@
+{
+  "tmdb_id": 614933,
+  "imdb_id": "tt14856980",
+  "title": "Atlas",
+  "year": "2024",
+  "genres": [
+    "Science Fiction",
+    "Action"
+  ],
+  "runtime": 120,
+  "director": "Brad Peyton",
+  "cast": [
+    "Jennifer Lopez",
+    "Simu Liu",
+    "Sterling K. Brown",
+    "Gregory James Cohan",
+    "Abraham Popoola"
+  ],
+  "plot": "A brilliant counterterrorism analyst with a deep distrust of AI discovers it might be her only hope when a mission to capture a renegade robot goes awry.",
+  "streaming_services": [
+    "Netflix",
+    "Netflix Standard with Ads"
+  ],
+  "imdb_rating": "5.6",
+  "metascore": "37",
+  "rotten_tomatoes": "18%"
+}

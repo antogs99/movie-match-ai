@@ -1,0 +1,29 @@
+{
+  "tmdb_id": 22,
+  "imdb_id": "tt0325980",
+  "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+  "year": "2003",
+  "genres": [
+    "Adventure",
+    "Fantasy",
+    "Action"
+  ],
+  "runtime": 143,
+  "director": "Gore Verbinski",
+  "cast": [
+    "Johnny Depp",
+    "Geoffrey Rush",
+    "Orlando Bloom",
+    "Keira Knightley",
+    "Jack Davenport"
+  ],
+  "plot": "After Port Royal is attacked and pillaged by a mysterious pirate crew, capturing the governor's daughter Elizabeth Swann in the process, William Turner asks free-willing pirate Jack Sparrow to help him locate the crew's ship\u2014The Black Pearl\u2014so that he can rescue the woman he loves.",
+  "streaming_services": [
+    "Disney Plus",
+    "Freeform",
+    "USA Network"
+  ],
+  "imdb_rating": "8.1",
+  "metascore": "63",
+  "rotten_tomatoes": "79%"
+}
