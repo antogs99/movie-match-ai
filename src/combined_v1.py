@@ -1,3 +1,13 @@
+WATCH_PROVIDER_MAP = {
+    "8": "Netflix",
+    "9": "Amazon Prime Video",
+    "15": "Hulu",
+    "384": "HBO Max",
+    "337": "Disney Plus",
+    "531": "Peacock",
+    "350": "Paramount Plus",
+    "387": "Apple TV Plus"
+}
 import os
 import json
 from openai import OpenAI
@@ -412,6 +422,18 @@ def recommend_movies_from_prompt(prompt: str):
         print("[INFO] No enriched movies with full data — fallback formatting may be GPT-generated.")
 
     enriched_movies = [m for m in enriched_movies if m.get("streaming_services")]
+
+    if filters.get("with_watch_providers"):
+        provider_ids = filters["with_watch_providers"].split(",")
+        allowed_platforms = [WATCH_PROVIDER_MAP.get(pid.strip()) for pid in provider_ids if pid.strip() in WATCH_PROVIDER_MAP]
+        allowed_platforms = [p for p in allowed_platforms if p]
+
+        before_count = len(enriched_movies)
+        enriched_movies = [
+            m for m in enriched_movies
+            if any(service in allowed_platforms for service in m.get("streaming_services", []))
+        ]
+        print(f"[INFO] Streaming platform filter applied — {len(enriched_movies)} of {before_count} movies kept.")
 
     def sort_key(m):
         def to_float(val):
