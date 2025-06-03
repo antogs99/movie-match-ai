@@ -64,15 +64,14 @@ def log_api_call(service):
         json.dump(log, f, indent=2)
 
 def get_or_fetch_keyword_id(keyword: str):
-    cache_path = os.path.abspath(os.path.join(cache_dir, "..", "tmdb_keywords.json"))
-    if os.path.exists(cache_path):
-        with open(cache_path) as f:
-            keyword_cache = json.load(f)
-    else:
-        keyword_cache = {}
-
-    if keyword in keyword_cache:
-        return keyword_cache[keyword]
+    try:
+        # Check Supabase first
+        result = supabase.table("tmdb_keywords").select("*").eq("keyword_name", keyword).execute()
+        if result and result.data:
+            print(f"[SUPABASE] Found keyword '{keyword}' → ID {result.data[0]['keyword_id']}")
+            return result.data[0]["keyword_id"]
+    except Exception as e:
+        print(f"[ERROR] Failed to check Supabase for keyword '{keyword}':", e)
 
     url = "https://api.themoviedb.org/3/search/keyword"
     headers = {"accept": "application/json", "Authorization": f"Bearer {TMDB_BEARER_TOKEN}"}
@@ -86,9 +85,15 @@ def get_or_fetch_keyword_id(keyword: str):
             print(f"[WARNING] No TMDb keyword found for '{keyword}'")
             return None
         keyword_id = results[0]["id"]
-        keyword_cache[keyword] = keyword_id
-        with open(cache_path, "w") as f:
-            json.dump(keyword_cache, f, indent=2)
+        # Insert into Supabase
+        try:
+            supabase.table("tmdb_keywords").insert({
+                "keyword_name": keyword,
+                "keyword_id": keyword_id
+            }).execute()
+            print(f"[SUPABASE] Inserted keyword '{keyword}' with ID {keyword_id}")
+        except Exception as e:
+            print(f"[ERROR] Failed to insert keyword '{keyword}' into Supabase:", e)
         return keyword_id
     except Exception as e:
         print(f"[ERROR] Keyword fetch failed for '{keyword}':", e)
@@ -122,12 +127,14 @@ def get_movies_by_filters(filters):
     return movies
 
 def load_genre_map():
-    genre_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "tmdb_genres.json"))
     try:
-        with open(genre_path) as f:
-            return json.load(f)
-    except Exception:
-        print("[WARNING] Could not load genre map.")
+        result = supabase.table("tmdb_genres").select("*").execute()
+        if result and result.data:
+            return {str(row["genre_id"]): row["genre_name"] for row in result.data}
+        else:
+            return {}
+    except Exception as e:
+        print("[ERROR] Failed to load genre map from Supabase:", e)
         return {}
 
 def extract_filters_from_prompt(prompt: str) -> dict:
@@ -153,33 +160,20 @@ def extract_filters_from_prompt(prompt: str) -> dict:
     try:
         filters = eval(response)
         if "with_keywords" in filters and isinstance(filters["with_keywords"], str):
-            keyword_id = get_or_fetch_keyword_id(filters["with_keywords"])
-            if keyword_id:
-                filters["with_keywords"] = keyword_id
+            raw_keywords = [kw.strip() for kw in filters["with_keywords"].split(",")]
+            keyword_ids = []
+            for kw in raw_keywords:
+                keyword_id = get_or_fetch_keyword_id(kw)
+                if keyword_id:
+                    keyword_ids.append(str(keyword_id))
+            if keyword_ids:
+                filters["with_keywords"] = ",".join(keyword_ids)
             else:
                 del filters["with_keywords"]
 
-        matched_keywords = []
-        if "with_keywords" not in filters:
-            keyword_path = os.path.abspath(os.path.join(cache_dir, "..", "tmdb_keywords.json"))
-            if os.path.exists(keyword_path):
-                with open(keyword_path) as f:
-                    keyword_cache = json.load(f)
-                print(f"[DEBUG] Loaded {len(keyword_cache)} keywords from local cache.")
-                prompt_lower = prompt.lower()
-                for k, v in keyword_cache.items():
-                    if k.lower() in prompt_lower:
-                        matched_keywords.append((k, v))
-                if matched_keywords:
-                    ids = [str(kw[1]) for kw in matched_keywords]
-                    filters["with_keywords"] = ",".join(ids)
+        # Local keyword fallback disabled
+        print("[INFO] Local keyword fallback is disabled in extract_filters_from_prompt.")
 
-        if matched_keywords:
-            print(f"[INFO] Matched keywords from local cache:")
-            for k, v in matched_keywords:
-                print(f"    - {k} → ID {v}")
-        else:
-            print("[INFO] No keywords matched from local cache.")
         return filters
     except Exception:
         print("Failed to parse GPT response:", response)
@@ -331,23 +325,9 @@ def recommend_movies_from_prompt(prompt: str):
     filters = extract_filters_from_prompt(prompt)
     print(f"[INFO] Extracted Filters: {filters}")
 
-    # Fallback keyword injection from local keyword list
+    # Fallback keyword injection from local keyword list is disabled.
     if "with_keywords" not in filters:
-        keyword_path = os.path.abspath(os.path.join(cache_dir, "..", "tmdb_keywords.json"))
-        if os.path.exists(keyword_path):
-            with open(keyword_path) as f:
-                keyword_cache = json.load(f)
-            prompt_lower = prompt.lower()
-            matched_keywords = []
-            for k, v in keyword_cache.items():
-                # match whole word or phrase
-                if k.lower() in prompt_lower:
-                    matched_keywords.append((k, v))
-            if matched_keywords:
-                print(f"[INFO] Keywords matched from local cache: {[kw[0] for kw in matched_keywords]}")
-                ids = [str(kw[1]) for kw in matched_keywords]
-                filters["with_keywords"] = ",".join(ids)
-                print(f"[INFO] Injected keywords from prompt: {[kw[0] for kw in matched_keywords]}")
+        print("[INFO] Local keyword fallback is disabled in recommend_movies_from_prompt.")
 
     if not filters.get("with_keywords") and not filters.get("with_genres"):
         print("[INFO] No strong filters detected — skipping TMDb and going to fallback titles.")
