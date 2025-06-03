@@ -5,6 +5,7 @@ import re
 import requests
 from datetime import datetime
 from dotenv import load_dotenv
+from difflib import get_close_matches
 
 today_str = datetime.now().strftime("%B %d, %Y")
 
@@ -65,13 +66,21 @@ def log_api_call(service):
 
 def get_or_fetch_keyword_id(keyword: str):
     try:
-        # Check Supabase first
-        result = supabase.table("tmdb_keywords").select("*").eq("keyword_name", keyword).execute()
+        # Load all existing keyword names from Supabase
+        result = supabase.table("tmdb_keywords").select("keyword_name,keyword_id").execute()
         if result and result.data:
-            print(f"[SUPABASE] Found keyword '{keyword}' → ID {result.data[0]['keyword_id']}")
-            return result.data[0]["keyword_id"]
+            keyword_list = [row["keyword_name"] for row in result.data]
+            match = get_close_matches(keyword, keyword_list, n=1, cutoff=0.8)
+            if match:
+                matched_name = match[0]
+                matched_id = next((row["keyword_id"] for row in result.data if row["keyword_name"] == matched_name), None)
+                if matched_id:
+                    print(f"[FUZZY MATCH] '{keyword}' → '{matched_name}' (ID {matched_id})")
+                    return matched_id
+        else:
+            print("[INFO] No keywords loaded from Supabase for fuzzy matching.")
     except Exception as e:
-        print(f"[ERROR] Failed to check Supabase for keyword '{keyword}':", e)
+        print(f"[ERROR] Failed during fuzzy keyword match for '{keyword}':", e)
 
     url = "https://api.themoviedb.org/3/search/keyword"
     headers = {"accept": "application/json", "Authorization": f"Bearer {TMDB_BEARER_TOKEN}"}
