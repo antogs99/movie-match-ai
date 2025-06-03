@@ -245,15 +245,23 @@ def get_combined_data(title):
     if not tmdb:
         return {"title": title, "note": "TMDb not found"}
     imdb_id = tmdb.get("imdb_id")
-    safe_filename = imdb_id if imdb_id else re.sub(r'[^\w\-_\. ]', '_', title)
-    path = os.path.join(cache_dir, f"{safe_filename}.json")
-    if os.path.exists(path):
-        return json.load(open(path))
+    # Check Supabase first for existing movie data
+    existing = supabase.table("movies").select("*").eq("imdb_id", imdb_id).execute()
+    if existing and existing.data:
+        print(f"[SUPABASE] Loaded cached data for {title} ({imdb_id}) from Supabase.")
+        return existing.data[0]
+    # (Removed local cache check)
+    #safe_filename = imdb_id if imdb_id else re.sub(r'[^\w\-_\. ]', '_', title)
+    #path = os.path.join(cache_dir, f"{safe_filename}.json")
+    #if os.path.exists(path):
+    #    return json.load(open(path))
     omdb = get_omdb_data(imdb_id)
     full = {**tmdb, **omdb}
-    with open(path, "w") as f:
-        json.dump(full, f, indent=2)
+    # Optionally still write to local cache for debugging, but no longer used for reads
+    #with open(path, "w") as f:
+    #    json.dump(full, f, indent=2)
     push_movie_to_supabase(full)
+    print(f"[SUPABASE] Pushed new data for {title} ({imdb_id}) to Supabase.")
     return full
 
 def push_movie_to_supabase(movie_data):
