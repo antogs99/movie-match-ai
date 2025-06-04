@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PickYourBinge - Card</title>
+  <style>
+    body {
+      margin: 0;
+      width: 768px;
+      height: 1152px;
+      background-color: #0F1C2E;
+      font-family: Arial, sans-serif;
+      color: white;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 0px;
+      right: 20px;
+      width: 180px;
+      background: none;
+    }
+
+    .headline {
+      font-size: 64px;
+      font-weight: bold;
+      color: #00C877;
+      position: absolute;
+      top: 160px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .poster {
+      position: absolute;
+      top: 250px;
+      left: 134px;
+      width: 500px;
+      height: 700px;
+      object-fit: contain;
+      background-color: #000;
+      border: 2px solid #000;
+    }
+
+    .title {
+      position: absolute;
+      top: 980px;
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      color: #F2F4F5;
+    }
+
+    .ratings {
+      position: absolute;
+      bottom: 70px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .rating-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 32px;
+      color: #F2F4F5;
+    }
+
+    .rating-icon {
+      height: 40px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <!-- Recommend using a transparent PNG version of this logo for visual consistency -->
+  <img class="logo" src="logo.png" alt="PickYourBinge Logo">
+  <div class="headline">Tonight's Pick</div>
+  <img class="poster" src="poster.jpg" alt="Movie Poster">
+  <div class="title">Movie Title (2024)</div>
+
+  <div class="ratings">
+    <div class="rating-block">
+      <img src="rt.png" class="rating-icon" alt="Rotten Tomatoes">
+      <span>30%</span>
+    </div>
+    <div class="rating-block">
+      <img src="imdb.png" class="rating-icon" alt="IMDb">
+      <span>6.8</span>
+    </div>
+  </div>
+</body>
+</html>

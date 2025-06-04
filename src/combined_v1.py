@@ -253,11 +253,32 @@ def get_omdb_data(imdb_id):
         print("[ERROR] OMDb fetch failed:", e)
         return {}
 
+def get_poster_url(tmdb_id):
+    try:
+        headers = {"accept": "application/json"}
+        if TMDB_BEARER_TOKEN:
+            headers["Authorization"] = f"Bearer {TMDB_BEARER_TOKEN}"
+        url = f"https://api.themoviedb.org/3/movie/{tmdb_id}"
+        r = requests.get(url, headers=headers)
+        r.raise_for_status()
+        data = r.json()
+        poster_path = data.get("poster_path")
+        if poster_path:
+            return f"https://image.tmdb.org/t/p/w500{poster_path}"
+        return None
+    except Exception as e:
+        print(f"[ERROR] Failed to fetch poster URL for TMDb ID {tmdb_id}: {e}")
+        return None
+
 def get_combined_data(title):
     tmdb = get_tmdb_data(title)
     if not tmdb:
         return {"title": title, "note": "TMDb not found"}
     imdb_id = tmdb.get("imdb_id")
+    tmdb_id = tmdb.get("tmdb_id")
+    # Retrieve poster URL after getting tmdb_id
+    poster_url = get_poster_url(tmdb_id)
+    print(f"[✓] Poster URL for {title}: {poster_url}")
     # Check Supabase first for existing movie data
     existing = supabase.table("movies").select("*").eq("imdb_id", imdb_id).execute()
     if existing and existing.data:
@@ -269,7 +290,7 @@ def get_combined_data(title):
     #if os.path.exists(path):
     #    return json.load(open(path))
     omdb = get_omdb_data(imdb_id)
-    full = {**tmdb, **omdb}
+    full = {**tmdb, **omdb, "poster_url": poster_url}
     # Optionally still write to local cache for debugging, but no longer used for reads
     #with open(path, "w") as f:
     #    json.dump(full, f, indent=2)
@@ -308,6 +329,9 @@ def push_movie_to_supabase(movie_data):
         existing = supabase.table("movies").select("imdb_id").eq("imdb_id", imdb_id).execute()
         is_new = not existing.data
 
+        # Use poster_url from movie_data if present
+        poster_url = movie_data.get("poster_url")
+
         movie_payload = {
             "imdb_id": imdb_id,
             "tmdb_id": movie_data.get("tmdb_id"),
@@ -322,8 +346,22 @@ def push_movie_to_supabase(movie_data):
             "rotten_tomatoes": rt_value,
             "imdb_rating": imdb_rating,
             "metascore": metascore,
-            "updated_at": datetime.utcnow().isoformat()
+            "updated_at": datetime.utcnow().isoformat(),
+            "poster_url": poster_url
         }
+
+        # Save poster locally if poster_url is present
+        if poster_url:
+            posters_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "posters"))
+            os.makedirs(posters_dir, exist_ok=True)
+            poster_file = os.path.join(posters_dir, f"{movie_data.get('tmdb_id')}.jpg")
+            if not os.path.exists(poster_file):
+                try:
+                    img_data = requests.get(poster_url).content
+                    with open(poster_file, "wb") as f:
+                        f.write(img_data)
+                except Exception as e:
+                    print(f"[ERROR] Failed to save poster locally for {movie_data.get('title')}: {e}")
 
         if is_new:
             movie_payload["created_at"] = datetime.utcnow().isoformat()
@@ -331,9 +369,9 @@ def push_movie_to_supabase(movie_data):
         result = supabase.table("movies").upsert(movie_payload, on_conflict="imdb_id").execute()
 
         if result and result.data:
-            print(f"[SUPABASE] Upserted: {movie_data['title']} ({imdb_id}) — {'NEW' if is_new else 'UPDATED'}")
+            print(f"[SUPABASE] Upserted: {movie_data.get('title')} ({imdb_id}) — {'NEW' if is_new else 'UPDATED'}")
         else:
-            print(f"[SUPABASE] No data returned for: {movie_data['title']} ({imdb_id})")
+            print(f"[SUPABASE] No data returned for: {movie_data.get('title')} ({imdb_id})")
     except Exception as e:
         print(f"[ERROR] Failed to push {movie_data.get('title', 'Unknown')} to Supabase: {e}")
 
