@@ -3,6 +3,7 @@ FINAL WORKING VERSION FOR IG POSTS GENERATION
 """
 from dotenv import load_dotenv
 import os
+import sys
 from supabase import create_client
 import requests
 import asyncio
@@ -22,18 +23,31 @@ OUTPUT_DIR = "data/output"
 POSTER_TEMP_PATH = "poster.jpg"
 Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
 
-# Query 5 high-rated movies with both RT and IMDb scores
-response = (
+
+# Optionally filter by genre if provided on command line
+genre_filter = sys.argv[1].lower() if len(sys.argv) > 1 else None
+
+# Query 5 high-rated movies with both RT and IMDb scores (optionally by genre)
+query = (
     supabase.table("movies")
     .select("*")
     .filter("imdb_rating", "not.is", "null")
     .filter("rotten_tomatoes", "not.is", "null")
-    .contains("genres", ["Horror"])
-    .order("imdb_rating", desc=True)
-    .limit(5)
-    .execute()
 )
+
+if genre_filter:
+    query = query.contains("genres", [genre_filter.capitalize()])
+    print(f"[→] Filtering by genre: {genre_filter}")
+
+
+from random import sample
+
+# Fetch a larger pool of high-rated movies
+response = query.order("imdb_rating", desc=True).limit(50).execute()
 movies = response.data
+
+# Randomly select 5 from that pool
+movies = sample(movies, k=5)
 
 for movie in movies:
     title = movie["title"]

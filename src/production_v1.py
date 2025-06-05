@@ -1,4 +1,24 @@
 import time
+import functools
+def with_retries(max_attempts=3, delay=1, backoff=2):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            attempts = 0
+            current_delay = delay
+            while attempts < max_attempts:
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    attempts += 1
+                    if attempts == max_attempts:
+                        raise
+                    if VERBOSE:
+                        print(f"[RETRY] Attempt {attempts} failed: {e}. Retrying in {current_delay} sec...")
+                    time.sleep(current_delay)
+                    current_delay *= backoff
+        return wrapper
+    return decorator
 from config import WATCH_PROVIDER_MAP
 import os
 import ast
@@ -101,10 +121,14 @@ def get_or_fetch_keyword_id(keyword: str):
     url = "https://api.themoviedb.org/3/search/keyword"
     headers = {"accept": "application/json", "Authorization": f"Bearer {TMDB_BEARER_TOKEN}"}
     params = {"query": keyword}
-    try:
+    @with_retries()
+    def fetch_tmdb_keyword():
         r = requests.get(url, headers=headers, params=params)
         log_api_call("tmdb")
         r.raise_for_status()
+        return r
+    try:
+        r = fetch_tmdb_keyword()
         results = r.json().get("results", [])
         if not results:
             if VERBOSE:
@@ -215,6 +239,7 @@ def extract_filters_from_prompt(prompt: str) -> dict:
         return {}
     
 ######### TMDb & OMDb DETAILS #########
+@with_retries()
 def get_tmdb_data(title):
     headers = {"accept": "application/json"}
     params = {"query": title, "include_adult": "false", "language": "en-US", "page": 1}
@@ -254,6 +279,7 @@ def get_tmdb_data(title):
             print("[ERROR] TMDb fetch failed:", e)
         return None
 
+@with_retries()
 def get_omdb_data(imdb_id):
     try:
         r = requests.get("http://www.omdbapi.com/", params={"apikey": OMDB_API_KEY, "i": imdb_id})
@@ -271,6 +297,7 @@ def get_omdb_data(imdb_id):
             print("[ERROR] OMDb fetch failed:", e)
         return {}
 
+@with_retries()
 def get_poster_url(tmdb_id):
     try:
         headers = {"accept": "application/json"}
