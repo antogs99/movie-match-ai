@@ -1,27 +1,12 @@
 // src/app/page.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Home() {
   const [prompt, setPrompt] = useState('');
   const [recommendations, setRecommendations] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-  const [landingRecommendations, setLandingRecommendations] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchLanding = async () => {
-      try {
-        const res = await fetch('/api/landing');
-        const data = await res.json();
-        setLandingRecommendations(data.results || []);
-      } catch (error) {
-        console.error('Error fetching landing recommendations:', error);
-      }
-    };
-
-    fetchLanding();
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,7 +65,35 @@ export default function Home() {
           <section>
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-center">Recommended for you</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {landingRecommendations.map((movie, idx) => (
+              {[
+                {
+                  title: 'The Silence of the Lambs',
+                  year: 1991,
+                  poster_url: 'https://image.tmdb.org/t/p/w500/rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg',
+                  sources: ['Netflix', 'Max'],
+                  imdb_rating: '8.6',
+                  rotten_tomatoes: '95',
+                  summary: 'FBI trainee Clarice Starling seeks help from cannibalistic serial killer Hannibal Lecter to catch another killer.'
+                },
+                {
+                  title: 'Talk to Me',
+                  year: 2023,
+                  poster_url: 'https://image.tmdb.org/t/p/w500/kdPMUMJzyYAc4roD52qavX0nLIC.jpg',
+                  sources: ['Max'],
+                  imdb_rating: '7.2',
+                  rotten_tomatoes: '94',
+                  summary: 'A group of teens discover a way to summon spirits using an embalmed hand—until it goes too far.'
+                },
+                {
+                  title: 'The Autopsy of Jane Doe',
+                  year: 2016,
+                  poster_url: 'https://image.tmdb.org/t/p/w500/kdPMUMJzyYAc4roD52qavX0nLIC.jpg',
+                  sources: ['Max'],
+                  imdb_rating: '6.8',
+                  rotten_tomatoes: '86',
+                  summary: 'Coroners uncover disturbing secrets while examining the mysterious corpse of an unidentified woman.'
+                }
+              ].map((movie, idx) => (
                 <div key={idx} className="bg-[#152033] rounded-lg p-4 shadow">
                   <img
                     src={movie.poster_url}
@@ -88,12 +101,12 @@ export default function Home() {
                     className="w-full aspect-[2/3] object-cover rounded mb-3 bg-[#0F1C2E]"
                   />
                   <h3 className="text-lg font-bold mb-1">{movie.title} ({movie.year})</h3>
-                  <p className="text-sm text-[#66D1CC] mb-1">Stream on: {movie.streaming_services?.join(', ')}</p>
+                  <p className="text-sm text-[#66D1CC] mb-1">Stream on: {movie.sources.join(', ')}</p>
                   <p className="text-sm mb-1">
                     <img src="/imdb.png" alt="IMDb" className="inline h-4 mr-1" /> {movie.imdb_rating}
                     <img src="/rt.png" alt="Rotten Tomatoes" className="inline h-4 mx-1" /> {movie.rotten_tomatoes}%
                   </p>
-                  <p className="text-sm text-[#ccc]">{movie.plot}</p>
+                  <p className="text-sm text-[#ccc]">{movie.summary}</p>
                 </div>
               ))}
             </div>
