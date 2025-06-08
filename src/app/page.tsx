@@ -114,14 +114,20 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {recommendations.map((movie, idx) => (
                 <div key={idx} className="bg-[#152033] rounded-lg p-4 shadow">
-                  <img src={movie.poster_url} alt={movie.title} className="w-full h-60 object-cover rounded mb-3" />
+                  <img
+                    src={movie.poster_url}
+                    alt={movie.title}
+                    className="w-full aspect-[2/3] object-cover rounded mb-3 bg-[#0F1C2E]"
+                  />
                   <h3 className="text-lg font-bold mb-1">{movie.title} ({movie.year})</h3>
-                  <p className="text-sm text-[#66D1CC] mb-1">Stream on: {movie.sources?.join(', ')}</p>
+                  <p className="text-sm text-[#66D1CC] mb-1">
+                    Stream on: {(movie.streaming_services || movie.sources || []).join(', ')}
+                  </p>
                   <p className="text-sm mb-1">
                     <img src="/imdb.png" alt="IMDb" className="inline h-4 mr-1" /> {movie.imdb_rating}
                     <img src="/rt.png" alt="Rotten Tomatoes" className="inline h-4 mx-1" /> {movie.rotten_tomatoes}%
                   </p>
-                  <p className="text-sm text-[#ccc]">{movie.summary}</p>
+                  <p className="text-sm text-[#ccc]">{movie.plot || movie.summary}</p>
                 </div>
               ))}
             </div>

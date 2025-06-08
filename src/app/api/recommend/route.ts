@@ -9,14 +9,18 @@ export async function POST(req: Request) {
   console.log('Received prompt:', prompt);
   console.log('Parsed filters:', filters);
 
+  const genreCapitalized = filters.genre.charAt(0).toUpperCase() + filters.genre.slice(1).toLowerCase();
+
   const { data, error } = await supabase
     .from('movies')
-    .select('*')
-    .contains('genres', [filters.genre])
-    // .contains('streaming_services', [filters.platform])
-    .gte('year', filters.year - 1)
+    .select('title,year,genres,streaming_services,imdb_rating,rotten_tomatoes,plot,poster_url')
+    .contains('genres', [genreCapitalized])
+    .contains('streaming_services', [filters.platform])
+    //.gte('year', filters.year - 1)
+    //.lte('year', filters.year + 1)
+    .eq('year', filters.year)
     .order('imdb_rating', { ascending: false })
-    .limit(9);
+    .limit(3);
 
   if (error) {
     console.error('Supabase error:', error.message);
@@ -34,7 +38,7 @@ export function processPrompt(prompt: string) {
   return {
     genre: 'Horror',
     platform: 'Netflix',
-    year: 2022,
+    year: 2021,
   };
 }
 
