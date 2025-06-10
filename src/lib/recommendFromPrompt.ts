@@ -13,17 +13,23 @@ function extractMentionedPlatforms(prompt: string): string[] {
     "Hulu",
     "Amazon Prime Video",
     "Prime Video",
+    "Amazon", // casual shorthand
     "Disney Plus",
     "Disney+",
     "Max",
     "HBO Max",
+    "HBO", // support users who just say "HBO"
     "Peacock",
     "Apple TV+",
+    "Apple TV", // alias for Apple TV+
+    "Apple",    // casual shorthand
     "Paramount+",
     "Paramount Plus",
+    "Paramount", // casual shorthand
     "Starz",
     "Showtime",
     "AMC+",
+    "AMC", // casual shorthand
     "Crunchyroll",
     "Tubi",
     "Pluto TV",
@@ -34,11 +40,12 @@ function extractMentionedPlatforms(prompt: string): string[] {
   return knownPlatforms.filter(platform =>
     normalizedPrompt.includes(platform.toLowerCase())
   ).map(name =>
-    // Normalize aliases
     name === "Disney+" ? "Disney Plus"
-    : name === "Prime Video" ? "Amazon Prime Video"
-    : name === "Paramount Plus" ? "Paramount+"
-    : name === "HBO Max" ? "Max"
+    : name === "Prime Video" || name === "Amazon" ? "Amazon Prime Video"
+    : name === "Paramount Plus" || name === "Paramount" ? "Paramount+"
+    : name === "HBO Max" || name === "HBO" ? "Max"
+    : name === "Apple" || name === "Apple TV" ? "Apple TV+"
+    : name === "AMC" ? "AMC+"
     : name
   );
 }
@@ -72,6 +79,8 @@ function extractMentionedPlatforms(prompt: string): string[] {
 import { createClient } from '@supabase/supabase-js';
 import OpenAI from 'openai';
 import { ChatCompletionMessageParam } from 'openai/resources';
+import fs from 'fs';
+import path from 'path';
 
 // More flexible filter map for prompt filters
 type FilterMap = {
@@ -83,6 +92,24 @@ const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_KE
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
+
+// Utility to log API usage to a JSON file by date and service
+function logApiCall(service: 'tmdb' | 'omdb') {
+  try {
+    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+    const filePath = path.join(process.cwd(), 'data', 'api_usage_log.json');
+    const exists = fs.existsSync(filePath);
+    const log = exists ? JSON.parse(fs.readFileSync(filePath, 'utf-8')) : {};
+
+    if (!log[today]) log[today] = { tmdb: 0, omdb: 0 };
+    if (!log[today][service]) log[today][service] = 0;
+    log[today][service] += 1;
+
+    fs.writeFileSync(filePath, JSON.stringify(log, null, 2));
+  } catch (err) {
+    console.warn('[LOG ERROR] Failed to log API call for', service, err);
+  }
+}
 
 // Step 1: Extract filters from the prompt using OpenAI
 async function extractFilters(prompt: string): Promise<FilterMap> {
@@ -286,6 +313,18 @@ export async function recommendFromPrompt(prompt: string) {
     }
   });
 
+  // Step 6.6: Filter enriched movies by detected streaming platforms
+  const platformFiltered = highQuality.filter((movie): movie is NonNullable<typeof movie> => {
+    if (!movie) return false;
+    if (!Array.isArray(filters.platforms) || filters.platforms.length === 0) return true;
+    return Array.isArray(movie.streaming_services) &&
+      movie.streaming_services.some(service =>
+        Array.isArray(filters.platforms) && filters.platforms.includes(service)
+      );
+  });
+
+  console.log('[INFO] Filtered down to', platformFiltered.length, 'movies available on:', filters.platforms);
+
   // Step 6.5: Sync enriched movies with Supabase
   // Python block replicated: check if movie exists, update or insert accordingly
   for (const movie of highQuality) {
@@ -357,6 +396,7 @@ export async function recommendFromPrompt(prompt: string) {
     const enriched = await Promise.all(
       fallbackList.map(async (item: { title: string; year: number }) => {
         const omdbRes = await fetch(`https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&t=${encodeURIComponent(item.title)}&y=${item.year}`);
+        logApiCall('omdb');
         const omdbData = await omdbRes.json();
 
         const streaming_services = await getStreamingPlatforms(item.title, String(item.year));
@@ -386,6 +426,19 @@ export async function recommendFromPrompt(prompt: string) {
         };
       })
     );
+
+    const fallbackFiltered = enriched.filter((movie): movie is NonNullable<typeof movie> => {
+      if (!movie) return false;
+
+      const platforms = Array.isArray(filters.platforms) ? filters.platforms : [];
+
+      return Array.isArray(movie.streaming_services) &&
+        movie.streaming_services.some((service: string) =>
+          platforms.includes(service)
+        );
+    });
+
+    console.log('[INFO] Filtered fallback down to', fallbackFiltered.length, 'movies on:', filters.platforms);
 
     // Python block replicated: fallback OMDb/platform enrichment + Supabase upsert
     // Insert Supabase sync logic for fallback movies
@@ -424,8 +477,8 @@ export async function recommendFromPrompt(prompt: string) {
       }
     }
 
-    // Return enriched fallback movies, filtering out nulls if any
-    return enriched.filter(Boolean);
+    // Return filtered fallback movies
+    return fallbackFiltered;
   }
 
   // Step 8: Re-rank the enriched movies using OpenAI GPT-4
@@ -437,7 +490,7 @@ export async function recommendFromPrompt(prompt: string) {
     },
     {
       role: 'user',
-      content: `Prompt: ${prompt}\n\nMovies:\n${JSON.stringify(highQuality, null, 2)}`,
+      content: `Prompt: ${prompt}\n\nMovies:\n${JSON.stringify(platformFiltered, null, 2)}`,
     }
   ];
 
@@ -456,7 +509,7 @@ export async function recommendFromPrompt(prompt: string) {
   } catch (err) {
     console.error('[ERROR] Failed to parse GPT re-rank response:', err);
     // Fallback: return top 5 enriched movies if GPT re-rank fails
-    return highQuality.slice(0, 5);
+    return platformFiltered.slice(0, 5);
   }
 }
 
@@ -478,6 +531,7 @@ async function getStreamingPlatforms(title: string, releaseDate: string): Promis
     // Step 1: Search TMDb for the movie by title and year
     const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${encodeURIComponent(title)}&year=${releaseDate.split('-')[0]}`;
     const tmdbRes = await fetch(searchUrl);
+    logApiCall('tmdb');
     const tmdbData = await tmdbRes.json();
 
     const movieId = tmdbData.results?.[0]?.id;
@@ -489,6 +543,7 @@ async function getStreamingPlatforms(title: string, releaseDate: string): Promis
     // Step 2: Use the movie ID to get watch providers
     const providerUrl = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${process.env.TMDB_API_KEY}`;
     const providerRes = await fetch(providerUrl);
+    logApiCall('tmdb');
     const providerData = await providerRes.json();
 
     const usSources = providerData?.results?.US?.flatrate || [];
@@ -516,6 +571,7 @@ async function getOMDbData(title: string, year: string): Promise<{
   try {
     const url = `https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&t=${encodeURIComponent(title)}&y=${year}`;
     const res = await fetch(url);
+    logApiCall('omdb');
     const data = await res.json();
     if (!data || data.Response === 'False') return null;
     const imdb_id = data.imdbID || null;
@@ -558,6 +614,7 @@ async function getTMDbMetadataFromTitleYear(title: string, year: string): Promis
     // 1. Search TMDb for the movie by title and year
     const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${encodeURIComponent(title)}&year=${year}`;
     const searchRes = await fetch(searchUrl);
+    logApiCall('tmdb');
     const searchData = await searchRes.json();
     const result = searchData.results?.[0];
     if (!result) return null;
@@ -565,6 +622,7 @@ async function getTMDbMetadataFromTitleYear(title: string, year: string): Promis
     // 2. Fetch movie details to get genres and runtime
     const detailsUrl = `https://api.themoviedb.org/3/movie/${tmdb_id}?api_key=${process.env.TMDB_API_KEY}`;
     const detailsRes = await fetch(detailsUrl);
+    logApiCall('tmdb');
     const details = await detailsRes.json();
     if (!details) return null;
     const genres = Array.isArray(details.genres) ? details.genres.map((g: any) => g.name) : [];
