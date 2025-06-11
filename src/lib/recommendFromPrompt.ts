@@ -182,13 +182,22 @@ export async function extractFiltersFromPrompt(prompt: string): Promise<FilterRe
 // Step 8: Re-rank the enriched movies using OpenAI
 export async function recommendFromPrompt(prompt: string) {
   console.log('[INFO] Prompt received:', prompt);
+  const startTimer = Date.now();
+  let stepTime = Date.now();
+  const logStepTime = (label: string) => {
+    const now = Date.now();
+    console.log(`[TIMER] ${label}: ${now - stepTime} ms`);
+    stepTime = now;
+  };
 
   // Step 2: Extract filters from the prompt using GPT-4
   const filters: FilterMap = await extractFilters(prompt);
+  logStepTime("Extract filters");
   console.log('[DEBUG] Extracted filters:', filters);
 
   // Detect platforms mentioned in the user's prompt (manual override for GPT misses)
   const mentionedPlatforms = extractMentionedPlatforms(prompt);
+  logStepTime("Extract mentioned platforms");
   console.log("[INFO] Detected platform mentions in prompt:", mentionedPlatforms);
 
   const { with_genres, primary_release_year, with_keywords } = filters as { [key: string]: any };
@@ -201,6 +210,7 @@ export async function recommendFromPrompt(prompt: string) {
 
   // Before passing filters to enrichment logic, print debug info
   console.log("[DEBUG] Final filters passed to enrichment:", filters);
+  logStepTime("Final filter merge and debug log");
 
   // Step 3: Build the TMDb query with those filters
   const baseParams = new URLSearchParams({
@@ -214,6 +224,15 @@ export async function recommendFromPrompt(prompt: string) {
     baseParams.append('with_keywords', with_keywords);
   }
 
+  // Convert GPT filters to TMDb-compatible date range filters
+  // (Python logic: convert primary_release_year.gte/lte to primary_release_date.gte/lte)
+  if (typeof filters['primary_release_year.gte'] === 'number') {
+    baseParams.append('primary_release_date.gte', `${filters['primary_release_year.gte']}-01-01`);
+  }
+  if (typeof filters['primary_release_year.lte'] === 'number') {
+    baseParams.append('primary_release_date.lte', `${filters['primary_release_year.lte']}-12-31`);
+  }
+
   // Step 4: Fetch movie results from TMDb (pages 1 to 3)
   let allResults: any[] = [];
   for (let page = 1; page <= 3; page++) {
@@ -225,6 +244,7 @@ export async function recommendFromPrompt(prompt: string) {
       allResults.push(...json.results);
     }
   }
+  logStepTime("TMDb API calls");
 
   // Step 5: Filter out low-quality or incomplete results
   const filtered = allResults.filter(m =>
@@ -233,6 +253,7 @@ export async function recommendFromPrompt(prompt: string) {
     m.title &&
     m.release_date
   );
+  logStepTime("Filtering TMDb results");
 
   console.log('[API] Raw TMDb titles fetched:', filtered.map(m => m.title));
 
@@ -302,6 +323,7 @@ export async function recommendFromPrompt(prompt: string) {
       return null;
     }
   }));
+  logStepTime("OMDb + TMDb enrichment");
 
   // Filter out nulls from enrichment
   const highQuality = enriched.filter(Boolean);
@@ -324,6 +346,14 @@ export async function recommendFromPrompt(prompt: string) {
   });
 
   console.log('[INFO] Filtered down to', platformFiltered.length, 'movies available on:', filters.platforms);
+
+  // Step 6.7: Filter by user-specified year range before sending to GPT
+  const yearFiltered = platformFiltered.filter(m => {
+    const from = typeof filters['primary_release_year.gte'] === 'number' ? filters['primary_release_year.gte'] : 1900;
+    const to = typeof filters['primary_release_year.lte'] === 'number' ? filters['primary_release_year.lte'] : 2100;
+    return m.year >= from && m.year <= to;
+  });
+  logStepTime("Filtering by streaming platforms and year");
 
   // Step 6.5: Sync enriched movies with Supabase
   // Python block replicated: check if movie exists, update or insert accordingly
@@ -366,6 +396,7 @@ export async function recommendFromPrompt(prompt: string) {
       }
     }
   }
+  logStepTime("Supabase sync");
 
   // Step 7: If enrichment fails for all movies, fallback to OpenAI direct suggestions
   // Python block replicated: fallback GPT call for direct movie titles + enrichment
@@ -426,11 +457,13 @@ export async function recommendFromPrompt(prompt: string) {
         };
       })
     );
+    logStepTime("Fallback OMDb + TMDb enrichment");
 
     const fallbackFiltered = enriched.filter((movie): movie is NonNullable<typeof movie> => {
       if (!movie) return false;
 
       const platforms = Array.isArray(filters.platforms) ? filters.platforms : [];
+      if (platforms.length === 0) return true;
 
       return Array.isArray(movie.streaming_services) &&
         movie.streaming_services.some((service: string) =>
@@ -476,8 +509,12 @@ export async function recommendFromPrompt(prompt: string) {
         }
       }
     }
+    logStepTime("Fallback Supabase sync");
 
     // Return filtered fallback movies
+    const endTimer = Date.now();
+    logStepTime("GPT re-rank + Supabase logging");
+    console.log(`[TIMER] Total fallback flow time: ${endTimer - startTimer} ms`);
     return fallbackFiltered;
   }
 
@@ -486,30 +523,79 @@ export async function recommendFromPrompt(prompt: string) {
   const finalPrompt: ChatCompletionMessageParam[] = [
     {
       role: 'system',
-      content: `You are a movie expert. From the list of movie objects, select the 5–10 best ones based on the user's preferences. Return a valid JSON array of full movie objects exactly as provided — do not summarize or change the format.`,
+      content: `You are a movie expert. From the list of movie objects, select the 5–10 best ones based on the user's preferences. Return your result by calling JSON.stringify(...) on the array of movie objects exactly as provided. Do NOT add comments, markdown, or any other formatting. Only output the raw result of JSON.stringify([...]).`,
     },
     {
       role: 'user',
-      content: `Prompt: ${prompt}\n\nMovies:\n${JSON.stringify(platformFiltered, null, 2)}`,
+      content: `Prompt: ${prompt}\n\nMovies:\n${JSON.stringify(yearFiltered, null, 2)}`,
     }
   ];
 
   let clean = '[]';
   try {
+    const gptStart = Date.now(); // add before openai.chat.completions.create
     const chatRes = await openai.chat.completions.create({
       model: 'gpt-4',
       messages: finalPrompt,
       temperature: 0.4
     });
+    const gptEnd = Date.now(); // add after the call resolves
+    console.log(`[TIMER] GPT re-rank call duration: ${gptEnd - gptStart} ms`);
     clean = chatRes.choices[0].message.content || '[]';
     console.log('📥 Raw GPT response:', clean);
+
+    // 🧹 Extract JSON inside JSON.stringify(...) if present
+    const stringifyStart = clean.indexOf('JSON.stringify([');
+    const jsonStart = stringifyStart !== -1 ? clean.indexOf('[', stringifyStart) : clean.indexOf('[');
+    const jsonEnd = clean.lastIndexOf(']');
+    if (jsonStart !== -1 && jsonEnd !== -1) {
+      clean = clean.slice(jsonStart, jsonEnd + 1);
+    } else {
+      throw new Error("❌ Could not locate JSON array in GPT response.");
+    }
+
     const parsed = JSON.parse(clean);
     console.log('📦 Parsed GPT results:', parsed);
+
+    // ✅ Log prompt, filters, and results to Supabase for analytics
+    try {
+      const startTime = Date.now();
+      const used_fallback = highQuality.length === 0;
+      const final_response = clean;
+      const response_time_ms = Date.now() - startTime;
+
+      const logPayload = {
+        prompt_text: prompt,
+        filters: JSON.stringify(filters), // ensure valid JSON structure
+        platforms: filters.platforms ?? [],
+        top_movies: parsed, // full array of re-ranked movie objects
+        final_response: final_response.slice(0, 5000), // truncate if needed
+        used_fallback,
+        response_time_ms,
+        token_usage: chatRes.usage?.total_tokens || null
+      };
+
+      const { error: logError } = await supabase.from('prompts').insert([logPayload]);
+      if (logError) {
+        console.warn('[SUPABASE LOG ERROR] Failed to log prompt usage:', logError.message);
+      } else {
+        console.log('[SUPABASE LOG] Prompt usage logged successfully');
+      }
+    } catch (err) {
+      console.error('[LOGGING ERROR] Failed to log prompt analytics:', err);
+    }
+
+    logStepTime("GPT re-rank + Supabase logging");
+    const endTimer = Date.now();
+    console.log(`[TIMER] Total recommendation flow time: ${endTimer - startTimer} ms`);
     return parsed;
   } catch (err) {
     console.error('[ERROR] Failed to parse GPT re-rank response:', err);
     // Fallback: return top 5 enriched movies if GPT re-rank fails
-    return platformFiltered.slice(0, 5);
+    logStepTime("GPT re-rank + Supabase logging");
+    const endTimer = Date.now();
+    console.log(`[TIMER] Total recommendation flow time: ${endTimer - startTimer} ms`);
+    return yearFiltered.slice(0, 5);
   }
 }
 
