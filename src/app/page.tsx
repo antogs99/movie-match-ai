@@ -47,7 +47,7 @@ export default function Home() {
             Pick<span className="text-[#00C876]">Your</span>Binge
           </h1>
           <img
-            src="/logo.PNG"
+            src="/logo.png"
             alt="PickYourBinge Logo"
             className="w-20 sm:w-28 md:w-36 h-auto object-contain"
           />
