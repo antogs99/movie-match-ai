@@ -36,6 +36,19 @@ export default function RootLayout({
             `,
           }}
         ></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PickYourBinge",
+              "url": "https://pickyourbinge.com",
+              "logo": "https://pickyourbinge.com/logo.png"
+            }),
+          }}
+        />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

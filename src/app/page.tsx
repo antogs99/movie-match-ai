@@ -3,6 +3,9 @@
 
 import { useState, useEffect } from 'react';
 
+
+
+
 export default function Home() {
   const [prompt, setPrompt] = useState('');
   const [recommendations, setRecommendations] = useState<any[]>([]);
