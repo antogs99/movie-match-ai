@@ -1,3 +1,18 @@
+// Utility to safely fetch JSON from a URL with error handling
+async function safeFetchJson(url: string, service: 'tmdb' | 'omdb'): Promise<any | null> {
+  try {
+    const res = await fetch(url);
+    logApiCall(service);
+    if (!res.ok) {
+      console.warn(`[${service.toUpperCase()} ERROR] HTTP ${res.status} for ${url}`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    console.error(`[${service.toUpperCase()} FETCH ERROR] ${url}`, err);
+    return null;
+  }
+}
 // Type for extracted filters from prompt
 type FilterResult = {
   genres: string[];
@@ -33,14 +48,16 @@ function extractMentionedPlatforms(prompt: string): string[] {
     "Crunchyroll",
     "Tubi",
     "Pluto TV",
-    "Freevee"
+    "Freevee",
+    "hob" // allow for casual typo or shorthand for HBO/Max
   ];
 
   const normalizedPrompt = prompt.toLowerCase();
   return knownPlatforms.filter(platform =>
     normalizedPrompt.includes(platform.toLowerCase())
   ).map(name =>
-    name === "Disney+" ? "Disney Plus"
+    name === "hob" ? "Max"
+    : name === "Disney+" ? "Disney Plus"
     : name === "Prime Video" || name === "Amazon" ? "Amazon Prime Video"
     : name === "Paramount Plus" || name === "Paramount" ? "Paramount+"
     : name === "HBO Max" || name === "HBO" ? "Max"
@@ -233,14 +250,13 @@ export async function recommendFromPrompt(prompt: string) {
     baseParams.append('primary_release_date.lte', `${filters['primary_release_year.lte']}-12-31`);
   }
 
-  // Step 4: Fetch movie results from TMDb (pages 1 to 3)
+  // Step 4: Fetch movie results from TMDb (only page 1 for performance)
   let allResults: any[] = [];
-  for (let page = 1; page <= 3; page++) {
+  for (let page = 1; page <= 4; page++) {
     const pageParams = new URLSearchParams(baseParams);
     pageParams.set('page', String(page));
-    const res = await fetch(`https://api.themoviedb.org/3/discover/movie?${pageParams}`);
-    const json = await res.json();
-    if (json.results) {
+    const json = await safeFetchJson(`https://api.themoviedb.org/3/discover/movie?${pageParams}`, 'tmdb');
+    if (json && json.results) {
       allResults.push(...json.results);
     }
   }
@@ -327,6 +343,30 @@ export async function recommendFromPrompt(prompt: string) {
 
   // Filter out nulls from enrichment
   const highQuality = enriched.filter(Boolean);
+
+  // 🧠 Sort high-quality movies by Rotten Tomatoes (desc), then IMDb rating, then Metascore
+  const sortKey = (movie: any) => {
+    const toFloat = (val: any) => {
+      try {
+        return typeof val === 'string' ? parseFloat(val.replace('%', '')) : (val ?? -1);
+      } catch {
+        return -1;
+      }
+    };
+
+    const rt = toFloat(movie.rotten_tomatoes);
+    const imdb = toFloat(movie.imdb_rating);
+    const meta = toFloat(movie.metascore);
+    return [rt, imdb, meta];
+  };
+
+  highQuality.sort((a, b) => {
+    const [rtA, imdbA, metaA] = sortKey(a);
+    const [rtB, imdbB, metaB] = sortKey(b);
+    if (rtB !== rtA) return rtB - rtA;
+    if (imdbB !== imdbA) return imdbB - imdbA;
+    return metaB - metaA;
+  });
 
   console.log('📋 Movie titles to be sent to GPT:');
   highQuality.forEach(movie => {
@@ -459,17 +499,31 @@ export async function recommendFromPrompt(prompt: string) {
     );
     logStepTime("Fallback OMDb + TMDb enrichment");
 
-    const fallbackFiltered = enriched.filter((movie): movie is NonNullable<typeof movie> => {
-      if (!movie) return false;
+    // ---- DEBUG LOGGING for fallback filtering steps ----
+    console.log(`[DEBUG] Total fallback movies: ${enriched.length}`);
 
+    // Platform filter
+    const fallbackPlatformFiltered = enriched.filter((movie): movie is NonNullable<typeof movie> => {
+      if (!movie) return false;
       const platforms = Array.isArray(filters.platforms) ? filters.platforms : [];
       if (platforms.length === 0) return true;
-
       return Array.isArray(movie.streaming_services) &&
         movie.streaming_services.some((service: string) =>
           platforms.includes(service)
         );
     });
+    console.log(`[DEBUG] Platform-filtered movies: ${fallbackPlatformFiltered.length}`);
+
+    // Year filter (match main logic)
+    const fallbackYearFiltered = fallbackPlatformFiltered.filter(m => {
+      const from = typeof filters['primary_release_year.gte'] === 'number' ? filters['primary_release_year.gte'] : 1900;
+      const to = typeof filters['primary_release_year.lte'] === 'number' ? filters['primary_release_year.lte'] : 2100;
+      return m.year >= from && m.year <= to;
+    });
+    console.log(`[DEBUG] Year-filtered movies: ${fallbackYearFiltered.length}`);
+
+    // Keep old name for compatibility
+    const fallbackFiltered = fallbackYearFiltered;
 
     console.log('[INFO] Filtered fallback down to', fallbackFiltered.length, 'movies on:', filters.platforms);
 
@@ -515,10 +569,22 @@ export async function recommendFromPrompt(prompt: string) {
     const endTimer = Date.now();
     logStepTime("GPT re-rank + Supabase logging");
     console.log(`[TIMER] Total fallback flow time: ${endTimer - startTimer} ms`);
+    console.log("[DONE] Fallback flow completed. All data has been processed and logged.");
     return fallbackFiltered;
   }
 
   // Step 8: Re-rank the enriched movies using OpenAI GPT-4
+  // Reduce movie object size before sending to GPT
+  const minimalMovies = yearFiltered.map(movie => ({
+    title: movie.title,
+    year: movie.year,
+    plot: movie.plot,
+    genres: movie.genres,
+    imdb_rating: movie.imdb_rating,
+    rotten_tomatoes: movie.rotten_tomatoes,
+    metascore: movie.metascore
+  }));
+
   // Python block replicated: send movies + prompt to GPT for top picks selection
   const finalPrompt: ChatCompletionMessageParam[] = [
     {
@@ -527,22 +593,30 @@ export async function recommendFromPrompt(prompt: string) {
     },
     {
       role: 'user',
-      content: `Prompt: ${prompt}\n\nMovies:\n${JSON.stringify(yearFiltered, null, 2)}`,
+      content: `Prompt: ${prompt}\n\nMovies:\n${JSON.stringify(minimalMovies, null, 2)}`,
     }
   ];
 
   let clean = '[]';
   try {
-    const gptStart = Date.now(); // add before openai.chat.completions.create
+    const gptStart = Date.now();
     const chatRes = await openai.chat.completions.create({
       model: 'gpt-4',
       messages: finalPrompt,
-      temperature: 0.4
+      temperature: 0.3,
+      max_tokens: 512,
+      stream: true
     });
-    const gptEnd = Date.now(); // add after the call resolves
+    let content = '';
+    for await (const part of (chatRes as any).stream ?? []) {
+      const delta = part.choices?.[0]?.delta?.content;
+      if (delta) content += delta;
+    }
+    clean = content || '[]';
+    const gptEnd = Date.now();
     console.log(`[TIMER] GPT re-rank call duration: ${gptEnd - gptStart} ms`);
-    clean = chatRes.choices[0].message.content || '[]';
-    console.log('📥 Raw GPT response:', clean);
+    console.log("📥 Raw GPT content:", content);
+    console.log("🧠 Cleaned content sent to JSON.parse:", clean);
 
     // 🧹 Extract JSON inside JSON.stringify(...) if present
     const stringifyStart = clean.indexOf('JSON.stringify([');
@@ -550,11 +624,22 @@ export async function recommendFromPrompt(prompt: string) {
     const jsonEnd = clean.lastIndexOf(']');
     if (jsonStart !== -1 && jsonEnd !== -1) {
       clean = clean.slice(jsonStart, jsonEnd + 1);
-    } else {
-      throw new Error("❌ Could not locate JSON array in GPT response.");
     }
 
-    const parsed = JSON.parse(clean);
+    // SAFER PARSING LOGIC
+    let parsed: any[] = [];
+    try {
+      parsed = JSON.parse(clean);
+    } catch (err) {
+      console.error("[ERROR] Failed to parse GPT re-rank response:", err);
+      parsed = [];
+    }
+
+    if (!parsed?.length) {
+      console.warn("⚠️ GPT returned no valid recommendations. Falling back to pre-ranked movies.");
+      parsed = yearFiltered;
+    }
+
     console.log('📦 Parsed GPT results:', parsed);
 
     // ✅ Log prompt, filters, and results to Supabase for analytics
@@ -566,13 +651,13 @@ export async function recommendFromPrompt(prompt: string) {
 
       const logPayload = {
         prompt_text: prompt,
-        filters: JSON.stringify(filters), // ensure valid JSON structure
+        filters: JSON.stringify(filters),
         platforms: filters.platforms ?? [],
-        top_movies: parsed, // full array of re-ranked movie objects
-        final_response: final_response.slice(0, 5000), // truncate if needed
+        top_movies: parsed,
+        final_response: final_response.slice(0, 5000),
         used_fallback,
         response_time_ms,
-        token_usage: chatRes.usage?.total_tokens || null
+        token_usage: null,
       };
 
       const { error: logError } = await supabase.from('prompts').insert([logPayload]);
@@ -588,13 +673,14 @@ export async function recommendFromPrompt(prompt: string) {
     logStepTime("GPT re-rank + Supabase logging");
     const endTimer = Date.now();
     console.log(`[TIMER] Total recommendation flow time: ${endTimer - startTimer} ms`);
+    console.log("[DONE] Main GPT flow completed. Recommendations generated and logged.");
     return parsed;
   } catch (err) {
     console.error('[ERROR] Failed to parse GPT re-rank response:', err);
-    // Fallback: return top 5 enriched movies if GPT re-rank fails
     logStepTime("GPT re-rank + Supabase logging");
     const endTimer = Date.now();
     console.log(`[TIMER] Total recommendation flow time: ${endTimer - startTimer} ms`);
+    console.log("[DONE] Main GPT flow completed. Recommendations generated and logged.");
     return yearFiltered.slice(0, 5);
   }
 }
@@ -616,11 +702,8 @@ async function getStreamingPlatforms(title: string, releaseDate: string): Promis
   try {
     // Step 1: Search TMDb for the movie by title and year
     const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${encodeURIComponent(title)}&year=${releaseDate.split('-')[0]}`;
-    const tmdbRes = await fetch(searchUrl);
-    logApiCall('tmdb');
-    const tmdbData = await tmdbRes.json();
-
-    const movieId = tmdbData.results?.[0]?.id;
+    const tmdbData = await safeFetchJson(searchUrl, 'tmdb');
+    const movieId = tmdbData?.results?.[0]?.id;
     if (!movieId) {
       console.warn(`[TMDb] No TMDb ID found for: ${title}`);
       return [];
@@ -628,10 +711,7 @@ async function getStreamingPlatforms(title: string, releaseDate: string): Promis
 
     // Step 2: Use the movie ID to get watch providers
     const providerUrl = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${process.env.TMDB_API_KEY}`;
-    const providerRes = await fetch(providerUrl);
-    logApiCall('tmdb');
-    const providerData = await providerRes.json();
-
+    const providerData = await safeFetchJson(providerUrl, 'tmdb');
     const usSources = providerData?.results?.US?.flatrate || [];
     const streamingServices = usSources.map((s: any) => s.provider_name);
 
@@ -656,9 +736,7 @@ async function getOMDbData(title: string, year: string): Promise<{
 } | null> {
   try {
     const url = `https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&t=${encodeURIComponent(title)}&y=${year}`;
-    const res = await fetch(url);
-    logApiCall('omdb');
-    const data = await res.json();
+    const data = await safeFetchJson(url, 'omdb');
     if (!data || data.Response === 'False') return null;
     const imdb_id = data.imdbID || null;
     const imdb_rating = data.imdbRating && data.imdbRating !== 'N/A' ? parseFloat(data.imdbRating) : null;
@@ -699,17 +777,13 @@ async function getTMDbMetadataFromTitleYear(title: string, year: string): Promis
   try {
     // 1. Search TMDb for the movie by title and year
     const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${encodeURIComponent(title)}&year=${year}`;
-    const searchRes = await fetch(searchUrl);
-    logApiCall('tmdb');
-    const searchData = await searchRes.json();
-    const result = searchData.results?.[0];
+    const searchData = await safeFetchJson(searchUrl, 'tmdb');
+    const result = searchData?.results?.[0];
     if (!result) return null;
     const tmdb_id = result.id;
     // 2. Fetch movie details to get genres and runtime
     const detailsUrl = `https://api.themoviedb.org/3/movie/${tmdb_id}?api_key=${process.env.TMDB_API_KEY}`;
-    const detailsRes = await fetch(detailsUrl);
-    logApiCall('tmdb');
-    const details = await detailsRes.json();
+    const details = await safeFetchJson(detailsUrl, 'tmdb');
     if (!details) return null;
     const genres = Array.isArray(details.genres) ? details.genres.map((g: any) => g.name) : [];
     const runtime = details.runtime ?? null;
