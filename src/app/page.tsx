@@ -52,7 +52,7 @@ export default function Home() {
           <img
             src="/logo.png"
             alt="PickYourBinge Logo"
-            className="w-20 sm:w-28 md:w-36 h-auto object-contain"
+            className="w-28 sm:w-36 md:w-48 h-auto object-contain"
           />
         </header>
 
