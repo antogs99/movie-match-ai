@@ -308,6 +308,11 @@ export async function recommendFromPrompt(prompt: string) {
         console.warn(`[OMDB FAIL] Could not enrich: ${title} (${year})`);
         return null;
       }
+      // New check: skip if no imdb_id
+      if (!omdbData.imdb_id) {
+        console.warn(`[SKIP] Missing IMDb ID for: ${title} (${year})`);
+        return null;
+      }
 
       // Fetch TMDb metadata for enrichment (genre names, runtime, etc)
       const tmdbMeta = await getTMDbMetadataFromTitleYear(title, year);
@@ -585,6 +590,36 @@ export async function recommendFromPrompt(prompt: string) {
     logStepTime("GPT re-rank + Supabase logging");
     console.log(`[TIMER] Total fallback flow time: ${endTimer - startTimer} ms`);
     console.log("[DONE] Fallback flow completed. All data has been processed and logged.");
+
+    // ✅ Log fallback prompt, filters, and results to Supabase
+    try {
+      const used_fallback = true;
+      // Only store final shown movies in final_response (as per instructions)
+      const final_response = JSON.stringify(fallbackFiltered).slice(0, 5000);
+      const response_time_ms = Date.now() - startTimer;
+
+      const logPayload = {
+        prompt_text: prompt,
+        filters: JSON.stringify(filters),
+        platforms: Array.isArray(filters.platforms)
+          ? `{${filters.platforms.map(p => `"${p}"`).join(',')}}`
+          : '{}',
+        top_movies: JSON.stringify(fallbackFiltered),
+        final_response: JSON.stringify(fallbackFiltered),
+        used_fallback,
+        response_time_ms,
+        token_usage: null,
+      };
+      console.log('[DEBUG] Logging fallback prompt payload:', logPayload);
+      const { error: logError } = await supabase.from('prompts').insert([logPayload]);
+      if (logError) {
+        console.warn('[SUPABASE LOG ERROR] Failed to log fallback prompt:', logError.message);
+      } else {
+        console.log('[SUPABASE LOG] Fallback prompt logged successfully');
+      }
+    } catch (err) {
+      console.error('[LOGGING ERROR] Fallback logging failed:', err);
+    }
     return fallbackFiltered;
   }
 
@@ -613,6 +648,8 @@ export async function recommendFromPrompt(prompt: string) {
   ];
 
   let clean = '[]';
+  let content = '';
+
   try {
     const gptStart = Date.now();
     const chatRes = await openai.chat.completions.create({
@@ -622,11 +659,13 @@ export async function recommendFromPrompt(prompt: string) {
       max_tokens: 512,
       stream: true
     });
-    let content = '';
-    for await (const part of (chatRes as any).stream ?? []) {
-      const delta = part.choices?.[0]?.delta?.content;
-      if (delta) content += delta;
+
+    for await (const chunk of chatRes) {
+      const choice = (chunk as any)?.choices?.[0];
+      const delta = choice?.delta?.content ?? '';
+      content += delta;
     }
+
     clean = content || '[]';
     const gptEnd = Date.now();
     console.log(`[TIMER] GPT re-rank call duration: ${gptEnd - gptStart} ms`);
@@ -661,20 +700,23 @@ export async function recommendFromPrompt(prompt: string) {
     try {
       const startTime = Date.now();
       const used_fallback = highQuality.length === 0;
-      const final_response = clean;
+      // Only store final shown movies in final_response (as per instructions)
+      const finalMovies = parsed;
       const response_time_ms = Date.now() - startTime;
 
       const logPayload = {
         prompt_text: prompt,
         filters: JSON.stringify(filters),
-        platforms: filters.platforms ?? [],
-        top_movies: parsed,
-        final_response: final_response.slice(0, 5000),
+        platforms: Array.isArray(filters.platforms)
+          ? `{${filters.platforms.map(p => `"${p}"`).join(',')}}`
+          : '{}',
+        top_movies: JSON.stringify(parsed),
+        final_response: JSON.stringify(finalMovies),
         used_fallback,
         response_time_ms,
         token_usage: null,
       };
-
+      console.log('[DEBUG] Logging prompt payload:', logPayload);
       const { error: logError } = await supabase.from('prompts').insert([logPayload]);
       if (logError) {
         console.warn('[SUPABASE LOG ERROR] Failed to log prompt usage:', logError.message);
