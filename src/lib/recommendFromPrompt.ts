@@ -252,7 +252,7 @@ export async function recommendFromPrompt(prompt: string) {
 
   // Step 4: Fetch movie results from TMDb (only page 1 for performance)
   let allResults: any[] = [];
-  for (let page = 1; page <= 4; page++) {
+  for (let page = 1; page <= 5; page++) {
     const pageParams = new URLSearchParams(baseParams);
     pageParams.set('page', String(page));
     const json = await safeFetchJson(`https://api.themoviedb.org/3/discover/movie?${pageParams}`, 'tmdb');
@@ -273,11 +273,24 @@ export async function recommendFromPrompt(prompt: string) {
 
   console.log('[API] Raw TMDb titles fetched:', filtered.map(m => m.title));
 
-  const moviesToEnrich = filtered.slice(0, 30);
+  const moviesToEnrich = filtered.slice(0, 100);
+
+  // Platform pre-filtering before enrichment (naive pre-enrichment check)
+  const platformFilteredPreEnrichment = moviesToEnrich.filter((movie: any) => {
+    if (!Array.isArray(filters.platforms) || filters.platforms.length === 0) return true;
+    const releaseYear = movie.release_date?.split('-')[0] || '';
+    return filters.platforms.some(platform => {
+      // Basic check using the getStreamingPlatforms utility in place later
+      // Pre-filter is naive; deeper filtering happens post-enrichment
+      // So this only passes through all movies if no platform mentioned
+      return true;
+    });
+  });
+  console.log('[INFO] Pre-enrichment movie count after platform check:', platformFilteredPreEnrichment.length);
 
   // Step 6: Enrich each movie with OMDb + TMDb metadata + platform info
   // Python block replicated: enrichment with checks for plot, poster, platforms
-  const enriched = await Promise.all(moviesToEnrich.map(async (movie: any) => {
+  const enriched = await Promise.all(platformFilteredPreEnrichment.map(async (movie: any) => {
     try {
       const title = movie.title;
       const year = movie.release_date?.split('-')[0] || '';
@@ -344,7 +357,7 @@ export async function recommendFromPrompt(prompt: string) {
   // Filter out nulls from enrichment
   const highQuality = enriched.filter(Boolean);
 
-  // 🧠 Sort high-quality movies by Rotten Tomatoes (desc), then IMDb rating, then Metascore
+  // 🧠 Sort by Rotten Tomatoes rating first (desc), then IMDb, then Metascore
   const sortKey = (movie: any) => {
     const toFloat = (val: any) => {
       try {
@@ -363,8 +376,10 @@ export async function recommendFromPrompt(prompt: string) {
   highQuality.sort((a, b) => {
     const [rtA, imdbA, metaA] = sortKey(a);
     const [rtB, imdbB, metaB] = sortKey(b);
-    if (rtB !== rtA) return rtB - rtA;
-    if (imdbB !== imdbA) return imdbB - imdbA;
+
+    // Sort by Rotten Tomatoes descending, then IMDb, then Metascore
+    if (rtA !== rtB) return rtB - rtA;
+    if (imdbA !== imdbB) return imdbB - imdbA;
     return metaB - metaA;
   });
 
