@@ -147,6 +147,9 @@ export default function Home() {
         </p>
         <img src="/tmdb.png.svg" alt="TMDB Logo" className="mx-auto mt-2 h-6" />
       </footer>
+      <p className="text-sm text-gray-500 text-center mt-10">
+        <a href="/privacy" className="underline hover:text-white">Privacy Policy</a>
+      </p>
     </main>
   );
 }
